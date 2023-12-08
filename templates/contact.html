@@ -1,0 +1,58 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'main/css/contact.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="d-flex">
+            <div class="w-70">
+                <h1 class="text_h1">КОНТАКТЫ</h1>
+                <img class="c_img" src="{% static 'main/imgs/contact.svg' %}" alt="">
+            </div>
+
+            <div class="w-30">
+                <img class="c_img_logo" src="{% static 'main/imgs/contact_logo.svg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="next_body">
+            <div class="map_part">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.0086092028223!2d69.20107107493487!3d41.35216659818081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8d4a0dce8309%3A0x43e0a115d4b09d1a!2sBobir%20Akilkhanov%20Tech%20Academy!5e0!3m2!1sru!2s!4v1702057912208!5m2!1sru!2s"
+                        width="400" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+            <div class="registration">
+                <h3 class="text-h3">КОНТАКТЫ</h3>
+
+                <div class="phone-email">
+                    <p class="p_toshken">Toshkent shaxri, Yunusobod tumani, O’zbekiston ko’chasi</p>
+                    <br>
+                    <p><a href="">+99897 123-45-67</a></p>
+                    <br>
+                    <p><a href="">+99897 123-45-67</a></p>
+                    <br>
+                    <p><a href="">email@befirst.com</a></p>
+                </div>
+
+                <div class="forms">
+                    <form action="" method="">
+                        <input class="name" type="text" placeholder="имя">
+                        <input class="email" type="email" placeholder="почта">
+                        <input class="message" type="text" placeholder="сообщения">
+                        <br>
+                    </form>
+
+                </div>
+
+                <button class="btn">ОТПРАВИТ</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

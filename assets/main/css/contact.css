@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.text_h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 112px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 100px;
+
+
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-30 {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c_img {
+    width: 667px;
+    height: 308px;
+    top: 341px;
+}
+
+.c_img_logo {
+    width: 242px;
+    height: 273px;
+    align-items: center;
+
+}
+
+.next_body {
+    display: flex;
+    background-color: #F5C24D
+}
+
+.map_part {
+    padding-top: 40px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.registration {
+    width: 50%;
+    justify-content: end;
+    padding-top: 40px;
+
+}
+
+.text-h3 {
+    text-align: start;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    padding-bottom: 40px;
+}
+
+.p_toshken {
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+.phone-email {
+    width: 350px;
+    height: 130px;
+    /*margin-bottom: px;*/
+}
+
+.forms {
+    width: 430px;
+    display: flex;
+}
+
+.name {
+    width: 430px;
+    height: 50px;
+}
+
+.email {
+    width: 430px;
+    height: 50px;
+}
+
+.message {
+    width: 430px;
+    height: 150px;
+}
+
+.btn {
+    align-items: end;
+}
