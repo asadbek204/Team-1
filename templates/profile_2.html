@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'layouts/base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'profile_2/css/profile_2.css' %}">
+	<title>Title</title>
+{% endblock %}
+{% block header %}
+	<div class="body"></div>
+{% endblock %}
+{% block content %}
+	
+{% endblock %}
