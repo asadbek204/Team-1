@@ -167,3 +167,5 @@ cython_debug/
 .static/
 .media/
 .assets/
+*.txt
+!requirements.txt
