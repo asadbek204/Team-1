@@ -1,3 +1,17 @@
-<nav>
-
+{% load static %}
+<nav class="site-navigation">
+    <div class="site-icon">
+        <img src="{% static 'base/img/logo.svg' %}" alt="">
+        <img src="{% static 'base/img/search.png' %}" alt="">
+    </div>
+    <div class="nav-links">
+        <a href="#">Главная</a>
+        <a href="#">Работы</a>
+        <a href="#">Правило</a>
+        <a href="#">Результаты</a>
+        <a href="#">Конкурс</a>
+        <a href="#">Эксперты</a>
+        <a href="#">О нас</a>
+    </div>
+    <button>Личный кабинет</button>
 </nav>
