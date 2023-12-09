@@ -1,10 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+    {#-------------About Achievements--------------#}
+    <section id="results">
+        <div class="container1">
+            <div class="results">
+                <div class="results-text">
+                    <h1>О РEЗУЛЬТАТАХ</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula sagittis libero quis
+                        sodales. Sed gravida augue eu odio ultrices, et cursus turpis maximus. Nam aliquam efficitur
+                        posuere. Nulla egestas, massa ac pretium luctus, mi lacus pulvinar turpis, at laoreet risus elit
+                        at sapien. Curabitur sagittis, neque id pulvinar pellentesque, magna libero consequat sapien,
+                        sed vehicula erat arcu vel velit. In cursus, dui ultricies tristique bibendum, nunc orci
+                        molestie lacus, a ultrices justo mauris eu
+                    </p>
+                </div>
+                <img class="results-img" src="{% static "main/img/results.svg" %}" alt="">
+            </div>
+            <div class="counter">
+                {% for count in counter %}
+                    <div class="cc">
+                        <div class="counter-img">
+                            <img class="count-img" src="{{ count.img.url }}" alt="">
+                        </div>
+                        <div class="counter-number">
+                            <p>
+                                <span data-purecounter-start="0"
+                                data-purecounter-end="{{ count.quantity }}"
+                                class="purecounter">0
+                                </span></p>
+                        </div>
+                        <div class="counter-txt">
+                            <p style="width: 10rem; text-align: center"> {{ count }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static "purecounter/purecounter_vanilla.js" %}"></script>
+    <script>
+        new PureCounter();
+    </script>
+{% endblock %}
