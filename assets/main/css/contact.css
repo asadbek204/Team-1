@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto&display=swap');
+root {
+
+}
+
 
 * {
     margin: 0;
@@ -53,16 +55,23 @@
 
 .next_body {
     display: flex;
-    background-color: #F5C24D
+    justify-content: space-between;
+    background-color: #F5C24D;
+    padding: 50px;
+}
+
+.c_map {
+    width: 80%;
+    height: 661px;
 }
 
 .map_part {
     padding-top: 40px;
     width: 50%;
+
     display: flex;
     justify-content: center;
 }
-
 
 
 .registration {
@@ -70,6 +79,11 @@
     justify-content: end;
     padding-top: 40px;
 
+}
+
+.contact_a {
+    text-decoration: none;
+    color: black;
 }
 
 .text-h3 {
@@ -86,7 +100,7 @@
 
 .phone-email {
     width: 350px;
-    height: 130px;
+    margin-bottom: 38px;
     /*margin-bottom: px;*/
 }
 
@@ -95,21 +109,44 @@
     display: flex;
 }
 
+.c_input {
+    margin-bottom: 38px;
+}
+
 .name {
-    width: 430px;
+    width: 95%;
     height: 50px;
+    padding: 1px 10px;
+    margin-bottom: 38px;
+    border: none;
 }
 
 .email {
-    width: 430px;
+    width: 95%;
     height: 50px;
+    padding: 1px 10px;
+    margin-bottom: 38px;
+    border: none;
 }
 
 .message {
-    width: 430px;
-    height: 150px;
+    text-align: start;
+    width: 95%;
+    padding: 30px 10px 190px 10px;
+    margin-bottom: 70px;
+    border: none;
 }
 
 .btn {
-    align-items: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 240px;
+    border-radius: 10px;
+    border: none;
+    width: 196px;
+    height: 55px;
+    color: white;
+    background-color: #2DF57D;;
+
 }

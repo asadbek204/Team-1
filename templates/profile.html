@@ -1,0 +1,66 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'main/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section>
+
+        <div class="container">
+            <div class="p_img">
+                <img class="" src="{% static 'main/imgs/profile_img.png' %}" alt="">
+            </div>
+
+            <div class="profile">
+                <div class="p_form ">
+                    <form action="" class="">
+                        <label for="login" class="profile_label"><p> Логин (E-mail)</p></label>
+                        <input class="profile_input"
+                               type="text" placeholder="" id="login">
+
+                        <br>
+                        <label for="password"><p>Пароль</p></label>
+                        <input class="profile_input"
+                               type="password" placeholder="" id="password">
+                        <br>
+
+
+                        <div class="profile_input_check">
+                            <div class="">
+                                <label for="chekbox"> Запомнить</label>
+                                <input type="checkbox" id="chekbox" class="profile_checkbox" style=" background: rgba(242, 209, 70, 1);
+">
+                            </div>
+
+                            <a href="#"> забыли пароль</a>
+                        </div>
+                        <br>
+                        <button type="submit" class="profile_btn">
+                            ВОЙТИ
+                        </button>
+                    </form>
+                </div>
+
+
+                <div class="center">
+                    <a href="#"> войдите через аккаунт социальной сети</a>
+                    <hr class="white_hr">
+
+                    <a href=""> <img src="{% static 'main/imgs/g+.svg' %}" alt=""></a>
+                    <a href=""> <img src="{% static 'main/imgs/f.svg' %}" alt=""></a>
+                    <a href=""> <img src="{% static 'main/imgs/intsa.svg' %}" alt=""></a>
+                    <a href=""> <img src="{% static 'main/imgs/tg.svg' %}" alt=""> </a>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+{% endblock %}
