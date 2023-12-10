@@ -3,13 +3,12 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'main/css/contact.css' %}">
-
 {% endblock %}
 
 {% block content %}
 
     <div class="container">
-        <div class="d-flex">
+        <div class="contact_img">
             <div class="w-70">
                 <h1 class="text_h1">КОНТАКТЫ</h1>
                 <img class="c_img" src="{% static 'main/imgs/contact.svg' %}" alt="">
@@ -20,50 +19,51 @@
             </div>
         </div>
 
-        <div class="next_body">
-            <div class="map_part">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.0086092028223!2d69.20107107493487!3d41.35216659818081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8d4a0dce8309%3A0x43e0a115d4b09d1a!2sBobir%20Akilkhanov%20Tech%20Academy!5e0!3m2!1sru!2s!4v1702057912208!5m2!1sru!2s"
-                        class="c_map"
+        <div class="contact_body">
+            <div class="contact_map w-50">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23999.652509001105!2d69.29346651918218!3d41.24450406435105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5e54c10d6699%3A0x59a43fd70a0634ae!2zUW_Ku3lsaXE!5e0!3m2!1sru!2s!4v1702197655304!5m2!1sru!2s"
+                        class="contact_map_ifr"
                         allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
             </div>
 
-            <div class="registration">
+            <div class="contact_start_form w-50">
                 <h3 class="text-h3">КОНТАКТЫ</h3>
 
-                <div class="phone-email">
-                    <p>
-                        <a href="https://www.google.com/maps?ll=41.352553,69.202337&z=15&t=m&hl=ru&gl=US&mapclient=embed&cid=4891086310459088154"
-                           class="contact_a">
-                            Toshkent shaxri, Yunusobod tumani, O’zbekiston ko’chasi</a></p>
+
+                <p>
+                    <a href="https://www.google.com/maps?ll=41.352553,69.202337&z=15&t=m&hl=ru&gl=US&mapclient=embed&cid=4891086310459088154"
+                       class="contact_a">
+                        Toshkent shaxri, Yunusobod tumani, O’zbekiston ko’chasi</a></p>
+                <br>
+                <p><a href="tel:+99897123-45-67" class="contact_a">+99897 123-45-67</a></p>
+                <br>
+                <p><a href="tel:99897123-45-67" class="contact_a">99897 123-45-67</a></p>
+                <br>
+                <p><a href="http://www.google.com" class="contact_a">email@befirst.com</a></p>
+
+                <form action="">
+                    <input type="text" class="contact_input" placeholder="имя">
                     <br>
-                    <p><a href="tel:+99897123-45-67" class="contact_a">+99897 123-45-67</a></p>
+                    <input type="email" class="contact_input" placeholder="почта">
                     <br>
-                    <p><a href="tel:99897123-45-67" class="contact_a">99897 123-45-67</a></p>
+                    <input type="text" class="contact_input_text-area" placeholder="сообщения">
                     <br>
-                    <p><a href="http://www.google.com" class="contact_a">email@befirst.com</a></p>
-                </div>
-
-
-                <div class="forms">
-                    <form action="" method="">
-                        <input class="name" type="text" placeholder="имя">
-                        <input class="email" type="email" placeholder="почта">
-                        <input class="message" type="text" placeholder="сообщения">
-
-
-                        <button class="btn" type="submit">
+                    <div class="contact_block_btn">
+                        <button type="submit" class="contact_btn">
                             ОТПРАВИТ
                         </button>
+                    </div>
 
-                    </form>
 
-                </div>
+                </form>
 
 
             </div>
+
         </div>
+
+
     </div>
+
 {% endblock %}

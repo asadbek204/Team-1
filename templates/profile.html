@@ -9,7 +9,15 @@
 
         <div class="container">
             <div class="p_img">
-                <img class="" src="{% static 'main/imgs/profile_img.png' %}" alt="">
+                <style>
+                    .p_img {
+                        background-image: url("{% static 'main/imgs/profile_img.png' %}");
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                    }
+                </style>
+                <h1 class="p_h_text"> ЛИЧНЫЙ КАБИНЕТ</h1>
             </div>
 
             <div class="profile">
@@ -29,8 +37,9 @@
                         <div class="profile_input_check">
                             <div class="">
                                 <label for="chekbox"> Запомнить</label>
-                                <input type="checkbox" id="chekbox" class="profile_checkbox" style=" background: rgba(242, 209, 70, 1);
-">
+                                <input type="checkbox" id="chekbox" class="profile_checkbox" style=background: rgba(242,
+                                       209, 70, 1);
+                                ">
                             </div>
 
                             <a href="#"> забыли пароль</a>
@@ -47,10 +56,10 @@
                     <a href="#"> войдите через аккаунт социальной сети</a>
                     <hr class="white_hr">
 
-                    <a href=""> <img src="{% static 'main/imgs/g+.svg' %}" alt=""></a>
-                    <a href=""> <img src="{% static 'main/imgs/f.svg' %}" alt=""></a>
-                    <a href=""> <img src="{% static 'main/imgs/intsa.svg' %}" alt=""></a>
-                    <a href=""> <img src="{% static 'main/imgs/tg.svg' %}" alt=""> </a>
+                    <a href="" class="p_icons"> <img src="{% static 'main/imgs/g+.svg' %}" alt=""></a>
+                    <a href="" class="p_icons"> <img src="{% static 'main/imgs/f.svg' %}" alt=""></a>
+                    <a href="" class="p_icons"> <img src="{% static 'main/imgs/intsa.svg' %}" alt=""></a>
+                    <a href="" > <img src="{% static 'main/imgs/tg.svg' %}" alt=""> </a>
 
 
                 </div>
