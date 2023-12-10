@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Acme&family=Alegreya+Sans:wght@700&family=Baloo+2:wght@400;700;800&family=Exo+2&family=Exo:wght@500&family=Inter:wght@400;700&family=Lato&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/
+        css2?family=Abel&family=Acme&family=Alegreya+Sans:wght@700&
+        family=Baloo+2:wght@400;700;800&family=Exo+2&family=Exo:wght@500&family=Inter:wght@400;
+        700&family=Lato&display=swap"
+        rel="stylesheet"
+    >
 
     {#-----------------STYLESHEETS----------------#}
     <link href="{% static "base/css/base.css" %}" rel="stylesheet">
 
     {#-----------------FONT AWESOME----------------#}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="{% static 'base/js/base.js' %}" defer></script>
     {% block extra_head %}
-
+    <title>Title</title>
     {% endblock %}
 </head>
 <body>
     <header>
         {% include 'layouts/navbar.html' %}
-        {% block header %}
+        <div class="header-content">
+            {% block header %}
 
-        {% endblock %}
+            {% endblock %}
+        </div>
     </header>
     {% block content %}
 
