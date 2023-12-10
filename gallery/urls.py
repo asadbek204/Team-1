@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import gallery
+from .views import GalleryListView
 
 urlpatterns = [
-    path('', gallery, name='gallery')
+    path('', GalleryListView.as_view(), name='gallery')
 ]
