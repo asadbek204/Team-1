@@ -7,3 +7,7 @@ def contact_view(request):
 
 def profile_view(request):
     return render(request, 'profile.html')
+
+
+def password_reset_view(request):
+    return render(request, template_name='forgot password.html')

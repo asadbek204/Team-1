@@ -1,3 +1,8 @@
+root {
+
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +19,15 @@
 }
 
 .text_h1 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 50px;
   font-weight: 800;
   line-height: 112px;
   letter-spacing: 0em;
   text-align: left;
   margin-left: 100px;
+
+
 }
 
 .w-70 {
@@ -48,13 +55,17 @@
   width: 242px;
   height: 273px;
   align-items: center;
+
 }
 
+
 .contact_body {
-  background-color: rgb(245, 194, 77);
+  background-color: rgba(245, 194, 77, 1);
   display: flex;
   justify-content: space-around;
   padding: 50px 50px;
+
+
 }
 
 .text-h3 {
@@ -73,6 +84,7 @@
 .contact_map_ifr {
   width: 100%;
   height: 598px;
+
 }
 
 .contact_start_form {
@@ -101,73 +113,98 @@
 }
 
 .contact_btn {
-  background-color: rgb(45, 245, 125);
+  background-color: rgba(45, 245, 125, 1);
   padding: 20px 40px;
   border-radius: 13px;
   color: white;
   border: none;
+
 }
 
 @media (max-width: 1600px) {
   .contact_map {
     padding: 0px 40px;
   }
+
   .contact_start_form {
     padding: 0px 40px;
   }
 }
+
 @media (max-width: 1439px) {
   .contact_map_ifr {
     width: 100%;
     height: 615px;
+
   }
+
 }
+
 @media (max-width: 1250px) {
   .c_img {
     width: 400px;
     height: 250px;
     top: 341px;
   }
+
+
   .c_img_logo {
     width: 200px;
     height: 273px;
     align-items: center;
+
   }
+
+
 }
+
 @media (max-width: 1200px) {
   .contact_body {
-    background-color: rgb(245, 194, 77);
+    background-color: rgba(245, 194, 77, 1);
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 50px 50px;
+
+    .w-50 {
+      width: 100%
+    }
+
+    .contact_map_ifr {
+      width: 100%;
+      height: 300px;
+
+    }
+
   }
-  .contact_body .w-50 {
-    width: 100%;
-  }
-  .contact_body .contact_map_ifr {
-    width: 100%;
-    height: 300px;
-  }
+
 }
+
+
 @media (max-width: 961px) {
   .container {
     width: 100%;
-  }
-  .container .contact_body {
-    background-color: rgb(245, 194, 77);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 50px;
-  }
-  .container .contact_body .w-50 {
-    width: 100%;
-  }
-  .container .contact_body .contact_map_ifr {
-    width: 300px;
-    height: 300px;
-  }
-}
 
-/*# sourceMappingURL=contact.css.map */
+    .contact_body {
+      background-color: rgba(245, 194, 77, 1);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 50px 50px;
+
+      .w-50 {
+        width: 100%
+      }
+
+      .contact_map_ifr {
+        width: 300px;
+        height: 300px;
+
+      }
+
+    }
+
+  }
+
+
+}
