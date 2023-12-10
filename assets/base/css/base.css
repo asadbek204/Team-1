@@ -31,7 +31,6 @@
 
 header {
   width: 100%;
-  height: 100vh;
 }
 header .nav-block {
   width: 100%;
@@ -47,7 +46,7 @@ header .nav-block .mini-control-bar {
 }
 header .nav-block .mini-control-bar .control-block {
   height: 100%;
-  width: 80%;
+  width: 80.5%;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -90,7 +89,7 @@ header .nav-block .site-navigation .site-icon {
   width: 11vw;
   display: flex;
   align-items: center;
-  gap: 2vw;
+  gap: 1.5vw;
 }
 header .nav-block .site-navigation .site-icon .site-logo {
   height: 100%;
