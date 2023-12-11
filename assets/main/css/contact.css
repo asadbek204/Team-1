@@ -3,9 +3,10 @@
   padding: 0;
 }
 
-.container {
+.block {
   width: 70%;
   margin: 0 auto;
+  padding: 100px 0;
 }
 
 .contact_img {
