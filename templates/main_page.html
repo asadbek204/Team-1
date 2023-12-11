@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="back" style=" background-image: url({% static 'base/img/bg_body.png' %});
+            background-repeat: no-repeat;
+            background-size: cover">
+        <div class="container">
+            <div class="main_page">
+                <div class="main_part">
+                    <h1 class="text_h1">МЕРОПРИЯТИЯ ОБРАЗОВАТЕЛЬНОГО ПОРТАЛА</h1>
+
+                    <img class="logo_ph" src="{% static 'base/img/logo.svg' %}" alt="">
+                </div>
+
+                <div class="children">
+                    <div class="rasm-block">
+                        <img class="rasm" src="{% static 'base/img/children.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
