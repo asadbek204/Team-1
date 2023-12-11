@@ -199,30 +199,32 @@ section {
     width: 80%;
     margin: 0 auto;
 }
-.cover {
+
+.swiper .cover {
     position: relative;
     margin-top: 10px;
 }
 
-.left {
+.swiper .left {
     position: absolute;
     transform: translateY(-50%);
     left: 35%;
 }
 
-.dots {
+.swiper .dots {
     position: absolute;
     transform: translateY(-50%);
     text-align: center;
     left: 45%
 }
-.right {
+
+.swiper .right {
     position: absolute;
     right: 30%;
     transform: translateY(-50%);
 }
 
-.scroll-images {
+.swiper .scroll-images {
     position: relative;
     width: 100%;
     padding: 40px 0px;
@@ -232,7 +234,6 @@ section {
     overflow-x: hidden;
     overflow-y: hidden;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
 }
 
 .swiper .child {
@@ -243,12 +244,13 @@ section {
     height: 22vh;
     padding: 0px 15px;
     margin: 1px 20px;
-    /*border: 1px solid #f1f1f1;*/
+    border: 1px;
     overflow: hidden;
-    -webkit-box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 10%);;
     box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 10%);;
 }
-.child > img {
+
+.swiper .child img {
+    width: 120%;
     height: 100%;
 }
 
@@ -258,11 +260,11 @@ section {
     background-color: #aaa;
 }
 
-.scroll-images::-webkit-scrollbar-thumb {
+.swiper .scroll-images::-webkit-scrollbar-thumb {
     background-color: var(--color-primary);
 }
 
-button {
+.swiper button {
     background-color: transparent;
     border: none;
     outline: none;
@@ -323,14 +325,6 @@ button {
     margin: 0 auto;
 }
 
-/*.advantages-main {*/
-/*    margin-right: 25px;*/
-/*}*/
-
-/*.advantages-main:nth-child(3n) {*/
-/*    margin-right: 0;*/
-/*}*/
-
 .advantages .advantages-card .advantages-main h6 {
     font-family: var(--txt);
     font-size: 18px;
@@ -365,9 +359,6 @@ button {
         margin-bottom: 3rem;
     }
 
-    /*.advantages-main {*/
-    /*    margin-right: 15px;*/
-    /*}*/
     .advantages .advantages-card .advantages-main h6 {
         font-size: 14px;
         line-height: 16px;
@@ -430,57 +421,99 @@ button {
     margin-top: 20px;
 }
 
-.experts-dots {
+.experts .dots {
+    position: relative;
+    left: 41%;
+    color: var(--color-primary);
+}
+
+.experts .cover {
+    position: relative;
+    padding: 0 30px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.experts .left {
     position: absolute;
+    left: 0;
+    top: 50%;
     transform: translateY(-50%);
-    text-align: center;
-    margin-left: 43%;
+}
+
+.experts .right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .experts .scroll-images {
-    display: flex;
-    justify-content: center;
-}
-
-.experts .child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 20%;
-    height: 25vh;
-    /*padding: 0px 15px;*/
-    margin: 1px 20px;
-    border: 1px solid #f1f1f1;
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    height: auto;
     overflow: hidden;
-    -webkit-box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 10%);;
-    box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 10%);;
 }
 
-.experts .child > img {
-   width: 100%;
+.experts button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
 }
+
 .hide {
+    width: 960px;
     display: none;
 }
 
+.hr-hide {
+    background: var(--color-primary);
+    width: 100%;
+    height: 20px;
+    border: none;
+}
+
+.e-img img {
+    margin: 20px 30px 10px 0;
+}
+
+.e-img button {
+    background: var(--color-primary);
+    padding: 5px;
+    font-family: var(--main-txt);
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 30%;
+}
+
+.e-par {
+    font-family: var(--main-txt);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0;
+    text-align: justify;
+    padding: 2%;
+}
+
 .hah {
-    cursor: pointer;
-}
-
-.hah:hover {
-    opacity: 1;
-    /*display: block;*/
 
 }
 
-.hide {
-  display: none;
+.hah:hover + .hide {
+    display: block;
 }
 
-.myDIV:hover + .hide {
-  display: block;
-  color: red;
-}
 /*----------END OF EXPERTS----------*/
 
 /*!*------------END OF ABOUT US SECTION--------------*!*/

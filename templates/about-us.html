@@ -78,14 +78,15 @@
                     <div class="swiper-row">
                         <button class="left" onclick="leftScroll()">
                             <i class="fa-solid fa-caret-left"></i>
-                            <button class="dots">
-                                <i class="fa-solid fa-circle me-5" style="font-size: 15px"></i>
-                                <i class="fa-solid fa-circle me-5" style="font-size: 15px"></i>
-                                <i class="fa-solid fa-circle" style="font-size: 15px"></i>
-                            </button>
-                            <button class="right" onclick="rightScroll()">
-                                <i class="fa-solid fa-caret-right"></i>
-                            </button>
+                        </button>
+                        <button class="dots">
+                            <i class="fa-solid fa-circle me-5" style="font-size: 15px"></i>
+                            <i class="fa-solid fa-circle me-5" style="font-size: 15px"></i>
+                            <i class="fa-solid fa-circle" style="font-size: 15px"></i>
+                        </button>
+                        <button class="right" onclick="rightScroll()">
+                            <i class="fa-solid fa-caret-right"></i>
+                        </button>
                     </div>
                 </div>
                 <hr class="hr-grey">
@@ -122,60 +123,40 @@
                     <h4>ЭКСПЕРТЫ</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodore et dolore magna
                         aliqua.</p>
-                </div>
-                <div class="cover mb-5">
-                    <button class="experts-dots mb-5">
-                        <i class="fa-solid fa-circle me-5" style="font-size: 15px"></i>
-                        <i class="fa-solid fa-circle me-5" style="font-size: 15px"></i>
-                        <i class="fa-solid fa-circle" style="font-size: 15px"></i>
+                    <button class="dots">
+                        <i class="fa-solid fa-circle me-5" style="font-size: 50%"></i>
+                        <i class="fa-solid fa-circle me-5" style="font-size: 50%"></i>
+                        <i class="fa-solid fa-circle" style="font-size: 50%"></i>
                     </button>
-                    <div class="scroll-images">
-                        {% for expert in experts %}
-                            <div class="child">
-                                <img src="{{ expert.image.url }}" alt="" class="hah">
-                            </div>
-                        {% endfor %}
-{#                        <div class="child">#}
-{#                            <img src="{{ experts.image.url }}" alt="" class="hah">#}
-{#                        </div>#}
-{#                        <div class="child">#}
-{#                            <img src="{% static "main/img/swiper/swiper2.png" %}" alt="">#}
-{#                        </div>#}
-{#                        <div class="child">#}
-{#                            <img src="{% static "main/img/swiper/swiper3.png" %}" alt="">#}
-{#                        </div>#}
-{#                        <div class="child">#}
-{#                            <img src="{% static "main/img/swiper/swiper4.png" %}" alt="">#}
-{#                        </div>#}
-{#                        <div class="child">#}
-{#                            <img src="{% static "main/img/swiper/swiper5.png" %}" alt="">#}
-{#                        </div>#}
-{#                        <div class="child">#}
-{#                            <img src="{% static "main/img/swiper/swiper6.png" %}" alt="">#}
-{#                        </div>#}
-                    </div>
                 </div>
-                <div class="hide">
-                    <hr class="hr-grey">
-                    <div class="experts-card d-flex">
-                        <div class="e-img">
-                            <img src="" alt="">
-                            <h4></h4>
+                <div class="cover">
+                    {% for expert in experts %}
+                        <div class="scroll-images">
+                            <div class="hah me-3">
+                                <img src="{{ expert.image.url }}" alt="" style="width: 14rem">
+                            </div>
+                            <div class="hide">
+                                <hr class="hr-hide">
+                                <div class="experts-card d-flex">
+                                    <div class="e-img">
+                                        <img src="{{ expert.image.url }}" alt="" style="width: 10rem">
+                                        <button>{{ expert }}</button>
+                                    </div>
+                                    <div class="e-par">
+                                        <p>{{ expert.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="e-par">
-                            <p></p>
-                        </div>
-                    </div>
+                    {% endfor %}
+                    {#                    <button class="right" onclick="rightScroll()">#}
+                    {#                        <i class="fas fa-angle-double-right"></i>#}
+                    {#                    </button>#}
                 </div>
             </div>
         </div>
+        </div>
     </section>
-
-    <div class="myDIV">Hover over me.</div>
-    <div class="hide">I am shown when someone hovers over the div above.</div>
-    <br>
-    <br>
-    <br>
 
 {% endblock %}
 
@@ -186,15 +167,18 @@
             crossorigin="anonymous"></script>
     {#-----------SWIPER------------#}
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+    <script>function leftScroll() {
+
+    }
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
     </script>
 
 {% endblock %}
