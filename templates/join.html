@@ -28,12 +28,45 @@
             </div>
         </div>
         <div class="inputs">
-            <div class="questionnaire">
-                <h2>АНКЕТА</h2>
-                <p>пожалуйста, заполните эту форму, чтобы создать учетную запись</p>
-            </div>
-            <div class="input">
-
+            <div class="input-content">
+                <div class="questionnaire">
+                    <h2>АНКЕТА</h2>
+                    <p>пожалуйста, заполните эту форму, чтобы создать учетную запись</p>
+                    <hr style="width: 450px">
+                </div>
+                <div class="form">
+                    <div class="input">
+                        <form action="">
+                            <div class="flex">
+                                <div class="input">
+                                    <input type="text" placeholder="Имя:">
+                                </div>
+                                <div class="input">
+                                    <input type="text" placeholder="Фамилия:">
+                                </div>
+                            </div>
+                            <div class="selectors">
+                                <div class="phone">
+                                    <input type="text" placeholder="Телефон:">
+                                </div>
+                                <div class="flexs">
+                                    <label for="checkbox"><img src="{% static 'img/women.png' %}" alt=""></label>
+                                    <input type="checkbox" id="checkbox">
+                                    <label for="checkbox"><img src="{% static 'img/male.png' %}" alt=""></label>
+                                    <input type="checkbox" id="checkbox">
+                                </div>
+                                <div class="textarea">
+                                    <textarea name="" id="" cols="30" rows="10" placeholder="Ваш коммент..."></textarea>
+                                </div>
+                                <input type="checkbox" id="checkbox">
+                                <label for="checkbox" class="remember">Запомнить</label>
+                                <div class="button">
+                                    <button type="submit" class="ok">OK</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
