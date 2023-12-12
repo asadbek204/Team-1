@@ -15,33 +15,15 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-<<<<<<< HEAD
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-20ryherm3_i!k*2o$p1xvf*^=jjqx9g_u$kkq$6q=kjp881h3n'
-=======
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 
 SECRET_KEY = 'django-insecure-20ryherm3_i!k*2o$p1xvf*^=jjqx9g_u$kkq$6q=kjp881h3n'
 
-SECRET_KEY = 'django-insecure-)fbfoiiwj3uk!hn5&)hj!goi(v7^&^f@j=e8yj+c)tg)pt3%vd'
-
->>>>>>> d755ed1 (created bug)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-<<<<<<< HEAD
-=======
-
-
-# Application definition
->>>>>>> d755ed1 (created bug)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -67,14 +49,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
         'DIRS': [BASE_DIR / 'templates'],
-=======
-
-        'DIRS': [
-            BASE_DIR / 'templates'
-        ],
->>>>>>> d755ed1 (created bug)
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -89,11 +64,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> d755ed1 (created bug)
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -104,10 +76,6 @@ DATABASES = {
     }
 }
 
-<<<<<<< HEAD
-=======
-# Password validation
->>>>>>> d755ed1 (created bug)
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -141,10 +109,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d755ed1 (created bug)
 STATIC_ROOT = BASE_DIR / "static"
 
 MEDIA_URL = "media/"
@@ -154,11 +118,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 STATICFILES_DIRS = BASE_DIR / "assets",
 
 
-<<<<<<< HEAD
-=======
-MEDIA_URl = 'media/'
-
->>>>>>> d755ed1 (created bug)
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
