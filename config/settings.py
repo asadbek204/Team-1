@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'account',
     'home',
     'administration'
+    'regions',
 ]
 
 MIDDLEWARE = [
