@@ -42,23 +42,20 @@ section {
     position: relative;
 }
 
-
 /*!*------------ABOUT US SECTION--------------*!*/
 .start {
     width: 80%;
     height: 60vh;
-    margin: 5rem auto;
+    margin: 0.5rem auto;
     background-image: url("../img/about-us/cartoon.png");
-    /*box-shadow: 40px 10px 20px 20px rgba(3, 117, 255, 0.15);*/
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    padding: 4rem 0;
 }
 
 .start .start-txt {
     width: 80%;
-    margin: 1rem 0 1rem 6rem;
+    margin: 0.2rem 0 1rem 6rem;
 }
 
 .start-txt h6 {
@@ -227,7 +224,7 @@ section {
 .swiper .scroll-images {
     position: relative;
     width: 100%;
-    padding: 40px 0px;
+    padding: 40px 0;
     height: auto;
     display: flex;
     flex-wrap: nowrap;
@@ -427,40 +424,6 @@ section {
     color: var(--color-primary);
 }
 
-.experts .cover {
-    position: relative;
-    padding: 0 30px;
-    margin: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-}
-
-.experts .left {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.experts .right {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.experts .scroll-images {
-    display: block;
-    position: relative;
-    width: 100%;
-    padding: 20px 0;
-    height: auto;
-    overflow: hidden;
-}
-
 .experts button {
     background-color: transparent;
     border: none;
@@ -469,8 +432,31 @@ section {
     font-size: 25px;
 }
 
+/*.experts .left {*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*}*/
+
+/*.experts .right {*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*}*/
+
+.experts .scroll-images {
+    position: relative;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    width: 100%;
+    padding: 20px 0;
+    height: auto;
+    overflow: hidden;
+}
+
 .hide {
-    width: 960px;
     display: none;
 }
 
@@ -481,19 +467,19 @@ section {
     border: none;
 }
 
-.e-img img {
-    margin: 20px 30px 10px 0;
+.e-img:last-child {
+    margin:  0;
 }
 
 .e-img button {
     background: var(--color-primary);
-    padding: 5px;
+    padding: 8px;
     font-family: var(--main-txt);
     font-size: 10px;
     font-weight: 400;
     text-transform: uppercase;
-    text-align: left;
-    margin-left: 30%;
+    text-align: right;
+    /*margin: 10% 0 0 30%;*/
 }
 
 .e-par {
@@ -506,13 +492,29 @@ section {
     padding: 2%;
 }
 
-.hah {
-
-}
-
-.hah:hover + .hide {
+.hide.visible {
     display: block;
+    width: 80%;
+    margin-left: 10%;
+    height: 40vh;
 }
+
+.close-btn {
+    float: right;
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+    background-color: var(--color-primary);
+}
+
+.close-btn i {
+    position: absolute;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: var(--color-primary);
+    color: var(--color-wide)
+}
+
 
 /*----------END OF EXPERTS----------*/
 

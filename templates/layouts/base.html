@@ -16,6 +16,7 @@
           rel="stylesheet">
 
     {#-----------------STYLESHEETS----------------#}
+    <link href="{% static "base/css/base.css" %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static "main/css/main.css" %}">
 
     {#-----------------FONT AWESOME----------------#}
@@ -26,15 +27,21 @@
     {% endblock %}
 </head>
 <body>
-{#    {% include "layouts/navbar.html" %}#}
+      <header>
+        {% include 'layouts/navbar.html' %}
+        {% block header %}
 
-{% block content %}
+        {% endblock %}
+      </header>
 
-{% endblock %}
+    {% block content %}
 
-{#    {% include "layouts/footer.html" %}#}
+    {% endblock %}
 
-<script src="{% static "main/js/main.js" %}"></script>
+    {% include "layouts/footer.html" %}
+
+    <script src="{% static "main/js/main.js" %}"></script>
+    <script src="{% static 'base/js/base.js' %}" defer></script>
 {% block extra_js %}
 
 {% endblock %}

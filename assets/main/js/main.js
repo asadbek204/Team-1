@@ -41,3 +41,5 @@ document.addEventListener("DOMContentLoaded", function () {
   leftButton.addEventListener("click", leftScroll);
   rightButton.addEventListener("click", rightScroll);
 });
+
+
