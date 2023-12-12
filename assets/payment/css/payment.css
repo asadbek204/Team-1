@@ -1,3 +1,208 @@
+:root {
+  /* Fonts */
+  --title: Baloo2;
+  --main-txt: Abel;
+  --bold-txt: Alegreya Sans;
+  --numbers: Acme;
+  --cp: Lato;
+  --footer1: Exo;
+  --footer2: Exo2;
+  /* Colors */
+  --text-color: #241F1F;
+  --text-color-ligth: #60606E;
+  --color-primary: #F5C24D;
+  --color-icon: #2A819E;
+  --color-wide: #F2F2F2;
+  --gray: #808080;
+  --color-hover: #EFEBE2;
+  --color-button: #92F246;
+  --mini-bg: #F2D146;
+  --main-dark: #263236;
+  --nums: #ED6059;
+  --input-text: #737171;
+}
 
+.display-none {
+  display: none;
+}
+
+.profile-main {
+  width: 100%;
+  height: 160vh;
+  background-color: white;
+  background-image: url("../../base/img/bg.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 2vh 20vw 7vh 20vw;
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+}
+.profile-main .top-banner {
+  width: 100%;
+  height: 70vh;
+  padding: 6vh;
+  background-image: url("../img/profile-2-ideas.svg");
+}
+.profile-main .top-banner .profile-2-h1 {
+  color: black;
+  font-size: 70px;
+  font-weight: bolder;
+  font-family: var(--title);
+}
+.profile-main .profile-2-body {
+  width: 100%;
+  height: 100%;
+  padding: 6vh;
+  padding-bottom: 0;
+  background-color: var(--color-primary);
+}
+.profile-main .profile-2-body .form-h3 {
+  font-size: 40px;
+  font-weight: 500;
+}
+.profile-main .profile-2-body form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 2vh;
+  flex-direction: column;
+  padding-top: 7vh;
+}
+.profile-main .profile-2-body form .form-top-block {
+  width: 100%;
+  display: flex;
+  gap: 5vw;
+}
+.profile-main .profile-2-body form .form-top-block .image-block {
+  width: 12vw;
+  height: 42vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+.profile-main .profile-2-body form .form-top-block .image-block .image-input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.profile-main .profile-2-body form .form-top-block .image-block .image-input-block .img-selector {
+  width: 12vw;
+  height: 26vh;
+  background-color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.profile-main .profile-2-body form .form-top-block .image-block .image-input-block .img-selector .default-img-text {
+  color: #D4D4D4;
+  text-align: center;
+}
+.profile-main .profile-2-body form .form-top-block .image-block .image-input-block .download-photo-text {
+  font-size: 18px;
+  color: white;
+}
+.profile-main .profile-2-body form .form-top-block .image-block .gender-selection {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+.profile-main .profile-2-body form .form-top-block .image-block .gender-selection .gender-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+.profile-main .profile-2-body form .form-top-block .image-block .gender-selection .gender-block .gender-icon {
+  width: 5vh;
+  height: 5vh;
+}
+.profile-main .profile-2-body form .form-top-block .form-block {
+  height: 42vh;
+  width: 64.4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1vh;
+}
+.profile-main .profile-2-body form .form-bottom-block {
+  width: 96.4%;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+.profile-main .profile-2-body form .form-bottom-block .bottom-inputs-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4vw;
+}
+.profile-main .profile-2-body form .form-confirm {
+  width: 96.4%;
+  height: 10vh;
+  display: flex;
+}
+.profile-main .profile-2-body form .form-confirm .connect-email-block {
+  width: 115%;
+  height: 5vh;
+}
+.profile-main .profile-2-body form .form-confirm .connect-email-block .v-line {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 2vh;
+}
+.profile-main .profile-2-body form .form-confirm .connect-email-block .email-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+.profile-main .profile-2-body form .form-confirm .connect-email-block .email-checkbox label {
+  width: 22vw;
+  height: 5vh;
+  color: white;
+  font-size: 25px;
+}
+.profile-main .profile-2-body form .form-confirm .connect-email-block .email-checkbox .email-checkbox-input {
+  width: 40px;
+  height: 40px;
+  background-color: #FEF5D0;
+  box-shadow: inset 0 3px 2px rgba(134, 120, 120, 0.53);
+}
+.profile-main .profile-2-body form .form-confirm .submit-button-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.profile-main .profile-2-body form .form-confirm .submit-button-box button {
+  width: 65%;
+  height: 70%;
+  background-color: #2DF57D;
+  font-size: 35px;
+}
+.profile-main .profile-2-body form .input-block {
+  width: 100%;
+  height: 7vh;
+  position: relative;
+}
+.profile-main .profile-2-body form .input-block input {
+  width: 100%;
+  height: 100%;
+}
+.profile-main .profile-2-body form .input-block label {
+  position: absolute;
+  top: 50%;
+  left: 1.5vw;
+  transform: translate(0, -50%);
+  font-size: 25px;
+  color: var(--input-text);
+}
 
 /*# sourceMappingURL=payment.css.map */
