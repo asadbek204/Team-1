@@ -45,6 +45,7 @@
             </div>
         </div>
         <div class="gallery">
+<<<<<<< HEAD
             {% for objs in page_obj %}
                 <div class="card">
                     <img src="{{ objs.img.url }}" alt="Card Image">
@@ -65,6 +66,55 @@
                 {% if page_obj.has_next %}
                     <a href="?page={{ page_obj.next_page_number }}">&raquo;</a>
                 {% endif %}
+=======
+            <div class="card">
+                <img src="{% static 'img/test/Layer 6 Image.png' %}" alt="Card Image">
+                <div class="overlay">
+                    <p>Hover Text</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/test/Layer 13 Image.png' %}" alt="Card Image">
+                <div class="overlay">
+                    <p>Hover Text</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/test/Layer 6 Image.png' %}" alt="Card Image">
+                <div class="overlay">
+                    <p>Hover Text</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/test/Layer 13 Image.png' %}" alt="Card Image">
+                <div class="overlay">
+                    <p>Hover Text</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/test/Layer 6 Image.png' %}" alt="Card Image">
+                <div class="overlay">
+                    <p>Hover Text</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/test/Layer 6 Image.png' %}" alt="Card Image">
+                <div class="overlay">
+                    <p>Hover Text</p>
+                </div>
+            </div>
+        </div>
+        <div class="paginators">
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+>>>>>>> c9565aa (gallery almost done media left)
             </div>
         </div>
     </div>
