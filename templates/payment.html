@@ -2,90 +2,62 @@
 {% load static %}
 
 {% block extra_head %}
-    <link rel="stylesheet" href="{% static 'profile_2/css/profile_2.css' %}">
+    <link rel="stylesheet" href="{% static 'payment/css/payment.css' %}">
 	<title>Title</title>
 {% endblock %}
 
 {% block content %}
-<main class="profile-main">
+<main class="payment-main">
     <div class="top-banner">
-        <h1 class="profile-2-h1">ЛИЧНЫЙ КАБИНЕТ</h1>
+        <h1 class="payment-h1">ОПЛАТА</h1>
     </div>
-    <div class="profile-2-body">
-        <h3 class="form-h3">Личные данные</h3>
+    <div class="payment-body">
+        <h3 class="form-h3">Оформление оплаты</h3>
         <form action="">
-            <div class="form-top-block">
-                <div class="image-block">
-                    <div class="image-input-block">
-                        <div class="img-selector">
-                            <span class="default-img-text">ФОТО</span>
-                        </div>
-                        <span class="download-photo-text">Загрузить фото</span>
-                        <input class="display-none" type="file" accept="image/*" id="image-input">
-                    </div>
-                    <div class="gender-selection">
-                        <div class="gender-block">
-                            <img class="gender-icon" src="{% static 'profile_2/img/femail.png' %}" alt="">
-                            <label for="female-check">
-                                <img src="{% static 'profile_2/img/check-false.png' %}" alt="">
-                            </label>
-                            <input class="display-none" type="checkbox" id="female-check">
-                        </div>
-                        <div class="gender-block">
-                            <img class="gender-icon" src="{% static 'profile_2/img/male.png' %}" alt="">
-                            <label for="male-check">
-                                <img src="{% static 'profile_2/img/check-false.png' %}" alt="">
-                            </label>
-                            <input class="display-none" type="checkbox" id="male-check">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-block">
+            <div class="initial-block">
+                <div class="personal-initials">
                     <div class="input-block">
                         <label for="name-input">Ваше имя</label>
                         <input type="text" id="name-input">
                     </div>
                     <div class="input-block">
-                        <label for="surname-input">Ваше фамилия</label>
-                        <input type="text" id="surname-input">
-                    </div>
-                    <div class="input-block">
                         <label for="phone-input">Ваше номер телефона </label>
-                        <input type="tel" id="phone-input">
+                        <input type="text" id="phone-input">
+                    </div>
+                </div>
+                <div class="payment-initials">
+                    <div class="input-block">
+                        <label for="category-input">ОПЛАТА ПО КАТЕГОРИЯМИ</label>
+                        <input type="text" id="category-input">
                     </div>
                     <div class="input-block">
-                        <label for="email-input">Ваше Е-mail</label>
-                        <input type="email" id="email-input">
+                        <label for="card-number">НОМЕР КАРТЫ</label>
+                        <input type="text" id="card-number">
                     </div>
                 </div>
             </div>
-            <div class="form-bottom-block">
-                <div class="bottom-inputs-block">
-                    <div class="input-block">
-                        <label for="date-of-birth">Дата рождения</label>
-                        <input type="text" id="date-of-birth">
-                    </div>
-                    <div class="input-block">
-                        <label for="password">Ваше пароль</label>
-                        <input type="text" id="password">
-                    </div>
+            <div class="h-line m-top-bottom"></div>
+            <div class="payment">
+                <div class="pay-input-block">
+                    <label for="payment-amount">СУММА</label>
+                    <input type="text" name="" id="payment-amount">
                 </div>
-                <div class="input-block">
-                    <label for="address">Ваше адрес</label>
-                    <input type="text" id="address">
-                </div>
+                <button class="btn-pay" type="submit" id="btn-pay">ОПЛАТИТ</button>
             </div>
-            <div class="form-confirm">
-                <div class="connect-email-block">
-                    <div class="v-line"></div>
-                    <div class="email-checkbox">
-                        <div class="email-checkbox-input"></div>
-                        <label for="email-checkbox">Хочу получать письма с новостями на электронный адрес</label>
-                        <input class="display-none" type="checkbox" id="email-checkbox">
-                    </div>
+            <span class="quick-payment-text">быстрый способ оплаты</span>
+            <div class="h-line"></div>
+            <div class="payment-services">
+                <div class="pay-service">
+                    <a href="#"><img src="{% static 'payment/img/apelsin-pay-icon.svg' %}" alt=""></a>
                 </div>
-                <div class="submit-button-box">
-                    <button type="submit">САХРАНИТЬ</button>
+                <div class="pay-service">
+                    <a href="#"><img src="{% static 'payment/img/click-pay-icon.svg' %}" alt=""></a>
+                </div>
+                <div class="pay-service">
+                    <a href="#"><img src="{% static 'payment/img/payme-pay-icon.svg' %}" alt=""></a>
+                </div>
+                <div class="pay-service">
+                    <a href="#"><img src="{% static 'payment/img/anorbank-pay-icon.svg' %}" alt=""></a>
                 </div>
             </div>
         </form>

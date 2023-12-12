@@ -20,13 +20,14 @@
   --main-dark: #263236;
   --nums: #ED6059;
   --input-text: #737171;
+  --clr-green: #2dF57D;
 }
 
 .display-none {
   display: none;
 }
 
-.profile-main {
+.payment-main {
   width: 100%;
   height: 160vh;
   background-color: white;
@@ -39,170 +40,116 @@
   flex-direction: column;
   gap: 7vh;
 }
-.profile-main .top-banner {
+.payment-main .top-banner {
   width: 100%;
   height: 70vh;
   padding: 6vh;
   background-image: url("../img/profile-2-ideas.svg");
 }
-.profile-main .top-banner .profile-2-h1 {
+.payment-main .top-banner .payment-h1 {
   color: black;
   font-size: 70px;
   font-weight: bolder;
   font-family: var(--title);
 }
-.profile-main .profile-2-body {
+.payment-main .payment-body {
   width: 100%;
   height: 100%;
   padding: 6vh;
   padding-bottom: 0;
   background-color: var(--color-primary);
 }
-.profile-main .profile-2-body .form-h3 {
-  font-size: 40px;
+.payment-main .payment-body .form-h3 {
+  font-size: 2.2vw;
   font-weight: 500;
 }
-.profile-main .profile-2-body form {
+.payment-main .payment-body form {
   width: 100%;
   height: 100%;
   display: flex;
-  gap: 2vh;
   flex-direction: column;
+  align-items: center;
   padding-top: 7vh;
 }
-.profile-main .profile-2-body form .form-top-block {
+.payment-main .payment-body form .initial-block {
   width: 100%;
   display: flex;
-  gap: 5vw;
-}
-.profile-main .profile-2-body form .form-top-block .image-block {
-  width: 12vw;
-  height: 42vh;
-  display: flex;
   flex-direction: column;
-  gap: 4vh;
+  justify-content: start;
+  gap: 5vh;
 }
-.profile-main .profile-2-body form .form-top-block .image-block .image-input-block {
-  display: flex;
-  flex-direction: column;
-  gap: 1vh;
-}
-.profile-main .profile-2-body form .form-top-block .image-block .image-input-block .img-selector {
-  width: 12vw;
-  height: 26vh;
-  background-color: #FAFAFA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.profile-main .profile-2-body form .form-top-block .image-block .image-input-block .img-selector .default-img-text {
-  color: #D4D4D4;
-  text-align: center;
-}
-.profile-main .profile-2-body form .form-top-block .image-block .image-input-block .download-photo-text {
-  font-size: 18px;
-  color: white;
-}
-.profile-main .profile-2-body form .form-top-block .image-block .gender-selection {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  gap: 2vw;
-}
-.profile-main .profile-2-body form .form-top-block .image-block .gender-selection .gender-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1vh;
-}
-.profile-main .profile-2-body form .form-top-block .image-block .gender-selection .gender-block .gender-icon {
-  width: 5vh;
-  height: 5vh;
-}
-.profile-main .profile-2-body form .form-top-block .form-block {
-  height: 42vh;
-  width: 64.4%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 1vh;
-}
-.profile-main .profile-2-body form .form-bottom-block {
-  width: 96.4%;
-  display: flex;
-  flex-direction: column;
-  gap: 4vh;
-}
-.profile-main .profile-2-body form .form-bottom-block .bottom-inputs-block {
-  width: 100%;
+.payment-main .payment-body form .initial-block .personal-initials {
   display: flex;
   justify-content: space-between;
-  gap: 4vw;
+  gap: 8.5vw;
 }
-.profile-main .profile-2-body form .form-confirm {
-  width: 96.4%;
-  height: 10vh;
-  display: flex;
-}
-.profile-main .profile-2-body form .form-confirm .connect-email-block {
-  width: 115%;
-  height: 5vh;
-}
-.profile-main .profile-2-body form .form-confirm .connect-email-block .v-line {
-  height: 2px;
+.payment-main .payment-body form .initial-block .payment-initials {
   width: 100%;
-  background-color: white;
-  margin-bottom: 2vh;
-}
-.profile-main .profile-2-body form .form-confirm .connect-email-block .email-checkbox {
   display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+.payment-main .payment-body form .payment {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 3vw;
+  gap: 6vh;
 }
-.profile-main .profile-2-body form .form-confirm .connect-email-block .email-checkbox label {
-  width: 22vw;
-  height: 5vh;
-  color: white;
-  font-size: 25px;
-}
-.profile-main .profile-2-body form .form-confirm .connect-email-block .email-checkbox .email-checkbox-input {
-  width: 40px;
-  height: 40px;
-  background-color: #FEF5D0;
-  box-shadow: inset 0 3px 2px rgba(134, 120, 120, 0.53);
-}
-.profile-main .profile-2-body form .form-confirm .submit-button-box {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: end;
-}
-.profile-main .profile-2-body form .form-confirm .submit-button-box button {
-  width: 65%;
-  height: 70%;
-  background-color: #2DF57D;
+.payment-main .payment-body form .payment .btn-pay {
+  width: 20vw;
+  height: 7vh;
   font-size: 35px;
+  background-color: var(--clr-green);
+  box-shadow: -1px 3px 5px rgba(0, 0, 0, 0.31);
 }
-.profile-main .profile-2-body form .input-block {
+.payment-main .payment-body form .h-line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.payment-main .payment-body form .h-line.m-top-bottom {
+  margin: 5vh 0;
+}
+.payment-main .payment-body form .quick-payment-text {
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  margin-top: 5vh;
+  text-transform: uppercase;
+}
+.payment-main .payment-body form .payment-services {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.payment-main .payment-body form input:focus {
+  outline: 5px solid var(--clr-green);
+}
+.payment-main .payment-body form .pay-input-block,
+.payment-main .payment-body form .input-block {
   width: 100%;
   height: 7vh;
   position: relative;
 }
-.profile-main .profile-2-body form .input-block input {
+.payment-main .payment-body form .pay-input-block input,
+.payment-main .payment-body form .input-block input {
   width: 100%;
   height: 100%;
 }
-.profile-main .profile-2-body form .input-block label {
+.payment-main .payment-body form .pay-input-block label,
+.payment-main .payment-body form .input-block label {
   position: absolute;
   top: 50%;
   left: 1.5vw;
   transform: translate(0, -50%);
   font-size: 25px;
   color: var(--input-text);
+}
+.payment-main .payment-body form .pay-input-block label {
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
 /*# sourceMappingURL=payment.css.map */
