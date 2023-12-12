@@ -1,123 +1,66 @@
+{% extends 'layouts/base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
-    <title>Document</title>
-</head>
-<body>
-<div class="all" id="all">
-    <div class="container">
-        <div class="title">
-            <div class="content">
-                <div class="content-title">
-                    <h1>ГАЛЛЕРИЯ</h1>
-                </div>
-                <div class="content-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit, sed do eiusmod tempor incididaliqua. </p>
-                </div>
-            </div>
-            <div class="content">
-                <div class="group">
-                    <form action="">
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <g>
-                                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-                            </g>
-                        </svg>
-                        <input placeholder="" type="" class="input">
-                    </form>
-                </div>
-                <a href="" class="regions">
-                    <button class="region">
-                        СТАТИСТИКА ПО РЕГИОНАМ
-                    </button>
-                </a>
-            </div>
-        </div>
-        <div class="gallery">
-<<<<<<< HEAD
-            {% for objs in page_obj %}
-                <div class="card">
-                    <img src="{{ objs.img.url }}" alt="Card Image">
-                    <div class="overlay">
-                        <p>{{ objs.title }}</p>
+{% block content %}
+    <main>
+        <div class="all" id="all">
+            <div class="container">
+                <div class="title">
+                    <div class="content">
+                        <div class="content-title">
+                            <h1>ГАЛЛЕРИЯ</h1>
+                        </div>
+                        <div class="content-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore
+                                et ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis Lorem ipsum dolor sit amet,
+                                consectetur
+                                adipiscing elit, sed do eiusmod tempor incididaliqua. </p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="group">
+                            <form action="">
+                                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                                    <g>
+                                        <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                                    </g>
+                                </svg>
+                                <input placeholder="" type="" class="input">
+                            </form>
+                        </div>
+                        <a href="" class="regions">
+                            <button class="region">
+                                СТАТИСТИКА ПО РЕГИОНАМ
+                            </button>
+                        </a>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
-        <div class="paginators">
-            <div class="pagination">
-                {% if page_obj.has_previous %}
-                    <a href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
-                {% endif %}
-                {% for nums in page_obj.paginator.page_range %}
-                    <a href="?page={{ nums }}">{{ nums }}</a>
-                {% endfor %}
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}">&raquo;</a>
-                {% endif %}
-=======
-            <div class="card">
-                <img src="{% static 'img/test/Layer 6 Image.png' %}" alt="Card Image">
-                <div class="overlay">
-                    <p>Hover Text</p>
+                <div class="gallery">
+                    {% for objs in page_obj %}
+                        <div class="card">
+                            <img src="{{ objs.img.url }}" alt="Card Image">
+                            <div class="overlay">
+                                <p>{{ objs.title }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
-            </div>
-            <div class="card">
-                <img src="{% static 'img/test/Layer 13 Image.png' %}" alt="Card Image">
-                <div class="overlay">
-                    <p>Hover Text</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{% static 'img/test/Layer 6 Image.png' %}" alt="Card Image">
-                <div class="overlay">
-                    <p>Hover Text</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{% static 'img/test/Layer 13 Image.png' %}" alt="Card Image">
-                <div class="overlay">
-                    <p>Hover Text</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{% static 'img/test/Layer 6 Image.png' %}" alt="Card Image">
-                <div class="overlay">
-                    <p>Hover Text</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{% static 'img/test/Layer 6 Image.png' %}" alt="Card Image">
-                <div class="overlay">
-                    <p>Hover Text</p>
+                <div class="paginators">
+                    <div class="pagination">
+                        {% if page_obj.has_previous %}
+                            <a href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+                        {% endif %}
+                        {% for nums in page_obj.paginator.page_range %}
+                            <a href="?page={{ nums }}">{{ nums }}</a>
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}">&raquo;</a>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="paginators">
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a href="#" class="active">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">&raquo;</a>
->>>>>>> c9565aa (gallery almost done media left)
-            </div>
-        </div>
-    </div>
-</div>
-</body>
-</html>
+    </main>
+{% endblock %}
