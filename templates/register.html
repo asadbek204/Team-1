@@ -1,0 +1,71 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'registration/css/grid.css' %}">
+    <link rel="stylesheet" href="{% static 'registration/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'registration/css/reset.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="box" style="background: #F0F0F0;">
+            <div class="yellow-box">
+            <div class="title">
+                <h1 id="register-text">РЕГИСТРАЦИЯ</h1>
+            </div>
+            <img src="{% static 'registration/img/note_book.png' %}" alt="" width="457" height="459">
+        </div>
+        <div class="box-bg" style="padding: 50px 90px">
+            <div class="flex-input" style="text-align: center; display: flex; justify-content: space-between;">
+                <input type="text" placeholder="имя" style="border: 1px solid #EAB801; background: #D3D3D3; color: #494949; padding: 15px 19px; max-width: 400px; width: 100%; font-size: 20px; outline: none">
+                <input type="text" placeholder="ФАМИЛИЯ" style="border: 1px solid #EAB801; background: #D3D3D3; color: #494949; padding: 15px 19px; max-width: 400px; width: 100%; font-size: 20px; outline: none">
+            </div>
+            <div class="icons" style="text-align: center; margin: 100px 20px 0 20px !important;">
+                <img src="{% static 'registration/img/google.png' %}" alt="" style="max-width: 60px !important; width: 100%">
+                <img src="{% static 'registration/img/facebook.png' %}" alt="" style="max-width: 60px !important; width: 100%">
+                <img src="{% static 'registration/img/insta.png' %}" alt="" style="max-width: 60px !important; width: 100%">
+                <img src="{% static 'registration/img/tg.png' %}" alt="" style="max-width: 60px !important; width: 100%">
+            </div>
+            <div class="line" style="height: 6px;
+        max-width: 425px;
+        width: 100%; background: #F5C24D; margin: 20px auto"></div>
+            <p style="font-size: 20px; color: #494949; text-align: center">Регистрация с помощью социальных сетей</p>
+            <input type="text" placeholder="ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ" style="border: 1px solid #EAB801; background: #D3D3D3; color: #494949; padding: 15px 19px; max-width: 947px; width: 100%; font-size: 20px; outline: none; margin-top: 100px">
+            <p style="font-size: 14px; color: #939393;">краткое наименование образовательного учреждения</p>
+            <input type="text" placeholder="РЕГИОН (область, республика, ...)" style="border: 1px solid #EAB801; background: #D3D3D3; color: #494949; padding: 15px 19px; max-width: 947px; width: 100%; font-size: 20px; outline: none; margin-top: 40px">
+            <p style="font-size: 14px; color: #939393;">выберите значения</p>
+            <h2 style="font-size: 20px; text-align: center; padding: 10px 20px; border: 5px solid #EAB801; margin-top: 48px; width: 100%">ВЫБЕРИТЕ СТАТУС, ВЫ СОГЛАШАЕТЕСЬ С УСЛОВИЯМИ БОНУСНОЙ ПРОГРАММЫ</h2>
+
+            <input type="checkbox" id="todo" name="todo" value="todo" >
+            <label for="todo" style="font-size: 20px; color: #494949; margin: 20px 0;" data-content="НЕТ">НЕТ</label><br>
+            <input type="checkbox" id="todo" name="todo" value="todo">
+            <label for="todo" style="font-size: 20px; color: #494949; margin: 20px 0;"
+                   data-content="УЧАСТНИК – работы на конкурсы отправляются только от имени одного Автора, но могут быть указаны разные Руководители работ">УЧАСТНИК
+                – работы на конкурсы отправляются только от имени одного Автора, но могут быть указаны разные
+                Руководители работ</label><br>
+            <input type="checkbox" id="todo" name="todo" value="todo">
+            <label for="todo" style="font-size: 20px; color: #494949; margin: 20px 0;"
+                   data-content="РУКОВОДИТЕЛЬ РАБОТ – работы на конкурсы могут отправляться от разных Авторов, но от одного Руководителя">РУКОВОДИТЕЛЬ
+                РАБОТ – работы на конкурсы могут отправляться от разных Авторов, но от одного Руководителя</label><br>
+            <input type="checkbox" id="todo" name="todo" value="todo">
+            <label for="todo" style="font-size: 20px; color: #494949; margin: 20px 0;"
+                   data-content="ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут отправляться от разных Авторов и разных Руководителей, но от одной образовательной организации">ОРГАНИЗАТОР
+                ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут отправляться от разных Авторов и разных
+                Руководителей, но от одной образовательной организации</label><br>
+            <input type="checkbox" id="todo" name="todo" value="todo">
+            <label for="todo" style="font-size: 20px; color: #494949; margin: 20px 0;"
+                   data-content="ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут отправляться от разных Авторов и разных Руководителей, но от одной образовательной организации">ОРГАНИЗАТОР
+                ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут отправляться от разных Авторов и разных
+                Руководителей, но от одной образовательной организации</label><br>
+            <h2 style="font-size: 20px; text-align: center; padding: 10px 20px; border: 5px solid #EAB801; margin-top: 48px; width: 100%">Согласие</h2>
+            <input type="checkbox" id="todo" name="todo" value="todo">
+            <label for="todo" style="font-size: 20px; color: #494949; margin: 20px 0;">Даю согласие образовательному порталу "НИКА" на обработку моих персональных данных *
+            Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё согласие
+            Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных данных, в
+            соответствии с ...</label><br>
+        </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Baloo+2:wght@400;500;600;700;800&display=swap');
+@import "grid.css";
+@import "reset.css";
+
+:root {
+    --yellow: #FFDE59;
+    --line: #2DF57D;
+    --Abel: 'Abel', sans-serif;
+    --Baloo: 'Baloo 2', sans-serif;
+}
+
+body {
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.box {
+    max-width: 1142px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 2vh;
+}
+
+.yellow-box {
+    background: var(--yellow);
+    max-height: 429px;
+    height: auto;
+    padding: 20px 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.yellow-box h1 {
+    font-size: 60px;
+    font-family: var(--Baloo);
+}
+
+.yellow-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.box-png {
+    border: 5px solid var(--yellow);
+}
+
+.main-text {
+    padding: 25px 70px;
+}
+
+.main-text h2 {
+    font-family: var(--Baloo);
+    max-width: 686px;
+    width: 100%;
+    font-size: 35px;
+    border-bottom: 3px solid var(--line);
+}
+
+.main-text p {
+    font-size: 20px;
+    font-family: var(--Abel);
+    font-weight: 400;
+}
+
+.bottom-title {
+    padding: 64px 0 64px 70px;
+}
+
+.bottom-title h2 {
+    font-size: 40px;
+    width: 100%;
+    font-family: var(--Baloo);
+
+}
+
+.text-1 {
+    max-width: 751px;
+    width: 100%;
+    border-bottom: 3px solid var(--line);
+}
+
+.text-2 {
+    max-width: 555px;
+    width: 100%;
+    border-bottom: 3px solid var(--line);
+}
+
+.text-3 {
+    max-width: 1065px;
+    width: 100%;
+    border-bottom: 3px solid var(--line);
+}
+
+
+
+@media (max-width: 1024px) {
+    .yellow-box img {
+        width: 300px;
+    }
+}
