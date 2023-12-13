@@ -1,12 +1,12 @@
 :root {
   /* Fonts */
-  --title: Baloo2;
-  --main-txt: Abel;
-  --bold-txt: Alegreya Sans;
-  --numbers: Acme;
-  --cp: Lato;
-  --footer1: Exo;
-  --footer2: Exo2;
+  --title: "Baloo 2", sans-serif;
+  --main-txt: "Abel", sans-serif;
+  --bold-txt: "Alegreya Sans", sans-serif;
+  --numbers: "Acme";
+  --cp: "Lato";
+  --footer1: "Exo";
+  --footer2: "Exo2";
   /* Colors */
   --text-color: #241F1F;
   --text-color-ligth: #60606E;
@@ -27,6 +27,10 @@
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
 }
 
 header {
@@ -55,6 +59,7 @@ header .nav-block .mini-control-bar .control-block {
 header .nav-block .mini-control-bar .control-block .nav-link {
   color: #848484;
   font-size: 12px;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
 }
 header .nav-block .mini-control-bar .control-block .flag {
@@ -114,6 +119,7 @@ header .nav-block .site-navigation .nav-links {
 }
 header .nav-block .site-navigation .nav-links .nav-link {
   color: var(--text-color);
+  font-family: "Inter", sans-serif;
 }
 header .nav-block .site-navigation .nav-links .nav-link.active {
   height: 25px;
