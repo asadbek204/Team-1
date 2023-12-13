@@ -1,2 +1,38 @@
 {% load static %}
-
+<div class="nav-block">
+    <div class="mini-control-bar">
+        <div class="control-block">
+            <div class="flag" id="lang-button">
+                <img class="flag-icon" src="{% static 'base/img/flag.png' %}" alt="">
+                <div class="h-line"></div>
+            </div>
+            <a href="#" class="nav-link">ВХОД</a>
+            <div class="h-line"></div>
+            <a class="nav-link" href="#">РЕГИСТРАЦИЯ</a>
+        </div>
+    </div>
+    <nav class="site-navigation">
+        <div class="site-icon">
+            <img class="site-logo" src="{% static 'base/img/logo.svg' %}" alt="">
+            <div class="h-line"></div>
+            <button class="search-button" id="search-button">
+                <img class="search-icon" src="{% static 'base/img/search.png' %}" alt="">
+            </button>
+        </div>
+        <div class="nav-links">
+            <a class="nav-link" href="#">Главная</a>
+            <a class="nav-link" href="#">Работы</a>
+            <a class="nav-link" href="#">Правило</a>
+            <a class="nav-link" href="#">Результаты</a>
+            <a class="nav-link" href="#">Конкурс</a>
+            <a class="nav-link" href="#">Эксперты</a>
+            <a class="nav-link" href="#">О нас</a>
+            <a class="nav-link active" href="#">Личный кабинет</a>
+        </div>
+        <div class="three-dots" id="menu-button">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </nav>
+</div>

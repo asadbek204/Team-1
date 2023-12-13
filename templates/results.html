@@ -1,7 +1,11 @@
 {% extends "layouts/base.html" %}
 {% load static %}
 
-{% block content %}
+{% block extra_css %}
+	<link href="{% static "main/css/main.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block header %}
     {#-------------About Achievements--------------#}
     <section id="results">
         <div class="container1">
