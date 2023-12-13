@@ -7,12 +7,17 @@
     box-sizing: border-box;
 }
 
+header {
+    height: 100vh;
+    width: 100%;
+}
+
 .container {
     width: 100%;
 }
 
 .main_page {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -38,30 +43,29 @@
 
 .logo_ph {
     width: 200px;
-    margin: 100px 0 0 0
+    /*height: 290x;*/
+    margin: 50px 0 0 0
 }
 
-/*.rasm {*/
-/*    height: 100%;*/
-/*}*/
-
 .children {
-    height: 100%;
+    height: 50%;
     width: 50%;
     margin-top: 55px;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    /*margin-right: 50px;*/
 }
 
 .rasm-block {
-    /*height: 100px;*/
+    height: 78vh;
     overflow: hidden;
 }
 
 .rasm {
-    width: 400px;
+    width: 100%;
     height: 100%;
+    padding-right: 35px;
 }
 
 .back{

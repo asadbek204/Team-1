@@ -1,9 +1,14 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
 
-{% block content %}
+{% block extra_head %}
+	<link rel="stylesheet" href="{% static 'main/css/main_page.css' %}">
+    <title>Be First</title>
+{% endblock %}
 
-    <div class="back" style=" background-image: url({% static 'base/img/bg_body.png' %});
+{% block header %}
+
+    <div class="back" style=" background-image: url({% static 'main/imgs/bg_body.png' %});
             background-repeat: no-repeat;
             background-size: cover">
         <div class="container">
@@ -11,12 +16,12 @@
                 <div class="main_part">
                     <h1 class="text_h1">МЕРОПРИЯТИЯ ОБРАЗОВАТЕЛЬНОГО ПОРТАЛА</h1>
 
-                    <img class="logo_ph" src="{% static 'base/img/logo.svg' %}" alt="">
+                    <img class="logo_ph" src="{% static 'main/imgs/logo.pngg' %}" alt="">
                 </div>
 
                 <div class="children">
                     <div class="rasm-block">
-                        <img class="rasm" src="{% static 'base/img/children.png' %}" alt="">
+                        <img class="rasm" src="{% static 'main/imgs/children.png' %}" alt="">
                     </div>
                 </div>
             </div>
