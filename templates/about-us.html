@@ -5,11 +5,13 @@
     {#-----------BOOTSTRAP------------#}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="{% static "main/css/main.css" %}" rel="stylesheet">
+
 {% endblock %}
 {% block content %}
     <section id="about-us">
-        <div class="container-sm">
-            {#-----------START------------#}
+        <div class="container-sm mt-3">
+{#            -----------START------------#}
             <div class="start">
                 <div class="start-txt">
                     <h6>О НАС</h6>
@@ -52,22 +54,22 @@
             <div class="swiper">
                 <div class="cover mb-5">
                     <div class="scroll-images">
-                        <div class="child">
-                            <img src="{% static "main/img/swiper/swiper1.png" %}" alt="">
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0" >
+                            <img src="{% static "main/img/swiper/swiper7.jpeg" %}" alt="">
                         </div>
-                        <div class="child">
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0">
                             <img src="{% static "main/img/swiper/swiper2.png" %}" alt="">
                         </div>
-                        <div class="child">
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0">
                             <img src="{% static "main/img/swiper/swiper3.png" %}" alt="">
                         </div>
-                        <div class="child">
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0">
                             <img src="{% static "main/img/swiper/swiper4.png" %}" alt="">
                         </div>
-                        <div class="child">
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0">
                             <img src="{% static "main/img/swiper/swiper5.png" %}" alt="">
                         </div>
-                        <div class="child">
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0">
                             <img src="{% static "main/img/swiper/swiper6.png" %}" alt="">
                         </div>
                     </div>
@@ -76,8 +78,8 @@
                             <i class="fa-solid fa-caret-left"></i>
                         </button>
                         <button class="dots">
-                            <i class="fa-solid fa-circle me-5" style="font-size: 15px"></i>
-                            <i class="fa-solid fa-circle me-5" style="font-size: 15px"></i>
+                            <i class="fa-solid fa-circle me-md-5 me-sm-3" style="font-size: 15px"></i>
+                            <i class="fa-solid fa-circle me-md-5 me-sm-3" style="font-size: 15px"></i>
                             <i class="fa-solid fa-circle" style="font-size: 15px"></i>
                         </button>
                         <button class="right" onclick="rightScroll()">
@@ -99,7 +101,7 @@
                 <div class="row mb-4">
                     <div class="advantages-card d-flex flex-wrap">
                         {% for advantage in advantages %}
-                            <div class="advantages-main col-lg-4 col-md-6 justify-content-evenly">
+                            <div class="advantages-main col-lg-4 col-md-6">
                                 <div class="d-flex align-items-center">
                                     <img src="{{ advantage.image.url }}" alt="" style="width: 25%">
                                     <h6 class="ms-3">{{ advantage }}</h6>
@@ -119,20 +121,19 @@
                     <h4>ЭКСПЕРТЫ</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodore et dolore magna
                         aliqua.</p>
-                    <button class="dots">
-                        <i class="fa-solid fa-circle me-5" style="font-size: 50%"></i>
-                        <i class="fa-solid fa-circle me-5" style="font-size: 50%"></i>
-                        <i class="fa-solid fa-circle" style="font-size: 50%"></i>
-                    </button>
+                    <div class="dots">
+                        <div><i class="fa-solid fa-circle me-5" style="font-size: 100%"></i></div>
+                        <div><i class="fa-solid fa-circle me-5" style="font-size: 100%"></i></div>
+                        <div><i class="fa-solid fa-circle me-5" style="font-size: 100%"></i></div>
+                    </div>
                 </div>
                 <div class="scroll-images">
                     {% for expert in experts %}
-                        <div class="hah me-5">
+                        <div class="hah">
                             <img id="{{ expert.id }}" src="{{ expert.image.url }}" alt="" style="width: 14rem">
                         </div>
                     {% endfor %}
                 </div>
-                <hr class="hr-hide">
                 <div id="hide" class="hide-content">
                     {% for expert in experts %}
                         <div id="hidden-{{ expert.id }}" class="hide">
@@ -178,6 +179,7 @@
             el.classList.add('visible')
             currentVisible = el
         }
+
 
         function hideDiv() {
             currentVisible.classList.remove('visible')

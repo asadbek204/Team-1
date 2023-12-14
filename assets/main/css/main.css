@@ -7,22 +7,9 @@
     --cp: Lato;
     --footer1: Exo;
     --footer2: Exo2;
-    --txt: Inter
-}
+    --txt: Inter;
 
-/* Colors */
-:root {
-    --text-color: #241F1F;
-    --text-color-ligth: #60606E;
-    --color-primary: #F5C24D;
-    --color-icon: #2A819E;
-    --color-wide: #F2F2F2;
-    --gray: #808080;
-    --color-hover: #EFEBE2;
-    --color-button: #92F246;
-    --mini-bg: #F2D146;
-    --main-dark: #263236;
-    --nums: #ED6059;
+    /* Colors */
     --hr-grey: #E2DFDF;
     --hr-green: #09b672;
     --hr-adv: #EAB801;
@@ -35,27 +22,39 @@
     text-decoration: none;
 }
 
+body {
+    background-image: url("../img/bg.png");
+    background-size: 100% 90%;
+    background-repeat: no-repeat;
+    /*background-position: left;*/
+}
+
 section {
     width: 100%;
-    background-image: url("../img/bg.png");
-    background-size: cover;
     position: relative;
 }
+
+/*.container2 {*/
+/*    width: 80%;*/
+/*    margin: 0 auto;*/
+/*}*/
 
 /*!*------------ABOUT US SECTION--------------*!*/
 .start {
     width: 80%;
     height: 60vh;
-    margin: 0.5rem auto;
+    margin: 5rem auto;
     background-image: url("../img/about-us/cartoon.png");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
 }
 
 .start .start-txt {
     width: 80%;
-    margin: 0.2rem 0 1rem 6rem;
+    margin: 0.5rem 80px 1rem 6rem;
+    position: absolute;
+    top: 20%;
 }
 
 .start-txt h6 {
@@ -205,7 +204,7 @@ section {
 .swiper .left {
     position: absolute;
     transform: translateY(-50%);
-    left: 35%;
+    left: 30%;
 }
 
 .swiper .dots {
@@ -217,8 +216,22 @@ section {
 
 .swiper .right {
     position: absolute;
-    right: 30%;
+    right: 25%;
     transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 1200px) {
+    .swiper .right {
+        right: 23%;
+    }
+
+    .swiper .dots {
+        left: 45%
+    }
+
+    .swiper .left {
+        left: 34%;
+    }
 }
 
 .swiper .scroll-images {
@@ -318,7 +331,7 @@ section {
 }
 
 .advantages .advantages-card {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -341,7 +354,8 @@ section {
     letter-spacing: 0;
     color: var(--text-color-ligth);
     text-align: left;
-    margin-right: 30px;
+    width: 90%;
+    /*margin-right: 30px;*/
 }
 
 .advantages-hr {
@@ -411,7 +425,7 @@ section {
     font-family: var(--txt);
     font-size: 14px;
     font-weight: 400;
-    line-height: 10px;
+    line-height: 18px;
     letter-spacing: 0;
     text-align: center;
     color: var(--text-color-ligth);
@@ -419,9 +433,16 @@ section {
 }
 
 .experts .dots {
-    position: relative;
-    left: 41%;
+    display: flex;
+    margin-left: 5%;
+    justify-content: center;
     color: var(--color-primary);
+}
+
+@media only screen and (max-width: 980px) {
+    .experts .dots {
+        margin-left: 18%;
+    }
 }
 
 .experts button {
@@ -432,43 +453,47 @@ section {
     font-size: 25px;
 }
 
-/*.experts .left {*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%);*/
-/*}*/
-
-/*.experts .right {*/
-/*    position: absolute;*/
-/*    right: 0;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%);*/
-/*}*/
-
 .experts .scroll-images {
     position: relative;
     display: flex;
-    /*flex-wrap: wrap;*/
     width: 100%;
     padding: 20px 0;
     height: auto;
-    overflow: hidden;
+    overflow-x: scroll;
+    margin-bottom: 5%;
+}
+
+.hah {
+    margin-right: 4%;
+}
+
+.hah:last-child {
+    margin-right: 0;
+}
+.scroll-images::-webkit-scrollbar{
+    height: 2%;
+    width: 100%;
+    background: var(--color-primary);
 }
 
 .hide {
-    display: none;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0ms 0ms, opacity 400ms 0ms ease-in-out;
 }
 
-.hr-hide {
-    background: var(--color-primary);
-    width: 100%;
-    height: 20px;
-    border: none;
+.hide.visible {
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    height: 40vh;
+    opacity: 1;
+    transition: height 0ms 0ms, opacity 400ms 0ms;
 }
 
 .e-img:last-child {
-    margin:  0;
+    margin: 0;
 }
 
 .e-img button {
@@ -492,12 +517,6 @@ section {
     padding: 2%;
 }
 
-.hide.visible {
-    display: block;
-    width: 80%;
-    margin-left: 10%;
-    height: 40vh;
-}
 
 .close-btn {
     float: right;
@@ -512,7 +531,8 @@ section {
     border-radius: 50%;
     padding: 5px;
     background-color: var(--color-primary);
-    color: var(--color-wide)
+    color: var(--color-wide);
+    cursor: pointer;
 }
 
 

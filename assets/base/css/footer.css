@@ -1,12 +1,11 @@
 /*!*------------FOOTER---------------*!*/
 .footer {
-  width: 100%;
   background-color: var(--color-primary);
   color: var(--text-color);
 }
 
 .footer-custom {
-  max-width: 65%;
+  width: 65%;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 3rem 24px;
@@ -16,6 +15,10 @@
   display: table;
   clear: both;
   content: "";
+}
+
+.footer-list {
+  width: 80%;
 }
 
 .ftr-hdr {
