@@ -6,14 +6,76 @@
 	<title>Title</title>
 {% endblock %}
 
-{% block header %}
-	<div class="profile-header">
-
-    </div>
-{% endblock %}
-
 {% block content %}
 <main class="profile-main">
-
+    <div class="container">
+        <div class="profile">
+            <h2 class="profile-h2">Личные данные</h2>
+            <div class="profile-content">
+                <div class="block left">
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="text">
+                        <input class="info-text" type="submit" value="Ваше имя" name="name" id="name-input">
+                        <input class="info-text" type="submit" value="Ваше фамилия" name="surname" id="surname-input">
+                        <input class="info-text" type="submit" value="Ваше номер телефона" name="phone" id="phone-input">
+                        <input class="info-text" type="submit" value="Ваше Е-mail" name="email" id="email-input">
+                    </div>
+                </div>
+                <div class="block right">
+                    <input class="info-text" type="submit" value="Дата рождения" name="birth-date" id="date-input">
+                    <input class="info-text" type="submit" value="Ваше адрес" name="address" id="address-input">
+                    <div class="gender-info">
+                        <div class="gender-block">
+                            <div class="gender-img"><img src="" alt=""></div>
+                            <label for="female-check" class="gender-check"><img src="" alt=""></label>
+                            <input type="checkbox" name="female" id="female-check">
+                        </div>
+                        <div class="gender-block">
+                            <div class="gender-img"><img src="" alt=""></div>
+                            <label for="male-check" class="gender-check"><img src="" alt=""></label>
+                            <input type="checkbox" name="male" id="male-check">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="competitions">
+            <span class="text">Текущие конкурсы</span>
+            <div class="competition" id="1">
+                <div class="img"><img src="" alt=""></div>
+                <div class="description">
+                    <span class="title">Испытай себя</span>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                </div>
+            </div>
+            <div class="competition" id="2">
+                <div class="img"><img src="" alt=""></div>
+                <div class="description">
+                    <span class="title">Испытай себя</span>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                </div>
+            </div>
+            <div class="competition" id="3">
+                <div class="img"><img src="" alt=""></div>
+                <div class="description">
+                    <span class="title">Испытай себя</span>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="side-bar">
+        <div class="control-block">
+            <div class="notifications"><img src="" alt=""></div>
+            <button class="logout-button" id="btn-logout">logout</button>
+            <button class="change-password" id="btn-change-password">change password</button>
+        </div>
+        <div class="certificates">
+            <span class="date">01 - декабр - 2023 год</span>
+            <div class="certificate"><img src="" alt=""></div>
+        </div>
+    </div>
 </main>
 {% endblock %}
