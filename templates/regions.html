@@ -6,45 +6,5 @@
     <link rel="stylesheet" href="{% static 'regions/css/regions.css' %}">
 {% endblock %}
 
-{% block header %}
-
-{% endblock %}
-
 {% block content %}
-<div class="header">
-    <div class="container">
-        <h1 class="h1">
-            РАБОТЫ ПО РЕГИОНАМ <br>
-            В {{ years.0 }}-{{ years.1 }} УЧЕБНОМ ГОДУ
-        </h1>
-        <div class="table-container">
-            <div class="v-line"></div>
-            <div class="table">
-                <div class="tr-header">
-                    <div class="th">№</div>
-                    <div class="th">РЕГИОН</div>
-                    <div class="th">ШКОЛА</div>
-                    <div class="th">ДЕТ САД</div>
-                    <div class="th">КОЛИЧЕСТВО</div>
-                </div>
-                {% for i in data %}
-                <div class="tr">
-                    <div class="td">{{ i }}</div>
-                    <div class="td"></div>
-                    <div class="td"></div>
-                    <div class="td"></div>
-                    <div class="td"></div>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="v-line"></div>
-        </div>
-        <div class="body">
-            <h2 class="h2">УЗБЕКИСТАН</h2>
-            <div class="uzb-map">
-
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock %}
