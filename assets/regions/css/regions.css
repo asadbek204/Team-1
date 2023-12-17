@@ -1,3 +1,140 @@
+body {
+  background-image: url("../img/bg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+}
 
+header {
+  width: 100%;
+  height: 100vh;
+}
+header .container {
+  padding: 4vh 2vw;
+  width: 100%;
+  display: flex;
+}
+header .container .table {
+  height: 80vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.1%;
+}
+header .container .table .thead .tr {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+header .container .table .td,
+header .container .table .th {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3%;
+  font-family: var(--title);
+  font-size: 25px;
+  font-weight: bold;
+}
+header .container .table .td {
+  font-size: 30px;
+}
+header .container .table .td {
+  background-color: transparent;
+}
+header .container .table .td.region,
+header .container .table .th.region {
+  justify-content: start;
+  padding-left: 5%;
+  width: 40%;
+}
+header .container .table .td.region {
+  padding-left: 3%;
+}
+header .container .table .td.count,
+header .container .table .th.count {
+  width: 30%;
+}
+header .container .table .tbody {
+  padding: 2% 1.5%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+header .container .table .tr {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  transition: 250ms ease-in-out;
+}
+header .container .table .tr.active {
+  background-color: white;
+}
+header .container .map-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container .map-container .map {
+  position: relative;
+}
+header .container .map-container .map .map-full {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(-2px 2px 1px rgba(147, 146, 146, 0.66));
+}
+header .container .map-container .map .map-part {
+  position: absolute;
+  top: 0;
+  left: 0.4vw;
+  width: 100%;
+  opacity: 0;
+  transition: 250ms ease-in-out;
+}
+header .container .map-container .map .map-part.active {
+  opacity: 1;
+}
+
+.h3 {
+  width: 100%;
+  height: 5vh;
+  text-align: center;
+  font-family: var(--title);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.body .container {
+  width: 80%;
+  height: 100%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(253, 253, 253, 0.4);
+}
+.body .container .region {
+  width: 100%;
+  height: 7vh;
+  font-family: var(--title);
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+}
+.body .container .info-head {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  padding-right: 1%;
+  gap: 35%;
+}
 
 /*# sourceMappingURL=regions.css.map */

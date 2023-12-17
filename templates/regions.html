@@ -4,7 +4,78 @@
 {% block extra_head %}
 	<title>Title</title>
     <link rel="stylesheet" href="{% static 'regions/css/regions.css' %}">
+    <script src="{% static 'regions/js/regions.js' %}"></script>
+{% endblock %}
+
+{% block header %}
+<div class="container">
+    <div class="table">
+        <div class="thead">
+            <div class="tr">
+                <div class="th region">Регион</div>
+                <div class="th count">кол.во  участников</div>
+                <div class="th count"> % по Узбекистану</div>
+            </div>
+        </div>
+        <div class="tbody">
+            {% for role, region, count, percent in data %}
+            <div class="tr" id="{{ role }}" onclick="selectRegion(this)">
+                <div class="td region">{{ region }}</div>
+                <div class="td count">{{ count }}</div>
+                <div class="td count">{{ percent }}%</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="map-container">
+        <div class="map">
+            <img class="map-full" src="{% static 'regions/img/regions/Uzbekistan.png' %}" alt="Uzbekistan">
+            <img class="map-part" src="{% static 'regions/img/regions/Tashkent.png' %}" alt="Tashkent" id="map-tt">
+            <img class="map-part" src="{% static 'regions/img/regions/Samarqand.png' %}" alt="Samarkand" id="map-sd">
+            <img class="map-part" src="{% static 'regions/img/regions/Navoiy.png' %}" alt="Navoiy" id="map-ny">
+            <img class="map-part" src="{% static 'regions/img/regions/Bukhoro.png' %}" alt="Bukhara" id="map-bo">
+            <img class="map-part" src="{% static 'regions/img/regions/Namangan.png' %}" alt="Namangan" id="map-nn">
+            <img class="map-part" src="{% static 'regions/img/regions/Jizzakh.png' %}" alt="Jizzakh" id="map-jx">
+            <img class="map-part" src="{% static 'regions/img/regions/Andijon.png' %}" alt="Andijon" id="map-an">
+            <img class="map-part" src="{% static 'regions/img/regions/Fargona.png' %}" alt="Fargona" id="map-fa">
+            <img class="map-part" src="{% static 'regions/img/regions/Karakalpakistan.png' %}" alt="Kharakhalpagiston" id="map-qn">
+            <img class="map-part" src="{% static 'regions/img/regions/Khorezm.png' %}" alt="Kharezm" id="map-xm">
+            <img class="map-part" src="{% static 'regions/img/regions/Khashkhadaryo.png' %}" alt="Khashkhadaryo" id="map-qo">
+            <img class="map-part" src="{% static 'regions/img/regions/Surkhandarya.png' %}" alt="Surkhandaryo" id="map-so">
+            <img class="map-part" src="{% static 'regions/img/regions/Sirdarya.png' %}" alt="Sirdaryo" id="map-sr">
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block content %}
+    <h3 class="h3">РАБОТЫ ПО РЕГИОНАМ В {{ years.0 }}-{{ years.1 }} УЧЕБНОМ ГОДУ</h3>
+    <div class="body">
+        <div class="container">
+            <span class="region">Ташкент</span>
+            <div class="info-head">
+                <span class="competitions">конкурсы</span>
+                <span class="participants">участники</span>
+            </div>
+            <div class="competition">
+                <div class="com-img-block">
+                    <img src="" alt="">
+                </div>
+                <div class="description">
+                    <span class="title"></span>
+                    <p class="text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-call-center">
+        <div class="icon"><img src="" alt=""></div>
+        <span class="text"></span>
+    </div>
+    <script>
+        let selectedRegion = document.getElementById('{{ data.0.0 }}')
+        selectedRegion.classList.add('active')
+        let selectedMap = document.getElementById(`map-{{ data.0.0 }}`)
+        selectedMap.classList.add('active')
+    </script>
 {% endblock %}
