@@ -15,19 +15,29 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 248f5ff (file is creating)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-20ryherm3_i!k*2o$p1xvf*^=jjqx9g_u$kkq$6q=kjp881h3n'
+=======
+SECRET_KEY = 'django-insecure-)fbfoiiwj3uk!hn5&)hj!goi(v7^&^f@j=e8yj+c)tg)pt3%vd'
+>>>>>>> 248f5ff (file is creating)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 248f5ff (file is creating)
 # Application definition
 
 INSTALLED_APPS = [
@@ -54,7 +64,13 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [BASE_DIR / 'templates'],
+=======
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
+>>>>>>> 248f5ff (file is creating)
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,7 +85,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 248f5ff (file is creating)
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -80,7 +99,10 @@ DATABASES = {
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 248f5ff (file is creating)
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -99,7 +121,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 248f5ff (file is creating)
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -111,12 +136,16 @@ USE_I18N = True
 
 USE_TZ = True
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 248f5ff (file is creating)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
 
+<<<<<<< HEAD
 STATIC_ROOT = BASE_DIR / "static"
 
 MEDIA_URL = "media/"
@@ -124,6 +153,15 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 STATICFILES_DIRS = BASE_DIR / "assets",
+=======
+STATIC_ROOT = BASE_DIR / 'static'
+
+STATICFILES_DIRS = BASE_DIR / 'assets',
+
+MEDIA_URl = 'media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+>>>>>>> 248f5ff (file is creating)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
