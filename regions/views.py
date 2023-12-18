@@ -15,7 +15,7 @@ def view(request):
                 ['jx', 'Jizzax', 14, 7],
                 ['an', 'Andijon', 14, 7],
                 ['fa', 'Fergana', 14, 7],
-                ['qn', 'Korakalpogiston', 2, 1],
+                ['qn', 'Karakalpakstan', 2, 1],
                 ['xm', 'Khorazm', 2, 1],
                 ['qo', 'Qashqadaryo', 2, 1],
                 ['so', 'Surkhandaryo', 1, .5],

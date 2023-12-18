@@ -1,3 +1,7 @@
+:root {
+  --anim-select-transition: 200ms ease-in-out;
+}
+
 body {
   background-image: url("../img/bg.png");
   background-position: top;
@@ -36,9 +40,9 @@ header .container .table .th {
 }
 header .container .table .td {
   font-size: 30px;
-}
-header .container .table .td {
   background-color: transparent;
+  color: #575555;
+  transition: var(--anim-select-transition);
 }
 header .container .table .td.region,
 header .container .table .th.region {
@@ -55,16 +59,32 @@ header .container .table .th.count {
 }
 header .container .table .tbody {
   padding: 2% 1.5%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.6980392157);
 }
 header .container .table .tr {
   width: 100%;
   height: 5vh;
   display: flex;
-  transition: 250ms ease-in-out;
+  transition: var(--anim-select-transition);
 }
 header .container .table .tr.active {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.46);
+  backdrop-filter: blur(5px);
+  box-shadow: -2px 2px 4px rgba(196, 192, 192, 0.4);
+}
+header .container .table .tr.active .td {
+  color: black;
+  font-size: 34px;
+}
+header .container .table .tr.active .td.region {
+  padding-left: 2%;
+}
+header .container .table .tr.active .td.count:last-child {
+  width: 28%;
+  margin-left: 2%;
+}
+header .container .table .tr.active .td.count:nth-child(2) {
+  width: 31%;
 }
 header .container .map-container {
   width: 50%;
@@ -86,7 +106,7 @@ header .container .map-container .map .map-part {
   left: 0.4vw;
   width: 100%;
   opacity: 0;
-  transition: 250ms ease-in-out;
+  transition: var(--anim-select-transition);
 }
 header .container .map-container .map .map-part.active {
   opacity: 1;
