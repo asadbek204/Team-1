@@ -134,18 +134,18 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div id="hide" class="hide-content">
+                <div id="hide" class="hide-content mb-3">
                     {% for expert in experts %}
                         <div id="hidden-{{ expert.id }}" class="hide">
-                            <div class="experts-card d-flex mt-4">
+                            <div class="experts-card">
                                 <div class="e-img mt-4">
                                     <img src="{{ expert.image.url }}" alt="" style="width: 15rem; height: 14rem"
                                          class="mt-1">
-                                    <div class="d-flex justify-content-end mt-2">
+                                    <div class="btn-prof mt-2">
                                         <button>{{ expert }}</button>
                                     </div>
                                 </div>
-                                <div class="e-par">
+                                <div class="e-par mt-3">
                                     <p>{{ expert.description }}</p>
                                 </div>
                             </div>

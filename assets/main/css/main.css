@@ -483,13 +483,37 @@ section {
     transition: height 0ms 0ms, opacity 400ms 0ms ease-in-out;
 }
 
+.experts-card {
+    display: flex;
+}
+
+@media only screen and (max-width: 1024px) {
+    .experts-card {
+        display: block;
+    }
+
+    .e-par {
+        font-size: 2px;
+        text-align: center;
+    }
+
+    .e-img .btn-prof {
+        justify-content: start;
+    }
+}
+
 .hide.visible {
     display: block;
     width: 80%;
     margin-left: 10%;
-    height: 40vh;
+    height: auto;
     opacity: 1;
     transition: height 0ms 0ms, opacity 400ms 0ms;
+}
+
+.btn-prof {
+    display: flex;
+    justify-content: end;
 }
 
 .e-img:last-child {
@@ -504,7 +528,6 @@ section {
     font-weight: 400;
     text-transform: uppercase;
     text-align: right;
-    /*margin: 10% 0 0 30%;*/
 }
 
 .e-par {
@@ -527,7 +550,6 @@ section {
 }
 
 .close-btn i {
-    position: absolute;
     border-radius: 50%;
     padding: 5px;
     background-color: var(--color-primary);
