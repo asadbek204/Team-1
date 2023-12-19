@@ -1,0 +1,280 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/grid.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* General styling */
+        body {
+            background-image: url({% static 'main/img/bg.png' %});
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: sans-serif;
+        }
+
+        /* Style for the buttons */
+        /* Style for the buttons */
+        button {
+            position: absolute;
+            left: 50px;
+            bottom: 30px; /* Adjust this value to set the distance from the bottom */
+            padding: 10px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 300ms ease;
+        }
+
+        /* First button (left-bottom) */
+        button:first-child {
+            left: 20px; /* Adjust this value to set the distance from the left */
+
+        }
+
+        /* Second button (right-bottom) */
+        button:last-child {
+            left: 330px; /* Adjust this value to set the distance from the right */
+        }
+
+        .first-btn {
+            background: #2DF57D;
+            font-size: 30px;
+            max-width: 266px;
+            width: 100%;
+            padding: 5px 15px;
+        }
+
+        .icon-btn {
+            padding: 5px 15px;
+            font-size: 30px;
+            background: #00A0FF;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+
+        /* Slider container */
+        #slider {
+            position: relative;
+            width: 50%;
+            height: 32vw;
+            margin: 150px auto;
+            perspective: 1400px;
+            transform-style: preserve-3d;
+            border-radius: 12px; /* Rounded corners */
+        }
+
+        /* Radio buttons for slide control */
+        input[type=radio] {
+            position: relative;
+            top: 108%;
+            left: 50%;
+            width: 20px; /* Slightly larger */
+            height: 20px; /* Slightly larger */
+            margin: 0 15px 0 0;
+            background: #ccc; /* Light gray */
+            border: 2px solid #ccc; /* Light gray */
+            border-radius: 50%; /* Rounded corners */
+            cursor: pointer;
+            transform: translateX(-83px);
+            transition: background 300ms ease, border 300ms ease; /* Smooth transition */
+        }
+
+        input[type=radio]:checked {
+            background: #FF5A5F; /* Airbnb's coral red */
+            border: 2px solid #FF5A5F; /* Airbnb's coral red */
+        }
+
+        /* Labels and images */
+        #slider label,
+        #slider label img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 12px; /* Rounded corners */
+            transition: transform 400ms ease, opacity 400ms ease; /* Added opacity transition */
+        }
+
+
+        /* Existing transition rules */
+        #s1:checked ~ #slide1,
+        #s2:checked ~ #slide2,
+        #s3:checked ~ #slide3,
+        #s4:checked ~ #slide4,
+        #s5:checked ~ #slide5 {
+            box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+            transform: translate3d(0%, 0, 0px);
+        }
+
+        #s1:checked ~ #slide2,
+        #s2:checked ~ #slide3,
+        #s3:checked ~ #slide4,
+        #s4:checked ~ #slide5,
+        #s5:checked ~ #slide1 {
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+            transform: translate3d(20%, 0, -100px);
+        }
+
+        #s1:checked ~ #slide3,
+        #s2:checked ~ #slide4,
+        #s3:checked ~ #slide5,
+        #s4:checked ~ #slide1,
+        #s5:checked ~ #slide2 {
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            transform: translate3d(40%, 0, -250px);
+        }
+
+        #s1:checked ~ #slide4,
+        #s2:checked ~ #slide5,
+        #s3:checked ~ #slide1,
+        #s4:checked ~ #slide2,
+        #s5:checked ~ #slide3 {
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            transform: translate3d(-40%, 0, -250px);
+        }
+
+        #s1:checked ~ #slide5,
+        #s2:checked ~ #slide1,
+        #s3:checked ~ #slide2,
+        #s4:checked ~ #slide3,
+        #s5:checked ~ #slide4 {
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+            transform: translate3d(-20%, 0, -100px);
+        }
+
+        .yellow-text {
+            background: #FABF49CC;
+            padding: 28px 50px;
+            border-radius: 30px;
+            -webkit-box-shadow: 8px 21px 39px 32px rgba(255, 11, 0, 0.2);
+            -moz-box-shadow: 8px 21px 39px 32px rgba(255, 11, 0, 0.2);
+            box-shadow: 8px 21px 39px 32px rgba(255, 11, 0, 0.2);
+        }
+
+        .yellow-text h1 {
+            text-align: center;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 60px;
+            margin: 20px 0;
+        }
+
+        .yellow-text p {
+            font-size: 30px;
+            line-height: 54px;
+        }
+
+    </style>
+</head>
+<body>
+<section id="slider">
+    <input type="radio" name="slider" id="s1" data-slide="1" checked>
+    <input type="radio" name="slider" id="s2" data-slide="2">
+    <input type="radio" name="slider" id="s3" data-slide="3">
+    <label for="s1" id="slide1">
+        <div class="zoom-container" data-slide="1">
+            <img src="{% static 'main/img/boys-1.png' %}" alt="Image 1">
+            <button class="first-btn">Участвовать</button>
+            <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
+        </div>
+    </label>
+    <label for="s2" id="slide2">
+        <div class="zoom-container" data-slide="2">
+            <img src="{% static 'main/img/boys-2.png' %}" alt="Image 2">
+            <button class="first-btn">Участвовать</button>
+            <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
+        </div>
+    </label>
+    <label for="s3" id="slide3">
+        <div class="zoom-container" data-slide="3">
+            <img src="{% static 'main/img/boys-3.png' %}" alt="Image 3">
+            <button class="first-btn">Участвовать</button>
+            <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
+        </div>
+    </label>
+
+
+</section>
+
+<div class="container">
+    <div class="yellow-text">
+        <h1>Игрушки и игры</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi exercitationem illum maiores, maxime
+            quae.</p>
+        <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
+        <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
+        <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
+        <p>4. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        <p>5. Lorem ipsum dolor sit amet.</p>
+        <p>6. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, natus.</p>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 1;
+    let isPaused = false; // Variable to check if the slideshow is paused
+
+    // Function to change the slide
+    const changeSlide = () => {
+        if (!isPaused) {
+            // Remove 'can-zoom' class from all slides
+            document.querySelectorAll('.zoom-container').forEach((container) => {
+                container.classList.remove('can-zoom');
+            });
+
+            // Set the active slide
+            const activeSlide = document.getElementById(`s${currentSlide}`);
+            activeSlide.checked = true;
+
+            // Add 'can-zoom' class to the active slide
+            const activeContainer = document.querySelector(`.zoom-container[data-slide="${currentSlide}"]`);
+            if (activeContainer) {
+                activeContainer.classList.add('can-zoom');
+            }
+
+            // Move to the next slide
+            currentSlide++;
+            if (currentSlide > 5) {
+                currentSlide = 1;
+            }
+        }
+    };
+
+    // Start the auto-scroll
+    let slideInterval = setInterval(changeSlide, 5000);
+
+    // Function to pause the auto-scroll
+    const pauseSlide = () => {
+        isPaused = true;
+    };
+
+    // Function to resume the auto-scroll
+    const resumeSlide = () => {
+        isPaused = false;
+    };
+
+    // Adding event listeners to pause and resume auto-scroll on hover
+    document.querySelectorAll('.zoom-container').forEach((container) => {
+        container.addEventListener('mouseover', () => {
+            if (!container.classList.contains('can-zoom')) {
+                return;
+            }
+            pauseSlide();
+        });
+        container.addEventListener('mouseout', () => {
+            resumeSlide();
+        });
+    });
+
+</script>
+</body>
+</html>
