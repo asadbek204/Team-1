@@ -1,0 +1,66 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'payment/css/payment.css' %}">
+	<title>Title</title>
+{% endblock %}
+
+{% block content %}
+<main class="payment-main">
+    <div class="top-banner">
+        <h1 class="payment-h1">ОПЛАТА</h1>
+    </div>
+    <div class="payment-body">
+        <h3 class="form-h3">Оформление оплаты</h3>
+        <form action="">
+            <div class="initial-block">
+                <div class="personal-initials">
+                    <div class="input-block">
+                        <label for="name-input">Ваше имя</label>
+                        <input type="text" id="name-input">
+                    </div>
+                    <div class="input-block">
+                        <label for="phone-input">Ваше номер телефона </label>
+                        <input type="text" id="phone-input">
+                    </div>
+                </div>
+                <div class="payment-initials">
+                    <div class="input-block">
+                        <label for="category-input">ОПЛАТА ПО КАТЕГОРИЯМИ</label>
+                        <input type="text" id="category-input">
+                    </div>
+                    <div class="input-block">
+                        <label for="card-number">НОМЕР КАРТЫ</label>
+                        <input type="text" id="card-number">
+                    </div>
+                </div>
+            </div>
+            <div class="h-line m-top-bottom"></div>
+            <div class="payment">
+                <div class="pay-input-block">
+                    <label for="payment-amount">СУММА</label>
+                    <input type="text" name="" id="payment-amount">
+                </div>
+                <button class="btn-pay" type="submit" id="btn-pay">ОПЛАТИТ</button>
+            </div>
+            <span class="quick-payment-text">быстрый способ оплаты</span>
+            <div class="h-line"></div>
+            <div class="payment-services">
+                <div class="pay-service">
+                    <a href="#"><img src="{% static 'payment/img/apelsin-pay-icon.svg' %}" alt=""></a>
+                </div>
+                <div class="pay-service">
+                    <a href="#"><img src="{% static 'payment/img/click-pay-icon.svg' %}" alt=""></a>
+                </div>
+                <div class="pay-service">
+                    <a href="#"><img src="{% static 'payment/img/payme-pay-icon.svg' %}" alt=""></a>
+                </div>
+                <div class="pay-service">
+                    <a href="#"><img src="{% static 'payment/img/anorbank-pay-icon.svg' %}" alt=""></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock %}

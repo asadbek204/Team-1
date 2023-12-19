@@ -1,0 +1,155 @@
+:root {
+  /* Fonts */
+  --title: Baloo2;
+  --main-txt: Abel;
+  --bold-txt: Alegreya Sans;
+  --numbers: Acme;
+  --cp: Lato;
+  --footer1: Exo;
+  --footer2: Exo2;
+  /* Colors */
+  --text-color: #241F1F;
+  --text-color-ligth: #60606E;
+  --color-primary: #F5C24D;
+  --color-icon: #2A819E;
+  --color-wide: #F2F2F2;
+  --gray: #808080;
+  --color-hover: #EFEBE2;
+  --color-button: #92F246;
+  --mini-bg: #F2D146;
+  --main-dark: #263236;
+  --nums: #ED6059;
+  --input-text: #737171;
+  --clr-green: #2dF57D;
+}
+
+.display-none {
+  display: none;
+}
+
+.payment-main {
+  width: 100%;
+  height: 160vh;
+  background-color: white;
+  background-image: url("../../base/img/bg.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 2vh 20vw 7vh 20vw;
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+}
+.payment-main .top-banner {
+  width: 100%;
+  height: 70vh;
+  padding: 6vh;
+  background-image: url("../img/profile-2-ideas.svg");
+}
+.payment-main .top-banner .payment-h1 {
+  color: black;
+  font-size: 70px;
+  font-weight: bolder;
+  font-family: var(--title);
+}
+.payment-main .payment-body {
+  width: 100%;
+  height: 100%;
+  padding: 6vh;
+  padding-bottom: 0;
+  background-color: var(--color-primary);
+}
+.payment-main .payment-body .form-h3 {
+  font-size: 2.2vw;
+  font-weight: 500;
+}
+.payment-main .payment-body form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7vh;
+}
+.payment-main .payment-body form .initial-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 5vh;
+}
+.payment-main .payment-body form .initial-block .personal-initials {
+  display: flex;
+  justify-content: space-between;
+  gap: 8.5vw;
+}
+.payment-main .payment-body form .initial-block .payment-initials {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+.payment-main .payment-body form .payment {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6vh;
+}
+.payment-main .payment-body form .payment .btn-pay {
+  width: 20vw;
+  height: 7vh;
+  font-size: 35px;
+  background-color: var(--clr-green);
+  box-shadow: -1px 3px 5px rgba(0, 0, 0, 0.31);
+}
+.payment-main .payment-body form .h-line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.payment-main .payment-body form .h-line.m-top-bottom {
+  margin: 5vh 0;
+}
+.payment-main .payment-body form .quick-payment-text {
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  margin-top: 5vh;
+  text-transform: uppercase;
+}
+.payment-main .payment-body form .payment-services {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.payment-main .payment-body form input:focus {
+  outline: 5px solid var(--clr-green);
+}
+.payment-main .payment-body form .pay-input-block,
+.payment-main .payment-body form .input-block {
+  width: 100%;
+  height: 7vh;
+  position: relative;
+}
+.payment-main .payment-body form .pay-input-block input,
+.payment-main .payment-body form .input-block input {
+  width: 100%;
+  height: 100%;
+}
+.payment-main .payment-body form .pay-input-block label,
+.payment-main .payment-body form .input-block label {
+  position: absolute;
+  top: 50%;
+  left: 1.5vw;
+  transform: translate(0, -50%);
+  font-size: 25px;
+  color: var(--input-text);
+}
+.payment-main .payment-body form .pay-input-block label {
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+/*# sourceMappingURL=payment.css.map */
