@@ -1,0 +1,202 @@
+:root {
+  --clr-input-text: #737171;
+}
+
+.display-none {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+.profile-main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background-image: url("../img/bg.png");
+}
+.profile-main .container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1vh;
+  padding: 4vh 1vw;
+  padding-bottom: 2vh;
+}
+.profile-main .container .profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  background-color: rgba(224, 224, 224, 0.4039215686);
+  padding: 1vh 2vw;
+}
+.profile-main .container .profile .profile-h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+}
+.profile-main .container .profile .profile-content {
+  display: flex;
+  gap: 10vw;
+  width: 100%;
+  height: 42vh;
+  align-items: center;
+}
+.profile-main .container .profile .profile-content .block {
+  display: flex;
+  flex-direction: column;
+}
+.profile-main .container .profile .profile-content .block.left {
+  height: 100%;
+  flex-direction: row;
+  gap: 2vw;
+  align-items: center;
+}
+.profile-main .container .profile .profile-content .block.left .img {
+  width: 16vw;
+}
+.profile-main .container .profile .profile-content .block.left .img img {
+  width: 100%;
+}
+.profile-main .container .profile .profile-content .block.left .text {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.profile-main .container .profile .profile-content .block.right {
+  justify-content: space-between;
+  align-items: start;
+  height: 70%;
+}
+.profile-main .container .profile .profile-content .block.right .gender-info {
+  height: 41%;
+  display: flex;
+  gap: 2vw;
+}
+.profile-main .container .profile .profile-content .block.right .gender-info .gender-block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 1vh;
+}
+.profile-main .container .profile .profile-content .block.right .gender-info .gender-block .gender-img {
+  width: 2.7vw;
+  height: 6vh;
+}
+.profile-main .container .profile .profile-content .block.right .gender-info .gender-block .gender-img img {
+  width: 100%;
+}
+.profile-main .container .competitions {
+  background-color: rgba(238, 238, 238, 0.5960784314);
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 1vh 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.profile-main .container .competitions .com-head {
+  width: 100%;
+  padding: 1vh 1vw;
+  display: flex;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+.profile-main .container .competitions .com-head .com-span {
+  font-size: 36px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+.profile-main .container .competitions .competition {
+  width: 100%;
+  height: 37vh;
+  display: flex;
+  padding: 2vh;
+  gap: 2vw;
+}
+.profile-main .container .competitions .competition .img {
+  width: 25vw;
+}
+.profile-main .container .competitions .competition .img img {
+  width: 100%;
+}
+.profile-main .container .competitions .competition .description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+.profile-main .container .competitions .competition .description .text,
+.profile-main .container .competitions .competition .description .title {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+.profile-main .container .competitions .competition .description .text {
+  width: 100%;
+  font-size: 25px;
+  font-weight: normal;
+}
+.profile-main .side-bar {
+  width: 25%;
+  height: 100%;
+  background-color: rgba(217, 217, 217, 0.5960784314);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1vh;
+  padding: 7px 10px;
+}
+.profile-main .side-bar .control-block {
+  background-color: rgba(247, 247, 247, 0.8039215686);
+  display: flex;
+  width: 100%;
+  height: 4vh;
+  padding: 1.5%;
+  justify-content: space-around;
+  gap: 2%;
+}
+.profile-main .side-bar .control-block .notifications {
+  width: 9%;
+  height: 100%;
+}
+.profile-main .side-bar .control-block .notifications img {
+  width: 100%;
+}
+.profile-main .side-bar .control-block .logout-button,
+.profile-main .side-bar .control-block .change-password {
+  width: 40%;
+  background-color: #EAEAEA;
+}
+.profile-main .side-bar .control-block .change-password {
+  width: 60%;
+}
+.profile-main .side-bar .certificates {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5019607843);
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  overflow-y: scroll;
+}
+.info-text {
+  background-color: transparent;
+  font-family: var(--bold-txt);
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=profile.css.map */

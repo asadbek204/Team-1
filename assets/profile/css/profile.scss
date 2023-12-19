@@ -1,0 +1,240 @@
+
+:root {
+  --clr-input-text: #737171;
+}
+
+.display-none {
+    display: none;
+}
+
+footer {
+  display: none;
+}
+
+.profile-main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background-image: url("../img/bg.png");
+
+  .container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1vh;
+    padding: 4vh 1vw;
+    padding-bottom: 2vh;
+
+    .profile {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+      background-color: #E0E0E067;
+      padding: 1vh 2vw;
+
+      .profile-h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 36px;
+      }
+
+      .profile-content {
+        display: flex;
+        gap: 10vw;
+        width: 100%;
+        height: 42vh;
+        align-items: center;
+
+        .block {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .block.left {
+          height: 100%;
+          flex-direction: row;
+          gap: 2vw;
+          align-items: center;
+
+          .img {
+            width: 16vw;
+
+            img {
+              width: 100%;
+            }
+          }
+          .text {
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+          }
+        }
+
+        .block.right {
+          justify-content: space-between;
+          align-items: start;
+          height: 70%;
+
+          .gender-info {
+            height: 41%;
+            display: flex;
+            gap: 2vw;
+
+            .gender-block {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: end;
+              align-items: center;
+              gap: 1vh;
+
+              .gender-img {
+                width: 2.7vw;
+                height: 6vh;
+
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .competitions {
+      background-color: #EEEEEE98;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      padding: 1vh 2vw;
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+
+      .com-head {
+        width: 100%;
+        padding: 1vh 1vw;
+        display: flex;
+        align-items: center;
+        background-color: #FAFAFA;
+
+        .com-span {
+          font-size: 36px;
+          font-family: 'Inter', sans-serif;
+          font-weight: bold;
+        }
+      }
+
+      .competition {
+        width: 100%;
+        height: 37vh;
+        display: flex;
+        padding: 2vh;
+        gap: 2vw;
+
+        .img {
+          width: 25vw;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .description {
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+          gap: 3vh;
+
+          .text,
+          .title {
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+          }
+
+          .text {
+            width: 100%;
+            font-size: 25px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+
+  .side-bar {
+    width: 25%;
+    height: 100%;
+    background-color: #D9D9D998;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1vh;
+    padding: 7px 10px;
+
+
+    .control-block {
+      background-color: #F7F7F7CD;
+      display: flex;
+      width: 100%;
+      height: 4vh;
+      padding: 1.5%;
+      justify-content: space-around;
+      gap: 2%;
+
+      .notifications {
+        width: 9%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          //height: 100%;
+        }
+      }
+
+      .logout-button,
+      .change-password {
+        width: 40%;
+        background-color: #EAEAEA;
+      }
+
+      .change-password {
+        width: 60%;
+      }
+    }
+
+    .certificates {
+      width: 100%;
+      height: 100%;
+      background-color: #FFFFFF80;
+      display: flex;
+      flex-direction: column;
+      padding: 1%;
+      overflow-y: scroll;
+      .date {
+
+      }
+
+      .certificate {
+
+      }
+    }
+  }
+}
+
+.info-text {
+  background-color: transparent;
+  font-family: var(--bold-txt);
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5);
+}

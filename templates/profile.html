@@ -1,0 +1,79 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'profile/css/profile.css' %}">
+    <script src="{% static 'profile/js/profile.js' %}" defer></script>
+	<title>Title</title>
+{% endblock %}
+
+{% block content %}
+<main class="profile-main">
+    <div class="container">
+        <div class="profile">
+            <h2 class="profile-h2">Личные данные</h2>
+            <div class="profile-content">
+                <div class="block left">
+                    <div class="img">
+                        <img src="{% static 'profile/img/def-user-photo.png' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <input class="info-text" type="submit" value="Ваше имя" name="name">
+                        <input class="info-text" type="submit" value="Ваше фамилия" name="surname">
+                        <input class="info-text" type="submit" value="Ваше номер телефона" name="phone">
+                        <input class="info-text" type="submit" value="Ваше Е-mail" name="email">
+                    </div>
+                </div>
+                <div class="block right">
+                    <input class="info-text" type="submit" value="Дата рождения" name="birth-date">
+                    <input class="info-text" type="submit" value="Ваше адрес" name="address">
+                    <div class="gender-info">
+                        <div class="gender-block">
+                            <div class="gender-img"><img src="{% static 'profile/img/femail.png' %}" alt=""></div>
+                            <label for="female-check" class="gender-check">
+                                <img src="{% static 'profile/img/check-false.png' %}" alt="">
+                            </label>
+                            <input class="display-none" type="checkbox" name="female" id="female-check">
+                        </div>
+                        <div class="gender-block">
+                            <div class="gender-img"><img src="{% static 'profile/img/male.png' %}" alt=""></div>
+                            <label for="male-check" class="gender-check">
+                                <img src="{% static 'profile/img/check-false.png' %}" alt="">
+                            </label>
+                            <input class="display-none" type="checkbox" name="male" id="male-check">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="competitions">
+            <div class="com-head">
+                <span class="com-span">Текущие конкурсы</span>
+            </div>
+            {% for competition in competitions %}
+            <div class="competition" id="{{ forloop.counter }}">
+                <div class="img"><img src="{{ competition.img.url }}" alt=""></div>
+                <div class="description">
+                    <span class="title">{{ competition.title }}</span>
+                    <p class="text">{{ competition.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="side-bar">
+        <div class="control-block">
+            <div class="notifications"><img src="{% static 'profile/img/notification.png' %}" alt=""></div>
+            <button class="logout-button" id="btn-logout">logout</button>
+            <button class="change-password" id="btn-change-password">change password</button>
+        </div>
+        <div class="certificates">
+            <span class="date">01 - декабр - 2023 год</span>
+            <div class="certificate"><img src="" alt=""></div>
+        </div>
+    </div>
+</main>
+<script>
+let array = [{% for com in competitions %}'{{ forloop.counter }}', {% endfor %}]
+</script>
+{% endblock %}
