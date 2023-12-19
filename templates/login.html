@@ -1,0 +1,79 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profile/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <section class="body">
+        <div class="block">
+            <div class="p_img">
+                <style>
+                    .p_img {
+                        background-image: url("{% static 'profile/imgs/profile.svg' %}");
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                    }
+                </style>
+                <h1 class="p_h_text">ЛИЧНЫЙ КАБИНЕТ</h1>
+            </div>
+
+            <div class="profile">
+                <div class="p_form">
+                    <form action="" class="">
+                        <label for="login" class="profile_label">
+                            Логин <span> (E-MAIL)</span>
+                        </label>
+
+                        <input
+                                class="profile_input"
+                                type="text"
+                                placeholder=""
+                                id="login"
+                        />
+
+                        <label for="password"><p>Пароль</p></label>
+                        <input
+                                class="profile_input"
+                                type="password"
+                                placeholder=""
+                                id="password"
+                        />
+
+                        <div class="profile_input_check">
+                            <div class="">
+                                <label for="chekbox" class="a zapomnit"> Запомнить</label>
+                            </div>
+
+                            <a class="a zb_pr" href="#"> забыли пароль</a>
+                        </div>
+                        <div class="center">
+                            <button type="submit" class="profile_btn">ВОЙТИ</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="center">
+                    <a class="a pr_text" href="#">
+                        войдите через аккаунт социальной сети</a
+                    >
+                    <hr class="white_hr"/>
+
+                    <a href="" class="p_icons">
+                        <img src="{% static 'profile/imgs/g+.svg' %}" alt=""
+                        /></a>
+                    <a href="" class="p_icons">
+                        <img src="{% static 'profile/imgs/f.svg' %}" alt=""
+                        /></a>
+                    <a href="" class="p_icons">
+                        <img src="{% static 'profile/imgs/intsa.svg' %}" alt=""
+                        /></a>
+                    <a href="" class="p_icons"> <img src="{% static 'profile/imgs/tg.svg' %}" alt=""/> </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
