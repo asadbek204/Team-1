@@ -5,11 +5,28 @@
   color: var(--text-color);
 }
 
+.footer-gray {
+  text-align: center;
+}
+
 .footer-custom {
-  max-width: 65%;
+  width: 80%;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 3rem 24px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .footer-custom {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer-custom {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 .footer-custom:after {
@@ -47,7 +64,7 @@
 
 @media only screen and (min-width: 568px) {
   .footer-list-wrap {
-    width: 50%;
+    width: 33%;
   }
   .footer .list-img {
     float: left;
