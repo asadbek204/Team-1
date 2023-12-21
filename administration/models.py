@@ -1,10 +1,11 @@
 from django.db import models
+from account.models import UserModel
 
 
 # Create your models here.
 class AdminModel(models.Model):
-    # user
     rules = models.CharField()
+    user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
 
 
 class RuleModel(models.Model):
@@ -12,3 +13,7 @@ class RuleModel(models.Model):
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     admin_site = models.ForeignKey(AdminModel, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'Rule'
+        verbose_name_plural = 'Rules'
