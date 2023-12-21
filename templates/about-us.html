@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}
     <section id="about-us">
-        <div class="container-sm mt-3">
+        <div class="container-lg ps-0">
 {#            -----------START------------#}
             <div class="start">
                 <div class="start-txt">
@@ -92,21 +92,17 @@
 
             {#-----------ADVANTAGES------------#}
             <div class="advantages">
-                <div class="advantages-txt">
-                    <h4>некоторые преимущества</h4>
-                    <hr class="hr-green">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                </div>
                 <div class="row mb-4">
                     <div class="advantages-card d-flex flex-wrap">
                         {% for advantage in advantages %}
-                            <div class="advantages-main col-lg-4 col-md-6">
+                            <div class="advantages-main col-lg-4 col-md-6 fff">
+                                <h6 class="d-none name">{{ advantage }}</h6>
                                 <div class="d-flex align-items-center">
-                                    <img src="{{ advantage.image.url }}" alt="" style="width: 25%">
-                                    <h6 class="ms-3">{{ advantage }}</h6>
+                                    <img src="{{ advantage.image.url }}" alt="" class="advantage-img">
+                                    <p class="my-3 d-none desc">{{ advantage.description }}</p>
+                                    <h6 class="ms-3 name1">{{ advantage }}</h6>
                                 </div>
-                                <p class="my-3">{{ advantage.description }}</p>
+                                <p class="my-3 desc1">{{ advantage.description }}</p>
                             </div>
                         {% endfor %}
                     </div>
@@ -130,22 +126,22 @@
                 <div class="scroll-images">
                     {% for expert in experts %}
                         <div class="hah">
-                            <img id="{{ expert.id }}" src="{{ expert.image.url }}" alt="" style="width: 14rem">
+                            <img id="{{ expert.id }}" src="{{ expert.image.url }}" alt=""
+                                 style="width: 14rem">
                         </div>
                     {% endfor %}
                 </div>
-                <div id="hide" class="hide-content mb-3">
+                <div id="hide" class="hide-content mb-3 me-4">
                     {% for expert in experts %}
                         <div id="hidden-{{ expert.id }}" class="hide">
                             <div class="experts-card">
-                                <div class="e-img mt-4">
-                                    <img src="{{ expert.image.url }}" alt="" style="width: 15rem; height: 14rem"
-                                         class="mt-1">
+                                <div class="e-img">
+                                    <img src="{{ expert.image.url }}" alt="" style="height: auto">
                                     <div class="btn-prof mt-2">
-                                        <button>{{ expert }}</button>
+                                        <div class="prof">{{ expert }}</div>
                                     </div>
                                 </div>
-                                <div class="e-par mt-3">
+                                <div class="e-par">
                                     <p>{{ expert.description }}</p>
                                 </div>
                             </div>

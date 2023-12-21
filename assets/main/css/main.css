@@ -13,7 +13,6 @@
     --hr-grey: #E2DFDF;
     --hr-green: #09b672;
     --hr-adv: #EAB801;
-
 }
 
 * {
@@ -26,7 +25,6 @@ body {
     background-image: url("../img/bg.png");
     background-size: 100% 90%;
     background-repeat: no-repeat;
-    /*background-position: left;*/
 }
 
 section {
@@ -34,12 +32,7 @@ section {
     position: relative;
 }
 
-/*.container2 {*/
-/*    width: 80%;*/
-/*    margin: 0 auto;*/
-/*}*/
-
-/*!*------------ABOUT US SECTION--------------*!*/
+/*!*!*------------ABOUT US SECTION--------------*!*!*/
 .start {
     width: 80%;
     height: 60vh;
@@ -50,11 +43,19 @@ section {
     position: relative;
 }
 
+
+@media only screen and (max-width: 740px) {
+    .start  {
+        width: 100% !important;
+    }
+}
+
+
 .start .start-txt {
     width: 80%;
-    margin: 0.5rem 80px 1rem 6rem;
+    margin: 0 80px 1rem 6rem;
     position: absolute;
-    top: 20%;
+    top: 15%;
 }
 
 .start-txt h6 {
@@ -79,10 +80,6 @@ section {
 }
 
 @media only screen and (max-width: 1400px) {
-    .start {
-        height: 400px;
-    }
-
     .start .start-txt {
         width: 85%;
         margin: 0 0 0 2rem;
@@ -100,19 +97,15 @@ section {
 }
 
 @media only screen and (max-width: 1024px) {
-    .start {
-        padding: 2rem 0;
-        height: 300px;
-    }
 
     .start .start-txt h6 {
         font-size: 40px;
     }
 
     .start-txt p {
-        font-size: 10px;
-        line-height: 12px;
-        margin-top: 0;
+        font-size: 15px;
+        line-height: 15px;
+        margin-top: 5%;
     }
 }
 
@@ -123,7 +116,10 @@ section {
 
     .start .start-txt h6 {
         font-size: 30px;
-        line-height: 70px;
+    }
+
+    .start {
+        width: 90%;
     }
 }
 
@@ -146,7 +142,6 @@ section {
     font-family: var(--txt);
     font-size: 36px;
     font-weight: 400;
-    /*line-height: 44px;*/
     letter-spacing: 0;
     text-align: left;
 }
@@ -184,6 +179,12 @@ section {
     .about-us .about-txt p {
         font-size: 16px;
         line-height: 16px;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .about-us {
+        width: 95%;
     }
 }
 
@@ -286,6 +287,20 @@ section {
     font-size: 40px;
 }
 
+@media only screen and (max-width: 740px) {
+    .swiper {
+        width: 90%;
+    }
+
+    .swiper .left {
+        left: 20%;
+    }
+
+    .swiper .right {
+        right: 15%;
+    }
+}
+
 /*----------END OF SWIPER----------*/
 
 
@@ -346,6 +361,7 @@ section {
     margin-right: 10px;
 }
 
+
 .advantages .advantages-card .advantages-main p {
     font-family: var(--txt);
     font-size: 14px;
@@ -355,7 +371,6 @@ section {
     color: var(--text-color-ligth);
     text-align: left;
     width: 90%;
-    /*margin-right: 30px;*/
 }
 
 .advantages-hr {
@@ -396,6 +411,46 @@ section {
         line-height: 14px;
     }
 }
+@property --advantage {
+  syntax: "<percentage>";
+  initial-value: 25%;
+  inherits: false;
+}
+
+ .advantage-img {
+       width: var(--advantage);
+   }
+
+@media only screen and (max-width: 740px) {
+    .advantages {
+        width: 90%;
+    }
+    .fff {
+        width: 80%;
+        margin: 1.5vh auto;
+    }
+   .name {
+       display: block !important;
+       margin-left: 0;
+   }
+
+   .name1 {
+       display: none;
+   }
+
+   .desc {
+       display: inline !important;
+   }
+
+   .desc1 {
+       display: none;
+   }
+
+    .advantage-img {
+       --advantage: 30%;
+        margin-right: 20px;
+   }
+}
 
 /*----------END OF ADVANTAGES----------*/
 
@@ -404,6 +459,12 @@ section {
 .experts {
     width: 80%;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 740px) {
+    .experts {
+        width: 90%;
+    }
 }
 
 .experts .experts-txt {
@@ -470,7 +531,8 @@ section {
 .hah:last-child {
     margin-right: 0;
 }
-.scroll-images::-webkit-scrollbar{
+
+.scroll-images::-webkit-scrollbar {
     height: 2%;
     width: 100%;
     background: var(--color-primary);
@@ -487,18 +549,18 @@ section {
     display: flex;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1224px) {
     .experts-card {
         display: block;
     }
 
-    .e-par {
-        font-size: 2px;
-        text-align: center;
+    .e-par p {
+        font-size: 24px;
+        line-height: 20px;
     }
 
-    .e-img .btn-prof {
-        justify-content: start;
+    .e-img {
+        margin-left: 20%;
     }
 }
 
@@ -511,23 +573,34 @@ section {
     transition: height 0ms 0ms, opacity 400ms 0ms;
 }
 
+.e-img {
+    position: relative;
+    display: inline-flex;
+}
+
 .btn-prof {
-    display: flex;
-    justify-content: end;
+    position: absolute;
+    opacity: 0;
+    transition: .5s ease;
+    bottom: 0;
+    right: 0;
+}
+
+.e-img:hover .btn-prof {
+    opacity: 1;
 }
 
 .e-img:last-child {
     margin: 0;
 }
 
-.e-img button {
-    background: var(--color-primary);
+.e-img .prof {
+    background-color: var(--color-primary);
     padding: 8px;
     font-family: var(--main-txt);
     font-size: 10px;
     font-weight: 400;
     text-transform: uppercase;
-    text-align: right;
 }
 
 .e-par {
@@ -539,7 +612,6 @@ section {
     text-align: justify;
     padding: 2%;
 }
-
 
 .close-btn {
     float: right;
@@ -555,6 +627,12 @@ section {
     background-color: var(--color-primary);
     color: var(--color-wide);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 740px) {
+    .hide.visible {
+        width: 90%;
+    }
 }
 
 
