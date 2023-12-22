@@ -54,6 +54,17 @@ body {
     font-family: var(--title);
 }
 
+@media (max-width: 1524px) {
+    .yellow-box {
+        display: block;
+        text-align: center;
+    }
+
+    .yellow-box .title h1 {
+        font-size: 40px;
+    }
+}
+
 .yellow-box img {
     max-width: 100%;
     height: auto;
@@ -61,6 +72,12 @@ body {
 
 .main-text {
     padding: 25px 70px;
+}
+
+@media (max-width: 1524px) {
+    .yellow-box img {
+        width: 300px;
+    }
 }
 
 .bg-img {
@@ -156,7 +173,7 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
-    width: 40%;
+    width: 50%;
     text-align: center;
     padding: 60px 32px;
     margin: 0 auto;
