@@ -12,10 +12,8 @@ class UserModel(AbstractUser):
     )
     photo = models.ImageField(upload_to='users_image/', null=True, blank=True)
     phone = models.CharField(max_length=20)
-    password = models.PositiveIntegerField()
-    confirm_password = models.PositiveIntegerField()
+    password = models.CharField(max_length=256)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICE)
-    is_admin = models.BooleanField()
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
