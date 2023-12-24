@@ -36,8 +36,9 @@ INSTALLED_APPS = [
     'competition',
     'account',
     'home',
-    'administration'
-    'regions',
+    'administration',
+    'about',
+    'expert'
 ]
 
 MIDDLEWARE = [
