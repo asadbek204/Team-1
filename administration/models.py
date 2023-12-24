@@ -4,7 +4,7 @@ from account.models import UserModel
 
 # Create your models here.
 class AdminModel(models.Model):
-    rules = models.CharField()
+    rules = models.CharField(max_length=100)
     user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
 
 
