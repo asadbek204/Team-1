@@ -1,0 +1,289 @@
+/* alegreya-sans-300 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/alegreya-sans-v24-latin-300.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-300.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/alegreya-sans-v24-latin-300.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-300.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* alegreya-sans-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/alegreya-sans-v24-latin-regular.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-regular.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/alegreya-sans-v24-latin-regular.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-regular.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* alegreya-sans-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/alegreya-sans-v24-latin-500.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-500.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/alegreya-sans-v24-latin-500.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-500.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* alegreya-sans-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/alegreya-sans-v24-latin-700.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-700.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/alegreya-sans-v24-latin-700.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-700.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* alegreya-sans-800 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/alegreya-sans-v24-latin-800.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-800.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/alegreya-sans-v24-latin-800.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-800.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* alegreya-sans-900 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/alegreya-sans-v24-latin-900.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-900.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/alegreya-sans-v24-latin-900.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/alegreya-sans-v24-latin-900.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/inter-v12-latin-500.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/inter-v12-latin-500.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/inter-v12-latin-700.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/inter-v12-latin-700.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-v12-latin-regular.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/inter-v12-latin-regular.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+:root {
+    --waiting-color: #F5C24D;
+    --danger-color: #ED6059;
+    --secondary-color: #D2D2D2;
+    --pure-white: #ffffff;
+}
+
+* {
+    font-family: 'Alegreya Sans', 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.konkurs {
+    background-image: url('../img/img1.svg');
+    height: 400px;
+    width: 1143px;
+    padding: 0;
+}
+
+.mt-4 {
+    padding: 40px 0 0 40px;
+}
+
+.konkurs_text {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 113px;
+}
+
+.konkurs_lorem {
+    font-weight: 400;
+    line-height: 20px;
+    width: 294px;
+    padding-bottom: 25px;
+}
+
+.konkurs_button {
+    border-radius: 17px;
+    width: 267px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.competitions {
+    /* padding-right: 10px; */
+    width: 1143px;
+}
+
+.card {
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow:#F5C24D;
+    background: #F5C24D;
+}
+
+.card_yellow {
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow:#ED6059;
+    background: #ED6059;
+}
+
+.card_button {
+    border-radius: 17px;
+    width: 150px;
+    height: 37px;
+    background-color: #ED6059;
+}
+
+.card_button_red {
+    border-radius: 17px;
+    width: 150px;
+    background-color: #F5C24D;
+}
+
+
+.pagination {
+    display: inline-block;
+}
+  
+.pagination .a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #F5C24D;
+}
+
+.pagination .previous  {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #ED6059;
+}
+
+.pagination .next  {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #ED6059;
+}
+  
+.pagination .active {
+    background-color: #ED6059;
+    color: white;
+}
+
+.atpravit_a {
+    width: 261px;
+    height: 63px;
+    border-radius: 15px;
+}
+ 
