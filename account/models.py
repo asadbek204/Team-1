@@ -37,4 +37,5 @@ class Expert(models.Model):
     expert_token = models.CharField(max_length=100)
     profession = models.CharField(max_length=100)
     last_checked_competition = models.PositiveIntegerField()
+    user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
 
