@@ -1,0 +1,253 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    background-image: url("../img/bg.svg");
+    background-size: cover;
+    text-align: center;
+}
+
+.container1 {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 1500px) {
+    .container1 {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container1 {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+/*!*------------RESULTS SECTION---------------*!*/
+.results {
+    width: 80%;
+    margin: 5% auto 8% auto;
+    display: flex;
+    background-color: var(--mini-bg);
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1500px) {
+    .results {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .results {
+        width: 100%;
+    }
+}
+
+
+.results .results-text {
+    margin: 4rem 3rem 0.5rem 7rem;
+}
+
+.results .results-text h1 {
+    font-family: var(--title);
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.results .results-text p {
+    line-height: 1.7rem;
+    font-size: 16px;
+    color: var(--text-color-ligth);
+    text-align: justify;
+}
+
+.results .results-img {
+    text-align: center;
+    width: 100%;
+}
+
+@media only screen and (min-width: 1600px) {
+    .results .results-img img {
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .results .results-text h1 {
+        font-size: 40px;
+    }
+
+    .results .results-img {
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .results-img img {
+        width: 90%;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .results {
+        flex-wrap: wrap;
+    }
+
+    .results .results-text {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .results .results-text h1 {
+        font-size: 33px;
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .results-img {
+        margin-bottom: 20px;
+    }
+
+    .results-img img {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+
+    .results .results-text {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .results .results-text h1 {
+        font-size: 33px;
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .results-img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*-------------COUNTER-----------------*/
+
+
+.counter {
+    width: 80%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1500px) {
+    .counter {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .counter{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.cc {
+    text-align: center;
+    margin: 2% 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .cc {
+        margin: 0 0;
+    }
+}
+
+.counter-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    width: 9rem;
+    height: 9rem;
+    background-color: var(--color-primary);
+    margin: 0 1.2rem;
+}
+
+.counter-img:last-child, .counter-number:last-child, .counter-txt:last-child {
+    margin-right: 0;
+}
+
+.count-img {
+    width: 80%;
+    height: 80%;
+}
+
+.counter-number {
+    margin: 12% auto 2% auto;
+}
+
+.counter-txt {
+    margin: 0 1.2rem 4rem 1.2rem;
+}
+
+.counter-number > p {
+    font-family: var(--numbers);
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--nums);
+}
+
+.counter-txt > p {
+    font-family: var(--bold-txt);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+@media only screen and (max-width: 1500px) {
+    .counter {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .counter-number > p {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .counter-txt > p {
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+
+/*!*------------END OF RESULTS SECTION--------------*!*/
