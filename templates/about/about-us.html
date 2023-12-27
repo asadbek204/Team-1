@@ -1,0 +1,192 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block extra_head %}
+    {#-----------BOOTSTRAP------------#}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+    <link href="{% static "about/about_us/main/css/main.css" %}" rel="stylesheet">
+    <script src="{% static "about/about_us/main/js/main.js" %}"></script>
+    <script>
+        let currentVisible = null
+
+        function onHover(event) {
+            let id = event.target.id
+            if (!!currentVisible)
+                currentVisible.classList.remove('visible')
+            let el = document.getElementById(`hidden-${id}`)
+            el.classList.add('visible')
+            currentVisible = el
+        }
+
+
+        function hideDiv() {
+            currentVisible.classList.remove('visible')
+        }
+
+        const expertArray = new Array({% for i in experts %}'{{ i.id }}',{% endfor %})
+        for (let i = 1; i <= expertArray.length; i++) {
+            let expert = document.getElementById(`${expertArray[i - 1]}`)
+            expert.addEventListener(
+                'mouseover',
+                onHover
+            )
+        }
+    </script>
+
+
+
+{% endblock %}
+{% block content %}
+    <section id="about-us">
+        <div class="container-lg ps-0">
+{#            -----------START------------#}
+            <div class="start">
+                <div class="start-txt">
+                    <h6>О НАС</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        labore
+                        et ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Lorem ipsum dolor sit
+                        amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                    </p>
+                </div>
+            </div>
+            {#-----------ABOUT US------------#}
+            <div class="about-us">
+                <div class="about-txt">
+                    <h2>О НАС</h2>
+                    <h4>информация о конкурсах</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                        ut
+                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+                        tation
+                        ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                        dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+                        facilisis at vero eros et accumsan et iusto odio dignissim qui blanddit praesent luptatum zzril
+                        delenit augue duis dolore te feugait nulla facilisi.
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut
+                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+                        tation
+                        ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                        dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+                        facilisis at vero eros et accumsan et iusto odio dignissim qui blanddit praesent luptatum zzril
+                        delenit augue duis dolore te feugait nulla facilisi.
+                    </p>
+                </div>
+                <hr class="hr-grey">
+            </div>
+
+            {#-----------SWIPER------------#}
+            <div class="swiper">
+                <div class="cover mb-5">
+                    <div class="scroll-images">
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0" >
+                            <img src="{% static "about/about_us/main/img/swiper/swiper7.jpeg" %}" alt="">
+                        </div>
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0">
+                            <img src="{% static "about/about_us/main/img/swiper/swiper2.png" %}" alt="">
+                        </div>
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0">
+                            <img src="{% static "about/about_us/main/img/swiper/swiper3.png" %}" alt="">
+                        </div>
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0">
+                            <img src="{% static "about/about_us/main/img/swiper/swiper4.png" %}" alt="">
+                        </div>
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0">
+                            <img src="{% static "about/about_us/main/img/swiper/swiper5.png" %}" alt="">
+                        </div>
+                        <div class="child col-md-4 col-lg-2 col-sm-6 col-10 p-0">
+                            <img src="{% static "about/about_us/main/img/swiper/swiper6.png" %}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-row">
+                        <button class="left" onclick="leftScroll()">
+                            <i class="fa-solid fa-caret-left"></i>
+                        </button>
+                        <button class="dots">
+                            <i class="fa-solid fa-circle me-md-5 me-sm-3" style="font-size: 15px"></i>
+                            <i class="fa-solid fa-circle me-md-5 me-sm-3" style="font-size: 15px"></i>
+                            <i class="fa-solid fa-circle" style="font-size: 15px"></i>
+                        </button>
+                        <button class="right" onclick="rightScroll()">
+                            <i class="fa-solid fa-caret-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <hr class="hr-grey">
+            </div>
+
+            {#-----------ADVANTAGES------------#}
+            <div class="advantages">
+                <div class="row mb-4">
+                    <div class="advantages-card d-flex flex-wrap">
+                        {% for advantage in advantages %}
+                            <div class="advantages-main col-lg-4 col-md-6 fff">
+                                <h6 class="d-none name">{{ advantage }}</h6>
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ advantage.image.url }}" alt="" class="advantage-img">
+                                    <p class="my-3 d-none desc">{{ advantage.description }}</p>
+                                    <h6 class="ms-3 name1">{{ advantage }}</h6>
+                                </div>
+                                <p class="my-3 desc1">{{ advantage.description }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <br>
+                <hr class="advantages-hr">
+            </div>
+
+            {#-----------EXPERTS------------#}
+            <div class="experts">
+                <div class="experts-txt">
+                    <h4>ЭКСПЕРТЫ</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodore et dolore magna
+                        aliqua.</p>
+                    <div class="dots">
+                        <div><i class="fa-solid fa-circle me-5" style="font-size: 100%"></i></div>
+                        <div><i class="fa-solid fa-circle me-5" style="font-size: 100%"></i></div>
+                        <div><i class="fa-solid fa-circle me-5" style="font-size: 100%"></i></div>
+                    </div>
+                </div>
+                <div class="scroll-images">
+                    {% for expert in experts %}
+                        <div class="hah">
+                            <img id="{{ expert.id }}" src="{{ expert.image.url }}" alt=""
+                                 style="width: 14rem">
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="hide" class="hide-content mb-3 me-4">
+                    {% for expert in experts %}
+                        <div id="hidden-{{ expert.id }}" class="hide">
+                            <div class="experts-card">
+                                <div class="e-img">
+                                    <img src="{{ expert.image.url }}" alt="" style="height: auto">
+                                    <div class="btn-prof mt-2">
+                                        <div class="prof">{{ expert.profession }}</div>
+                                    </div>
+                                </div>
+                                <div class="e-par">
+                                    <p>{{ expert.about }}</p>
+                                </div>
+                            </div>
+                            <div>
+                                <button onclick="hideDiv()" class="close-btn">
+                                    <i class="fa-solid fa-chevron-up"></i>
+                                </button>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
