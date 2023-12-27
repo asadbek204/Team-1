@@ -26,3 +26,17 @@ class CounterModel(models.Model):
         verbose_name = "counter"
         verbose_name_plural = "counters"
         db_table = "counter"
+
+
+class AdvantagesModel(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="advantages/")
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "advantage"
+        verbose_name_plural = "advantages"
+        db_table = "advantages"
