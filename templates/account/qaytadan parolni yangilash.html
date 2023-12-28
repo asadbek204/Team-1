@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'account/css/qaytadan parolni yangilash.css' %}">
+    
+{% endblock %}
+
+{% block header %}
+	 <div class="main">
+        <form action="">
+            <div class="box">
+                <h1>Enter new paswword </h1>
+            <input type="password" placeholder="new password" id="password">
+            <input type="password" placeholder=" confirun password" id="password">
+            <input type="submit" value="next" id="next">
+        </div>
+        </form>
+    </div>
+{% endblock %}

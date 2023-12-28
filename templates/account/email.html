@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'account/css/test.css' %}">
+{% endblock %}
+
+{% block content %}
+	 <div class="main">
+    <form action="">
+        <div class="form_body">
+        
+            <div class="box">
+                <h1>Enter the your E-mail adress</h1>
+                <input type="email" name="" id="email" placeholder="Email">
+
+                <input type="submit" value="Fotgot" id="fotgot">
+                <p>Alredy have an account? <a href="login.html"
+                    class="log"> Login</a>
+                
+                </p>
+
+            </div>
+        
+        </div>    
+
+    </form>
+</div>
+{% endblock %}
