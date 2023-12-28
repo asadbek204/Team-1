@@ -140,3 +140,24 @@
 .check > input{
     margin-left: 30px;
 }
+
+.gender-info {
+  height: 41%;
+  display: flex;
+  gap: 2vw;
+}
+.gender-info .gender-block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 1vh;
+}
+.gender-info .gender-block .gender-img {
+  width: 2.7vw;
+  height: 6vh;
+}
+.gender-info .gender-block .gender-img img {
+  width: 100%;
+}

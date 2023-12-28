@@ -30,10 +30,11 @@ class QuestionnaireModel(models.Model):
     first_name = models.CharField(max_length=50, help_text='Your First Name like: Ali')
     last_name = models.CharField(max_length=50, help_text='Your Family Name: Aliyev')
     age = models.PositiveIntegerField()
-    file = models.FileField()
-    final_score = models.PositiveIntegerField()
+    phone_number = models.CharField(max_length=20)
+    file = models.FileField(null=True, blank=True)
+    final_score = models.PositiveIntegerField(null=True, blank=True)
     # region
-    region = models.ForeignKey(Region, on_delete=models.CASCADE)
+    region = models.ForeignKey(Region, on_delete=models.CASCADE, to_field='name')
     # participent
     participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
     competition = models.ForeignKey(CompetitionModel, on_delete=models.CASCADE)

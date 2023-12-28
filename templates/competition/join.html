@@ -1,12 +1,10 @@
+{% extends 'layouts/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'css/join.css' %}">
-</head>
-<body>
+{% block extra_head %}
+    <title>Questionare</title>
+    <link rel="stylesheet" href="{% static 'join/css/join.css' %}">
+{% endblock %}
+{% block content %}
 <div class="all">
     <div class="container">
         <div class="join">
@@ -36,51 +34,61 @@
                 </div>
                 <div class="form">
                     <div class="input">
-                        <form action="">
+                        <form action="" method="post">
+                            {% csrf_token %}
                             <div class="flex">
                                 <div class="input">
-                                    <input type="text" placeholder="Имя:">
+                                    <input type="text" placeholder="Имя:" name="first_name">
                                 </div>
                                 <div class="input">
-                                    <input type="text" placeholder="Фамилия:">
+                                    <input type="text" placeholder="Фамилия:" name="last_name">
                                 </div>
                             </div>
                             <div class="selectors">
                                 <div class="select">
                                     <div class="selector">
-                                        <select name="" id="">
-                                            <option value="Лет:">Лет:</option>
-                                            <option value="Лет:">Лет:</option>
+                                        <select name="age" id="">
+                                            <option value="15">15</option>
+                                            <option value="12">12</option>
                                         </select>
                                     </div>
                                     <div class="selector">
-                                        <select name="Лет:" id="">
-                                            <option value="Лет:">Категория конкурс:</option>
-                                            <option value="Лет:">Лет:</option>
+                                        <select name="category" id="">
+                                            <option value="young">young</option>
+                                            <option value="Лет:">middle</option>
                                         </select>
                                     </div>
                                     <div class="selector">
-                                        <select name="Лет:" id="">
-                                            <option value="Лет:">Город:</option>
-                                            <option value="Лет:">Лет:</option>
+                                        <select name="region" id="">
+                                            <option value="Tashkent">Tashkent</option>
+                                            <option value="Samarkand">Samarkand</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="phone">
-                                    <input type="text" placeholder="Телефон:">
+                                    <input type="text" placeholder="Телефон:" name="phone_number">
                                 </div>
-                                <div class="flexs">
-                                    <div class="label">
-                                        <label for="checkbox"><img src="{% static 'img/women.png' %}" alt=""></label>
-                                        <label for="checkbox"><img src="{% static 'img/male.png' %}" alt=""></label>
+                                <div class="gender-info">
+                                    <div class="gender-block">
+                                        <div class="gender-img"><img src="{% static 'profile/img/femail.png' %}" alt="">
+                                        </div>
+                                        <label for="female-check" class="gender-check">
+                                            <img src="{% static 'profile/img/check-false.png' %}" alt="">
+                                        </label>
+                                        <input class="display-none" type="radio" name="female" id="female-check">
                                     </div>
-                                    <div class="check">
-                                        <input type="checkbox" id="checkbox" class="first">
-                                        <input type="checkbox" id="checkbox">
+                                    <div class="gender-block">
+                                        <div class="gender-img"><img src="{% static 'join/img/women.png' %}" alt="">
+                                        </div>
+                                        <label for="male-check" class="gender-check">
+                                            <img src="{% static 'profile/img/check-false.png' %}" alt="">
+                                        </label>
+                                        <input class="display-none" type="radio" name="male" id="male-check">
                                     </div>
                                 </div>
                                 <div class="textarea">
-                                    <textarea name="" id="" cols="30" rows="10" placeholder="Ваш коммент..."></textarea>
+                                    <textarea name="comment" id="" cols="30" rows="10"
+                                              placeholder="Ваш коммент..."></textarea>
                                 </div>
                                 <input type="checkbox" id="checkbox">
                                 <label for="checkbox" class="remember">Запомнить</label>
@@ -95,5 +103,4 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+{% endblock %}
