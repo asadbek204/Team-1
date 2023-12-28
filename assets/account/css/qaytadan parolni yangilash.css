@@ -5,18 +5,14 @@
     /* border: none; */
 }
 
-body{
-    background-image: url(imgs/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 
-}
 
 input{
     display: block;
 }
 
 .main{
+     background: url("/static/join/img/back.png") ;
     height: 100vh;
     display: flex;
     align-items: center;

@@ -6,14 +6,10 @@
 }
 
 
-body{
-    background-image: url(assets/gallery/img/back.png);
-    background-size: cover;
-    background-repeat: no-repeat;
 
-}
 
 .main{
+     background: url("/static/join/img/back.png") ;
     display: flex;
     justify-content: center;
     align-items: center;

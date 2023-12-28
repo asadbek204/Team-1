@@ -6,12 +6,7 @@
 }
 
 
-    body{
-        background-image: url(imgs/background.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-    
-    }
+
 
 input{
     display: block;
@@ -19,6 +14,7 @@ input{
 }
 
 .main{
+     background: url("/static/join/img/back.png") ;
     display: flex;
     justify-content: center;
     align-items: center;
