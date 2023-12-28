@@ -9,13 +9,13 @@
 
 .container {
     width: 100%;
-    padding-right: 398px;
-    padding-left: 398px;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 
 .all {
     width: 100%;
-    background: url("/static/img/back.png") 50% 0 no-repeat fixed;
+    background: url("/static/join/img/back.png") 50% 0 no-repeat fixed;
     color: white;
     padding: 100px 0 0 0;
     background-size: cover;
@@ -23,7 +23,7 @@
 
 .join {
     width: 100%;
-    background-image: url("/static/img/back-join.png");
+    background-image: url("/static/join/img/back-join.png");
     background-repeat: no-repeat;
     height: 400px;
     background-size: cover;
@@ -70,6 +70,7 @@
     box-shadow: 0px 7px 10px 0px #00000096;
     opacity: 80%;
     border-radius: 16px;
+    width: 100%;
 }
 
 .questionnaire h2, p {
