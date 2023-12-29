@@ -1,4 +1,4 @@
-let url = "http://127.0.0.1:8000/exp_reg/"
+let url = "http://127.0.0.1:3000/exp_reg/"
 
 
 document.getElementById("regBtn").onclick = async (event) => {
@@ -27,7 +27,7 @@ document.getElementById("regBtn").onclick = async (event) => {
     let data = await result.json()
 
     if (!data.ok) {
-        console.log(data.message)
+        document.getElementById("message1").innerText = data.message
         return
     }
     const blurEl = document.getElementById("blur");

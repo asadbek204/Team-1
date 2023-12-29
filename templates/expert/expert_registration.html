@@ -27,10 +27,11 @@
                 <div class="title">
                     <h1 id="register-text">РЕГИСТРАЦИЯ</h1>
                 </div>
-                <img src="{% static 'main/img/registration.svg' %}" alt="">
+                <img src="{% static 'expert/expert_registaration/main/img/registration.svg' %}" alt="">
             </div>
             <div class="content">
                 <div class="title">Registration Form</div>
+                 <div class="message"><span id="message1"></span></div>
                 <form action="#" method="post">
                     {% csrf_token %}
                     <div class="field">
@@ -52,6 +53,7 @@
         <div class="title">
             <h1 id="register-text">Change Password</h1>
         </div>
+        <div class="message"><span id="message2"></span></div>
         <form action="#" method="post">
             {% csrf_token %}
             <div class="field">
