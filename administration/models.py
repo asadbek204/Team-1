@@ -17,3 +17,9 @@ class RuleModel(models.Model):
     class Meta:
         verbose_name = 'Rule'
         verbose_name_plural = 'Rules'
+
+
+class ContactModel(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()

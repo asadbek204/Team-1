@@ -125,3 +125,11 @@ STATICFILES_DIRS = BASE_DIR / "assets",
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'account.UserModel'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'befirst.contact07@gmail.com'
+EMAIL_HOST_PASSWORD = 'umlr fbkw lmxq qjgd'
