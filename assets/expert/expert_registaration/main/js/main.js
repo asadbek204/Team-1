@@ -1,18 +1,40 @@
-const toggleBlur = async (event) => {
-    event.preventDefault();
-    let url = "http://127.0.0.1:8000/exp_reg/"
+async function sendRequest(url, method, body) {
     let csrf_token = document.querySelector('input[name="csrfmiddlewaretoken"]').value
+    let xhr = new XMLHttpRequest()
+    xhr.open(method, url, true)
+    xhr.responseType = 'json'
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.setRequestHeader('X-CSRFToken', csrf_token)
+
+    xhr.onload = () => {
+        if (xhr.status >= 400) {
+            reject(xhr.response)
+        }
+        else {
+            resolve(xhr.response)
+        }
+    }
+
+    xhr.onerror = () => {
+        reject(xhr.response)
+    }
+    xhr.send(JSON.stringify(body))
+}
+let url = "http://127.0.0.1:8000/exp_reg/"
+
+
+let regBtn = document.getElementById("regBtn")
+regBtn.onclick = (event) => {
+    event.preventDefault();
     const usernameInput = document.getElementById('username_input');
     const usernamePassword = document.getElementById('username_password');
-    console.log(usernameInput.value)
-    const data = new URLSearchParams();
-    data.append('username', usernameInput.value);
-    data.append('password', usernamePassword.value);
-    let result = await fetch(url, {
-        method: 'POST', headers: {
-            'Content-Type': 'application/json;charset=utf-8', 'X-CSRFToken': csrf_token
-        }, body: data
-    })
+
+    let body = {
+        username: usernameInput.value,
+        password: usernamePassword.value
+    }
+    sendRequest(url, 'POST', body).then(console.log).catch(console.log)
+
 
     const blurEl = document.getElementById("blur");
     blurEl.classList.toggle("active");
@@ -21,12 +43,7 @@ const toggleBlur = async (event) => {
     popupEl.classList.toggle("active");
 };
 
-let regBtn = document.getElementById("regBtn")
-regBtn.onclick = toggleBlur
 
-
-// const usernameInput = document.getElementById('username_input');
-// const usernamePassword = document.getElementById('username_password');
 //
 //
 // const onChangeWrap = (input) => (e) => {
