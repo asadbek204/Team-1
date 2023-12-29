@@ -1,41 +1,35 @@
-async function sendRequest(url, method, body) {
-    let csrf_token = document.querySelector('input[name="csrfmiddlewaretoken"]').value
-    let xhr = new XMLHttpRequest()
-    xhr.open(method, url, true)
-    xhr.responseType = 'json'
-    xhr.setRequestHeader('Content-Type', 'application/json')
-    xhr.setRequestHeader('X-CSRFToken', csrf_token)
-
-    xhr.onload = () => {
-        if (xhr.status >= 400) {
-            reject(xhr.response)
-        }
-        else {
-            resolve(xhr.response)
-        }
-    }
-
-    xhr.onerror = () => {
-        reject(xhr.response)
-    }
-    xhr.send(JSON.stringify(body))
-}
 let url = "http://127.0.0.1:8000/exp_reg/"
 
 
-let regBtn = document.getElementById("regBtn")
-regBtn.onclick = (event) => {
+document.getElementById("regBtn").onclick = async (event) => {
     event.preventDefault();
-    const usernameInput = document.getElementById('username_input');
-    const usernamePassword = document.getElementById('username_password');
+    let csrf_token = document.querySelector('input[name="csrfmiddlewaretoken"]').value
+    const usernameInput = document.getElementById('username');
+    const usernamePassword = document.getElementById('password');
 
     let body = {
         username: usernameInput.value,
         password: usernamePassword.value
     }
-    sendRequest(url, 'POST', body).then(console.log).catch(console.log)
+    let result = await fetch(
+        url,
+        {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type':'application/json',
+                'X-Requested-With':'XMLHttpRequest',
+                'X-CSRFToken': csrf_token
+            },
+            body: JSON.stringify(body)
+        }
+    )
+    let data = await result.json()
 
-
+    if (!data.ok) {
+        console.log(data.message)
+        return
+    }
     const blurEl = document.getElementById("blur");
     blurEl.classList.toggle("active");
 

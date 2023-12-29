@@ -35,11 +35,11 @@
                     {% csrf_token %}
                     <div class="field">
                         <span class="fa fa-user"></span>
-                        <input type="text" value="" id="username_input" required placeholder="Username">
+                        <input type="text" value="" id="username" required placeholder="Username">
                     </div>
                     <div class="field space">
                         <span class="fa fa-lock"></span>
-                        <input type="password" id="username_password" class="pass-key" required placeholder="Password">
+                        <input type="password" id="password" class="pass-key" required placeholder="Password">
                     </div>
                     <div class="button">
                         <button id="regBtn" type="button">REGISTER</button>
@@ -56,14 +56,14 @@
             {% csrf_token %}
             <div class="field">
                 <span class="fa fa-user"></span>
-                <input type="text" value="" id="username_input" required placeholder="Username">
+                <input type="text" value="" id="newusername" required placeholder="Username">
             </div>
             <div class="field space">
                 <span class="fa fa-lock"></span>
-                <input type="password" id="username_password" class="pass-key" required placeholder="Password">
+                <input type="password" id="newpassword" class="pass-key" required placeholder="Password">
             </div>
             <div class="button">
-                <button id="regBtn" type="submit" onclick="toggleBlur()">CHANGE</button>
+                <button id="regBtn2" type="submit">CHANGE</button>
             </div>
         </form>
     </div>
