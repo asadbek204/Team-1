@@ -169,7 +169,6 @@
     /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
 :root {
     --waiting-color: #F5C24D;
     --danger-color: #ED6059;
@@ -245,4 +244,12 @@
     margin-right: 20px;
     width: 100px;
     height: 70px;
+}
+
+.nav-block {
+    display: none !important;
+}
+
+footer {
+    display: none;
 }
