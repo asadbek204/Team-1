@@ -8,19 +8,19 @@
 
 .container {
     width: 100%;
-    padding-right: 398px;
-    padding-left: 398px;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 
 #all {
-    background: url("/static/img/back.png") 50% 0 no-repeat fixed;
+    background: url("/static/gallery/img/back.png") 50% 0 no-repeat fixed;
     color: white;
     padding: 100px 0 0 0;
 }
 
 .title {
     width: 100%;
-    background-image: url("/static/img/title.png");
+    background-image: url("/static/gallery/img/title.png");
     background-repeat: no-repeat;
     height: 400px;
     background-size: cover;

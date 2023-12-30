@@ -1,4 +1,4 @@
-let url = "http://127.0.0.1:3000/exp_reg/"
+let url = "http://127.0.0.1:1212/expert/login/"
 
 
 document.getElementById("regBtn").onclick = async (event) => {

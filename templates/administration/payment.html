@@ -13,7 +13,7 @@
     </div>
     <div class="payment-body">
         <h3 class="form-h3">Оформление оплаты</h3>
-        <form action="{% url 'administration:payment' %}" method="POST">
+        <form action="{% url 'payment' %}" method="POST">
             {% csrf_token %}
             <div class="initial-block">
                 <div class="personal-initials">
@@ -49,16 +49,16 @@
             <div class="h-line"></div>
             <div class="payment-services">
                 <div class="pay-service">
-                    <a href="{% url 'administration:error' %}"><img src="{% static 'payment/img/apelsin-pay-icon.svg' %}" alt=""></a>
+                    <a href="{% url 'error' %}"><img src="{% static 'payment/img/apelsin-pay-icon.svg' %}" alt=""></a>
                 </div>
                 <div class="pay-service">
-                    <a href="{% url 'administration:error' %}"><img src="{% static 'payment/img/click-pay-icon.svg' %}" alt=""></a>
+                    <a href="{% url 'error' %}"><img src="{% static 'payment/img/click-pay-icon.svg' %}" alt=""></a>
                 </div>
                 <div class="pay-service">
-                    <a href="{% url 'administration:error' %}"><img src="{% static 'payment/img/payme-pay-icon.svg' %}" alt=""></a>
+                    <a href="{% url 'error' %}"><img src="{% static 'payment/img/payme-pay-icon.svg' %}" alt=""></a>
                 </div>
                 <div class="pay-service">
-                    <a href="{% url 'administration:error' %}"><img src="{% static 'payment/img/anorbank-pay-icon.svg' %}" alt=""></a>
+                    <a href="{% url 'error' %}"><img src="{% static 'payment/img/anorbank-pay-icon.svg' %}" alt=""></a>
                 </div>
             </div>
         </form>
