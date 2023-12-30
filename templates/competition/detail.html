@@ -1,8 +1,7 @@
+{% extends 'layouts/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+
+{% block extra_head %}
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'competition/detail/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'competition/detail/css/grid.css' %}">
@@ -174,107 +173,107 @@
         }
 
     </style>
-</head>
-<body>
-<section id="slider">
-    <input type="radio" name="slider" id="s1" data-slide="1" checked>
-    <input type="radio" name="slider" id="s2" data-slide="2">
-    <input type="radio" name="slider" id="s3" data-slide="3">
-    <label for="s1" id="slide1">
-        <div class="zoom-container" data-slide="1">
-            <img src="{% static 'competition/detail/img/boys-1.png' %}" alt="Image 1">
-            <button class="first-btn">Участвовать</button>
-            <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
-        </div>
-    </label>
-    <label for="s2" id="slide2">
-        <div class="zoom-container" data-slide="2">
-            <img src="{% static 'competition/detail/img/boys-2.png' %}" alt="Image 2">
-            <button class="first-btn">Участвовать</button>
-            <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
-        </div>
-    </label>
-    <label for="s3" id="slide3">
-        <div class="zoom-container" data-slide="3">
-            <img src="{% static 'competition/detail/img/boys-3.png' %}" alt="Image 3">
-            <button class="first-btn">Участвовать</button>
-            <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
-        </div>
-    </label>
+{% endblock %}
+
+{% block content %}
+    <section id="slider">
+        <input type="radio" name="slider" id="s1" data-slide="1" checked>
+        <input type="radio" name="slider" id="s2" data-slide="2">
+        <input type="radio" name="slider" id="s3" data-slide="3">
+        <label for="s1" id="slide1">
+            <div class="zoom-container" data-slide="1">
+                <img src="{% static 'competition/detail/img/boys-1.png' %}" alt="Image 1">
+                <button class="first-btn">Участвовать</button>
+                <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
+            </div>
+        </label>
+        <label for="s2" id="slide2">
+            <div class="zoom-container" data-slide="2">
+                <img src="{% static 'competition/detail/img/boys-2.png' %}" alt="Image 2">
+                <button class="first-btn">Участвовать</button>
+                <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
+            </div>
+        </label>
+        <label for="s3" id="slide3">
+            <div class="zoom-container" data-slide="3">
+                <img src="{% static 'competition/detail/img/boys-3.png' %}" alt="Image 3">
+                <button class="first-btn">Участвовать</button>
+                <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
+            </div>
+        </label>
 
 
-</section>
+    </section>
 
-<div class="container">
-    <div class="yellow-text">
-        <h1>Игрушки и игры</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi exercitationem illum maiores, maxime
-            quae.</p>
-        <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
-        <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
-        <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
-        <p>4. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-        <p>5. Lorem ipsum dolor sit amet.</p>
-        <p>6. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, natus.</p>
+    <div class="container">
+        <div class="yellow-text">
+            <h1>Игрушки и игры</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi exercitationem illum maiores, maxime
+                quae.</p>
+            <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
+            <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
+            <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
+            <p>4. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <p>5. Lorem ipsum dolor sit amet.</p>
+            <p>6. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, natus.</p>
+        </div>
     </div>
-</div>
 
-<script>
-    let currentSlide = 1;
-    let isPaused = false; // Variable to check if the slideshow is paused
+    <script>
+        let currentSlide = 1;
+        let isPaused = false; // Variable to check if the slideshow is paused
 
-    // Function to change the slide
-    const changeSlide = () => {
-        if (!isPaused) {
-            // Remove 'can-zoom' class from all slides
-            document.querySelectorAll('.zoom-container').forEach((container) => {
-                container.classList.remove('can-zoom');
+        // Function to change the slide
+        const changeSlide = () => {
+            if (!isPaused) {
+                // Remove 'can-zoom' class from all slides
+                document.querySelectorAll('.zoom-container').forEach((container) => {
+                    container.classList.remove('can-zoom');
+                });
+
+                // Set the active slide
+                const activeSlide = document.getElementById(`s${currentSlide}`);
+                activeSlide.checked = true;
+
+                // Add 'can-zoom' class to the active slide
+                const activeContainer = document.querySelector(`.zoom-container[data-slide="${currentSlide}"]`);
+                if (activeContainer) {
+                    activeContainer.classList.add('can-zoom');
+                }
+
+                // Move to the next slide
+                currentSlide++;
+                if (currentSlide > 5) {
+                    currentSlide = 1;
+                }
+            }
+        };
+
+        // Start the auto-scroll
+        let slideInterval = setInterval(changeSlide, 5000);
+
+        // Function to pause the auto-scroll
+        const pauseSlide = () => {
+            isPaused = true;
+        };
+
+        // Function to resume the auto-scroll
+        const resumeSlide = () => {
+            isPaused = false;
+        };
+
+        // Adding event listeners to pause and resume auto-scroll on hover
+        document.querySelectorAll('.zoom-container').forEach((container) => {
+            container.addEventListener('mouseover', () => {
+                if (!container.classList.contains('can-zoom')) {
+                    return;
+                }
+                pauseSlide();
             });
-
-            // Set the active slide
-            const activeSlide = document.getElementById(`s${currentSlide}`);
-            activeSlide.checked = true;
-
-            // Add 'can-zoom' class to the active slide
-            const activeContainer = document.querySelector(`.zoom-container[data-slide="${currentSlide}"]`);
-            if (activeContainer) {
-                activeContainer.classList.add('can-zoom');
-            }
-
-            // Move to the next slide
-            currentSlide++;
-            if (currentSlide > 5) {
-                currentSlide = 1;
-            }
-        }
-    };
-
-    // Start the auto-scroll
-    let slideInterval = setInterval(changeSlide, 5000);
-
-    // Function to pause the auto-scroll
-    const pauseSlide = () => {
-        isPaused = true;
-    };
-
-    // Function to resume the auto-scroll
-    const resumeSlide = () => {
-        isPaused = false;
-    };
-
-    // Adding event listeners to pause and resume auto-scroll on hover
-    document.querySelectorAll('.zoom-container').forEach((container) => {
-        container.addEventListener('mouseover', () => {
-            if (!container.classList.contains('can-zoom')) {
-                return;
-            }
-            pauseSlide();
+            container.addEventListener('mouseout', () => {
+                resumeSlide();
+            });
         });
-        container.addEventListener('mouseout', () => {
-            resumeSlide();
-        });
-    });
 
-</script>
-</body>
-</html>
+    </script>
+{% endblock %}

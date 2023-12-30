@@ -16,7 +16,12 @@ def questionare(request):
         phone_number = request.POST['phone_number']
         comment = request.POST['comment']
 
-        join = QuestionnaireModel(first_name=first_name, last_name=last_name, age=age, competition=category, region=region,
+        join = QuestionnaireModel(first_name=first_name, last_name=last_name, age=age, competition=category,
+                                  region=region,
                                   phone_number=phone_number, participant=request.user)
         join.save()
     return render(request, 'competition/join.html')
+
+
+def detail(request):
+    return render(request, 'competition/detail.html')
