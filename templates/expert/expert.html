@@ -1,0 +1,104 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block extra_head %}
+    <title>Expert Matching</title>
+    <link rel="stylesheet" href="{% static 'expert/expert/css/experts.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <nav class="nav d-flex align-items-center justify-content-between">
+        <form action="" class="form">
+            <input class="input" type="text" placeholder="search competitions ">
+        </form>
+        <div>
+            <a class="a" href="#">last checked</a>
+            <a class="a" href="#">ending</a>
+            <a class="a" href="#">checked</a>
+            <a class="a" href="#">contact</a>
+        </div>
+        <img src="{% static 'img/man.webp' %}" alt="#" class="img rounded-circle">
+    </nav>
+    <div class="d-flex justify-content-between pt-4" style="height: 22rem;">
+        <div class="card" style="width: 26rem; height: 20rem;">
+            <img src="{% static 'img/card2.png'%}" class="rounde" alt="...">
+            <div class="card-body d-flex justify-content-between">
+                <span>Lorem ipsum dolor sit amet</span>
+                <span>25.13.2023</span>
+            </div>
+        </div>
+        <div class="card" style="width: 26rem; height: 20rem;">
+            <img src="{% static 'img/card2.png'%}" class="rounde" alt="...">
+            <div class="card-body d-flex justify-content-between">
+                <span>Lorem ipsum dolor sit amet</span>
+                <span>25.13.2023</span>
+            </div>
+        </div>
+        <div class="card" style="width: 26rem; height: 20rem;">
+            <img src="{% static 'img/card2.png'%}" class="rounde" alt="...">
+            <div class="card-body d-flex justify-content-between">
+                <span>Lorem ipsum dolor sit amet</span>
+                <span>25.13.2023</span>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between pt-4" style="height: 22rem;">
+        <div class="card" style="width: 26rem; height: 20rem;">
+            <img src="{% static 'img/card2.png'%}" class="rounde" alt="...">
+            <div class="card-body d-flex justify-content-between">
+                <span>Lorem ipsum dolor sit amet</span>
+                <span>25.13.2023</span>
+            </div>
+        </div>
+        <div class="card" style="width: 26rem; height: 20rem;">
+            <img src="{% static 'img/card2.png'%}" class="rounde" alt="...">
+            <div class="card-body d-flex justify-content-between">
+                <span>Lorem ipsum dolor sit amet</span>
+                <span>25.13.2023</span>
+            </div>
+        </div>
+        <div class="card" style="width: 26rem; height: 20rem;">
+            <img src="{% static 'img/card2.png'%}" class="rounde" alt="...">
+            <div class="card-body d-flex justify-content-between">
+                <span>Lorem ipsum dolor sit amet</span>
+                <span>25.13.2023</span>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between pt-4" style="height: 22rem;">
+        <div class="card" style="width: 26rem; height: 20rem;">
+            <img src="{% static 'img/card2.png'%}" class="rounde" alt="...">
+            <div class="card-body d-flex justify-content-between">
+                <span>Lorem ipsum dolor sit amet</span>
+                <span>25.13.2023</span>
+            </div>
+        </div>
+        <div class="card" style="width: 26rem; height: 20rem;">
+            <img src="{% static 'img/card2.png'%}" class="rounde" alt="...">
+            <div class="card-body d-flex justify-content-between">
+                <span>Lorem ipsum dolor sit amet</span>
+                <span>25.13.2023</span>
+            </div>
+        </div>
+        <div class="card" style="width: 26rem; height: 20rem;">
+            <img src="{% static 'img/card2.png'%}" class="rounde" alt="...">
+            <div class="card-body d-flex justify-content-between">
+                <span>Lorem ipsum dolor sit amet</span>
+                <span>25.13.2023</span>
+            </div>
+        </div>
+    </div>
+    <div class="pagination d-flex justify-content-center mt-4 mb-4">
+        <a class="a d-flex align-items-center" href="#"><i class="bi bi-chevron-bar-left" style="color: #000;"></i></a>
+        <a class="a" href="#">1</a>
+        <a class="a active" href="#">2</a>
+        <a class="a" href="#">3</a>
+        <a class="a" href="#">4</a>
+        <a class="a" href="#">4</a>
+        <a class="a" href="#">5</a>
+        <a class="a" href="#">6</a>
+        <a class="a d-flex align-items-center" href="#"><i class="bi bi-chevron-bar-right" style="color: #000;"></i></a>
+    </div>
+</div>
+{% endblock content %}
