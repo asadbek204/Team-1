@@ -23,3 +23,19 @@ class ContactModel(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()
+
+
+class PaymentModel(models.Model):
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=13)
+    category = models.CharField(max_length=100)
+    card_number = models.CharField(max_length=16)
+    summa = models.PositiveIntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.name
+    
+    class Meta:
+        verbose_name = 'payment'
+        verbose_name_plural = 'payments'

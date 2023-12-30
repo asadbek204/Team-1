@@ -13,26 +13,27 @@
     </div>
     <div class="payment-body">
         <h3 class="form-h3">Оформление оплаты</h3>
-        <form action="">
+        <form action="{% url 'administration:payment' %}" method="POST">
+            {% csrf_token %}
             <div class="initial-block">
                 <div class="personal-initials">
                     <div class="input-block">
                         <label for="name-input">Ваше имя</label>
-                        <input type="text" id="name-input">
+                        {{form.name}}
                     </div>
                     <div class="input-block">
-                        <label for="phone-input">Ваше номер телефона </label>
-                        <input type="text" id="phone-input">
+                        <label for="phone-input">Ваше номер телефона</label>
+                        {{form.phone}}
                     </div>
                 </div>
                 <div class="payment-initials">
                     <div class="input-block">
                         <label for="category-input">ОПЛАТА ПО КАТЕГОРИЯМИ</label>
-                        <input type="text" id="category-input">
+                        {{form.category}}
                     </div>
                     <div class="input-block">
                         <label for="card-number">НОМЕР КАРТЫ</label>
-                        <input type="text" id="card-number">
+                        {{form.card_number}}
                     </div>
                 </div>
             </div>
@@ -40,7 +41,7 @@
             <div class="payment">
                 <div class="pay-input-block">
                     <label for="payment-amount">СУММА</label>
-                    <input type="text" name="" id="payment-amount">
+                    {{form.summa}}
                 </div>
                 <button class="btn-pay" type="submit" id="btn-pay">ОПЛАТИТ</button>
             </div>
@@ -48,16 +49,16 @@
             <div class="h-line"></div>
             <div class="payment-services">
                 <div class="pay-service">
-                    <a href="#"><img src="{% static 'payment/img/apelsin-pay-icon.svg' %}" alt=""></a>
+                    <a href="{% url 'administration:error' %}"><img src="{% static 'payment/img/apelsin-pay-icon.svg' %}" alt=""></a>
                 </div>
                 <div class="pay-service">
-                    <a href="#"><img src="{% static 'payment/img/click-pay-icon.svg' %}" alt=""></a>
+                    <a href="{% url 'administration:error' %}"><img src="{% static 'payment/img/click-pay-icon.svg' %}" alt=""></a>
                 </div>
                 <div class="pay-service">
-                    <a href="#"><img src="{% static 'payment/img/payme-pay-icon.svg' %}" alt=""></a>
+                    <a href="{% url 'administration:error' %}"><img src="{% static 'payment/img/payme-pay-icon.svg' %}" alt=""></a>
                 </div>
                 <div class="pay-service">
-                    <a href="#"><img src="{% static 'payment/img/anorbank-pay-icon.svg' %}" alt=""></a>
+                    <a href="{% url 'administration:error' %}"><img src="{% static 'payment/img/anorbank-pay-icon.svg' %}" alt=""></a>
                 </div>
             </div>
         </form>
