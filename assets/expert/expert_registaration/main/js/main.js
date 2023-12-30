@@ -32,19 +32,4 @@ document.getElementById("regBtn").onclick = async (event) => {
     }
     const blurEl = document.getElementById("blur");
     blurEl.classList.toggle("active");
-
-    const popupEl = document.getElementById("popup");
-    popupEl.classList.toggle("active");
 };
-
-
-//
-//
-// const onChangeWrap = (input) => (e) => {
-//     input.innerText = e.target.value;
-//     console.log(e.target.value)
-// }
-//
-//
-// usernameInput.addEventListener('input', onChangeWrap(usernameInput));
-// usernamePassword.addEventListener('input', onChangeWrap(usernamePassword));
