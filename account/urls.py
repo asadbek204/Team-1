@@ -14,5 +14,4 @@ urlpatterns = [
     path('email', email, name='email'),
     path('change_password', change_password, name='change_password'),
     path('qaytadan_parolni', qaytadan_parolni, name='qaytadan_parolni')
-
 ]
