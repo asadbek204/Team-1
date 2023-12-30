@@ -5,8 +5,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('administration.urls')),
-    path('home/', include('home.urls')),
+    path('', include('home.urls')),
+    path('site/', include('administration.urls')),
     path('account/', include('account.urls')),
     path('questionare/', include('competition.urls')),
 ]
