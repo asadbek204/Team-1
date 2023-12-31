@@ -20,5 +20,7 @@ document.getElementById("regBtn").onclick = async (event) => {
         return
     }
     const blurEl = document.getElementById("blur");
+    const popup = document.getElementById('popup')
     blurEl.classList.toggle("active");
+    popup.classList.toggle('active')
 };
