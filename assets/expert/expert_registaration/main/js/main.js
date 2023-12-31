@@ -1,6 +1,3 @@
-let url = "http://127.0.0.1:1212/expert/login/"
-
-
 document.getElementById("regBtn").onclick = async (event) => {
     event.preventDefault();
     let csrf_token = document.querySelector('input[name="csrfmiddlewaretoken"]').value
