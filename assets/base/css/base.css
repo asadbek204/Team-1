@@ -29,8 +29,103 @@
   box-sizing: border-box;
 }
 
-.display-none {
-  display: none !important;
+.search-window.active {
+  visibility: visible;
+  width: 60%;
+  height: 97dvh;
+  padding: 1%;
+  left: 50%;
+  transform: translate(-50%, 2%);
+}
+.search-window.active .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.search-window.active .container .search-bar {
+  width: 100%;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -1px 1px 2px rgba(213, 208, 208, 0.66);
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 15px 10px;
+}
+.search-window.active .container .search-bar .options {
+  width: 27%;
+  display: flex;
+  justify-content: space-around;
+}
+.search-window.active .search-block {
+  width: 73%;
+  position: relative;
+  display: flex;
+}
+.search-window.active .search-block .search-label {
+  position: absolute;
+  top: 0;
+  left: 1.5vw;
+  transform: translate(0, -50%);
+  font-size: 14px;
+  background-color: white;
+  box-sizing: content-box;
+  padding: 0 10px;
+}
+.search-window.active .search-block .search-input {
+  width: 100%;
+  height: 5vh;
+  box-shadow: 1px 0 5px #f8eeee inset;
+  border-radius: 5000px;
+  padding: 0 1vw;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 22px;
+}
+.search-window.active input:focus {
+  outline: 1px solid #d3cfcf;
+}
+.search-window.active .description-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.search-window.active .by-description {
+  width: 1vw;
+  height: 1vw;
+}
+.search-window.active .desc-label {
+  font-size: 12px;
+}
+.search-window.active .date {
+  width: 100%;
+  height: 100%;
+  padding: 0 0.7vw;
+  font-size: 16px;
+}
+
+.general-container.blur {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+
+body.on-search {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.search-window {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.85);
+  top: 0;
+  left: 0;
+  transition: 0.5s ease-in-out all;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 header {
@@ -104,6 +199,7 @@ header .nav-block .site-navigation .site-icon .h-line {
   background-color: white;
 }
 header .nav-block .site-navigation #search-button {
+  cursor: pointer;
   background-color: transparent;
 }
 header .nav-block .site-navigation #search-button .search-icon {

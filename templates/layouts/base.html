@@ -21,15 +21,17 @@
     {% endblock %}
 </head>
 <body>
-    <header>
-        {% include 'layouts/navbar.html' %}
-        {% block header %}
-
+    <div class="general-container" id="general-container">
+        <header>
+            {% include 'layouts/navbar.html' %}
+            {% block header %}
+    
+            {% endblock %}
+        </header>
+        {% block content %}
         {% endblock %}
-    </header>
-    {% block content %}
-
-    {% endblock %}
-    {% include 'layouts/footer.html' %}
+        {% include 'layouts/footer.html' %}
+    </div>
+    {% include 'layouts/search-window.html' %}
 </body>
 </html>
