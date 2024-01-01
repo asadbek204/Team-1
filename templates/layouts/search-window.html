@@ -1,12 +1,10 @@
-<button type="button" class="close-search-window display-none close" id="btn-close-window" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
+<button type="button" class="close-search-window display-none" id="btn-close-window">&times;</button>
 <div class="search-window" id="search-window">
     <div class="viewport-container">
         <form action="" class="search-bar">
             {% csrf_token %}
             <div class="search-block">
-                <label class="search-label" for="search-input">search by title</label>
+                <label class="search-label" for="search-input" id="search-label">search by title</label>
                 <input class="search-input" type="text" name="title" id="search-input">
             </div>
             <div class="options">
@@ -16,6 +14,7 @@
                 </div>
                 <input class="date" type="date" id="date-input">
             </div>
+            <button class="display-none" type="submit" id="btn-submit"></button>
         </form>
         <div class="viewport" id="viewport"></div>
     </div>
