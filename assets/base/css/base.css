@@ -29,6 +29,32 @@
   box-sizing: border-box;
 }
 
+.close-search-window.display-none {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  top: 0;
+  left: 0;
+}
+
+.close-search-window {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  font-size: 40px;
+  position: absolute;
+  top: 5%;
+  left: 16%;
+  color: #c2bcbc;
+  transition: 0.5s ease-in-out all;
+}
+
+.close-search-window:hover {
+  color: gray;
+  cursor: pointer;
+}
+
 .search-window.active {
   visibility: visible;
   width: 60%;
@@ -37,88 +63,9 @@
   left: 50%;
   transform: translate(-50%, 2%);
 }
-.search-window.active .viewport-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1vh;
-}
-.search-window.active .viewport-container .search-bar {
-  width: 100%;
-  display: flex;
-  background-color: rgb(255, 255, 255);
-  box-shadow: -1px 1px 2px rgba(213, 208, 208, 0.66);
-  justify-content: space-around;
-  border-radius: 10px;
-  padding: 15px 10px;
-}
-.search-window.active .viewport-container .search-bar .options {
-  width: 27%;
-  display: flex;
-  justify-content: space-around;
-}
-.search-window.active .viewport-container .viewport {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  gap: 1vh;
-}
-.search-window.active .viewport-container .viewport .not-found {
-  margin: auto;
-  font-size: 40px;
-  color: rgba(183, 182, 182, 0.72);
-}
-.search-window.active .search-block {
-  width: 73%;
-  position: relative;
-  display: flex;
-}
-.search-window.active .search-block .search-label {
-  position: absolute;
-  top: 0;
-  left: 1.5vw;
-  transform: translate(0, -50%);
-  font-size: 14px;
-  background-color: white;
-  box-sizing: content-box;
-  padding: 0 10px;
-}
-.search-window.active .search-block .search-input {
-  width: 100%;
-  height: 5vh;
-  box-shadow: 1px 0 5px #f8eeee inset;
-  border-radius: 5000px;
-  padding: 0 1vw;
-  font-family: "Alegreya Sans", sans-serif;
-  font-size: 22px;
-}
-.search-window.active input:focus {
-  outline: 1px solid #d3cfcf;
-}
-.search-window.active .description-block {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.search-window.active .by-description {
-  width: 1vw;
-  height: 1vw;
-}
-.search-window.active .desc-label {
-  font-size: 12px;
-}
-.search-window.active .date {
-  width: 100%;
-  height: 100%;
-  padding: 0 0.7vw;
-  font-size: 16px;
+
+.general-container {
+  transition: 0.5s ease-in-out all;
 }
 
 .general-container.blur {
@@ -143,6 +90,90 @@ body.on-search {
   transition: 0.5s ease-in-out all;
   overflow: hidden;
   border-radius: 10px;
+}
+.search-window .viewport-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.search-window .viewport-container .search-bar {
+  width: 100%;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -1px 1px 2px rgba(213, 208, 208, 0.66);
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 15px 10px;
+}
+.search-window .viewport-container .search-bar .options {
+  width: 27%;
+  display: flex;
+  justify-content: space-around;
+}
+.search-window .viewport-container .viewport {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1vh;
+}
+.search-window .viewport-container .viewport .not-found {
+  margin: auto;
+  font-size: 40px;
+  color: rgba(183, 182, 182, 0.72);
+}
+.search-window .search-block {
+  width: 73%;
+  position: relative;
+  display: flex;
+}
+.search-window .search-block .search-label {
+  position: absolute;
+  top: 0;
+  left: 1.5vw;
+  transform: translate(0, -50%);
+  font-size: 14px;
+  background-color: white;
+  box-sizing: content-box;
+  padding: 0 10px;
+}
+.search-window .search-block .search-input {
+  width: 100%;
+  height: 5vh;
+  box-shadow: 1px 0 5px #f8eeee inset;
+  border-radius: 5000px;
+  padding: 0 1vw;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 22px;
+}
+.search-window input:hover,
+.search-window input:focus {
+  outline: 1px solid #d3cfcf;
+}
+.search-window .description-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.search-window .by-description {
+  width: 1vw;
+  height: 1vw;
+}
+.search-window .desc-label {
+  font-size: 12px;
+}
+.search-window .date {
+  width: 100%;
+  height: 100%;
+  padding: 0 0.7vw;
+  font-size: 16px;
 }
 
 header {
