@@ -5,6 +5,7 @@ const viewport = document.getElementById('viewport')
 const searchInput = document.getElementById('search-input')
 const searchUrl = baseUrl + '/search/'
 const csrf_token = document.querySelector('input[name="csrfmiddlewaretoken"]').value
+const btnCloseWindow = document.getElementById('btn-close-window')
 
 const requests = new Requests(searchUrl)
 
@@ -14,6 +15,7 @@ function blurPage() {
 }
 function openSearchWindow() {
     searchWindow.classList.toggle('active')
+    btnCloseWindow.classList.toggle('display-none')
 }
 
 async function renderCompetitions(competitions){
@@ -42,6 +44,11 @@ searchInput.oninput = async (event) => {
         return
     }
     await renderCompetitions(data.competitions)
+}
+
+btnCloseWindow.onclick = () => {
+    openSearchWindow()
+    blurPage()
 }
 
 document.getElementById('search-button').onclick = () => {
