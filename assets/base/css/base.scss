@@ -39,10 +39,12 @@
     left: 50%;
     transform: translate(-50%, 2%);
 
-    .container {
+    .viewport-container {
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
+        gap: 1vh;
         .search-bar {
             width: 100%;
             display: flex;
@@ -56,6 +58,23 @@
                 width: 27%;
                 display: flex;
                 justify-content: space-around;
+            }
+        }
+
+        .viewport {
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            gap: 1vh;
+
+            .not-found {
+                margin: auto;
+                font-size: 40px;
+                color: rgba(183, 182, 182, 0.72);
             }
         }
     }

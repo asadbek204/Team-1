@@ -1,7 +1,12 @@
 const searchWindow = document.getElementById('search-window')
 const generalContainer = document.getElementById('general-container')
+const viewport = document.getElementById('viewport')
 
 const searchInput = document.getElementById('search-input')
+const searchUrl = baseUrl + '/search/'
+const csrf_token = document.querySelector('input[name="csrfmiddlewaretoken"]').value
+
+const requests = new Requests(searchUrl)
 
 function blurPage() {
     generalContainer.classList.toggle('blur')
@@ -11,8 +16,32 @@ function openSearchWindow() {
     searchWindow.classList.toggle('active')
 }
 
-document.getElementById('search-input').oninput = async () => {
+async function renderCompetitions(competitions){
+    for (let competition of competitions) {
+        let a = document.createElement('a')
+        a.href = `${baseUrl}/competition/detail/${competition.id}`
+        a.className = "competition"
+        a.innerHTML = `
+            <div class="img-block">
+                <img src="${baseUrl}/${competition.photo.url}" alt="">
+            </div>
+            <div class="info-block">
+                <span class="title">${competition.title}</span>
+                <p class="description">${competition.description}</p>
+            </div>
+        `
+        viewport.appendChild(a)
+    }
+}
 
+searchInput.oninput = async (event) => {
+    const result = await requests.GET()
+    const data = await result.json()
+    if (data.competitions.length === 0) {
+        viewport.innerHTML = `<span class="not-found">${data.message}</span>`
+        return
+    }
+    await renderCompetitions(data.competitions)
 }
 
 document.getElementById('search-button').onclick = () => {

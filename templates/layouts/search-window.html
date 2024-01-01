@@ -1,6 +1,7 @@
 <div class="search-window" id="search-window">
-    <div class="container">
-        <div class="search-bar">
+    <div class="viewport-container">
+        <form action="" class="search-bar">
+            {% csrf_token %}
             <div class="search-block">
                 <label class="search-label" for="search-input">search by title</label>
                 <input class="search-input" type="text" name="title" id="search-input">
@@ -12,17 +13,7 @@
                 </div>
                 <input class="date" type="date" id="date-input">
             </div>
-        </div>
-        <div class="viewport" id="viewport">
-{#            <div class="competition">#}
-{#                <div class="img-block">#}
-{#                    <img src="" alt="">#}
-{#                </div>#}
-{#                <div class="info-block">#}
-{#                    <span class="title"></span>#}
-{#                    <p class="description"></p>#}
-{#                </div>#}
-{#            </div>#}
-        </div>
+        </form>
+        <div class="viewport" id="viewport"></div>
     </div>
 </div>

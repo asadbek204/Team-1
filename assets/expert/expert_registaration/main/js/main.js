@@ -1,3 +1,5 @@
+const requests = new Requests(url)
+
 document.getElementById("regBtn").onclick = async (event) => {
     event.preventDefault();
     let csrf_token = document.querySelector('input[name="csrfmiddlewaretoken"]').value
@@ -8,19 +10,9 @@ document.getElementById("regBtn").onclick = async (event) => {
         username: usernameInput.value,
         password: usernamePassword.value
     }
-    let result = await fetch(
-        url,
-        {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type':'application/json',
-                'X-Requested-With':'XMLHttpRequest',
-                'X-CSRFToken': csrf_token
-            },
-            body: JSON.stringify(body)
-        }
-    )
+
+    const result = await requests.POST(body)
+
     let data = await result.json()
 
     if (!data.ok) {
