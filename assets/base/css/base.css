@@ -93,6 +93,9 @@
 .search-window.active .viewport-container .viewport .not-found {
   font-size: 40px;
   color: rgba(183, 182, 182, 0.72);
+  visibility: visible;
+  width: auto;
+  height: auto;
 }
 .search-window.active .search-block {
   width: 73%;
@@ -140,7 +143,7 @@
   user-select: none;
 }
 
-body.on-search {
+body.freeze {
   height: 100vh;
   overflow: hidden;
 }
@@ -186,9 +189,15 @@ body.on-search {
   justify-content: start;
   align-items: center;
 }
+.search-window .viewport-container .viewport * {
+  font-size: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  transition: var(--trsn-child);
+}
 .search-window .viewport-container .viewport .not-found {
   margin: auto;
-  font-size: 0;
 }
 .search-window .search-block {
   transition: var(--trsn-child);

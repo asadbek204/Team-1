@@ -16,37 +16,22 @@
 
     {#-----------------FONT AWESOME----------------#}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script>
+    <script defer>
         const url = '{{ request.build_absolute_uri }}'
         const baseUrl = url.split('/')[0]
         class Requests {
-        
-            constructor(url) {
+            constructor(url=url, csrfToken) {
                 this.url = url
                 this.headers = {
                     'Accept': 'application/json',
                     'Content-Type':'application/json',
                     'X-Requested-With':'XMLHttpRequest',
-                    'X-CSRFToken': csrf_token
+                    'X-CSRFToken': csrfToken
                 }
             }
-            GET = async (body) => await fetch(
-                this.url,
-                {
-                    method: 'GET',
-                    headers: this.headers,
-                    body: JSON.stringify(body)
-                }
-            )
-        
-            POST = async (body) => await fetch(
-                this.url,
-                {
-                    method: 'POST',
-                    headers: this.headers,
-                    body: JSON.stringify(body)
-                }
-            )
+            init = (method, body) => ({method: method, headers: this.headers, body: JSON.stringify(body)})
+            GET = async (body) => await fetch(this.url, this.init('GET', body))
+            POST = async (body) => await fetch(this.url, this.init('POST', body))
         }
     </script>
     <script src="{% static 'base/js/base.js' %}" defer></script>
