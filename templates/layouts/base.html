@@ -32,6 +32,7 @@
             init = (method, body) => ({method: method, headers: this.headers, body: JSON.stringify(body)})
             GET = async (body) => await fetch(this.url, this.init('GET', body))
             POST = async (body) => await fetch(this.url, this.init('POST', body))
+            PUT = async (body) => await fetch(this.url, this.init('PUT', body))
         }
     </script>
     <script src="{% static 'base/js/base.js' %}" defer></script>
