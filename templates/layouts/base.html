@@ -35,22 +35,18 @@
         }
     </script>
     <script src="{% static 'base/js/base.js' %}" defer></script>
-    {% block extra_head %}
-    <title>Title</title>
-    {% endblock %}
+    {% block extra_head %}<title>Title</title>{% endblock %}
 </head>
 <body>
     <div class="general-container" id="general-container">
         <header>
             {% include 'layouts/navbar.html' %}
-            {% block header %}
-    
-            {% endblock %}
+            {% block header %}{% endblock %}
         </header>
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
         {% include 'layouts/footer.html' %}
     </div>
+    {% block modal %}{% endblock %}
     {% include 'layouts/search-window.html' %}
 </body>
 </html>

@@ -5,9 +5,8 @@
     <link href="{% static "expert/expert_registaration/main/css/main.css" %}" rel="stylesheet">
     <script defer src="{% static "expert/expert_registaration/main/js/main.js" %}"></script>
 {% endblock %}
-
-{% block header %}
-	<div id="blur" class="bg-img">
+{% block content %}
+    <div class="container">
         <div class="box">
             <div class="yellow-box">
                 <div class="title">
@@ -20,14 +19,14 @@
                  <div class="message"><span id="message1"></span></div>
                 <form action="#" method="post">
                     {% csrf_token %}
-                    <div class="field">
+                    <label class="field" for="username">
                         <span class="fa fa-user"></span>
                         <input type="text" value="" id="username" required placeholder="Username">
-                    </div>
-                    <div class="field space">
+                    </label>
+                    <label class="field space" for="password">
                         <span class="fa fa-lock"></span>
                         <input type="password" id="password" class="pass-key" required placeholder="Password">
-                    </div>
+                    </label>
                     <div class="button">
                         <button id="regBtn" type="button">REGISTER</button>
                     </div>
@@ -35,24 +34,22 @@
             </div>
         </div>
     </div>
-    <div id="popup" class="pop">
-        <div class="title">
-            <h1 id="register-text">Change Password</h1>
-        </div>
+{% endblock %}
+{% block modal %}
+	<div id="popup" class="pop">
+        <div class="title"><h1 id="register-text">Change Password</h1></div>
         <div class="message"><span id="message2"></span></div>
         <form action="#" method="post">
             {% csrf_token %}
-            <div class="field">
+            <label class="field" for="newusername">
                 <span class="fa fa-user"></span>
                 <input type="text" value="" id="newusername" required placeholder="Username">
-            </div>
-            <div class="field space">
+            </label>
+            <label class="field space" for="newpassword">
                 <span class="fa fa-lock"></span>
                 <input type="password" id="newpassword" class="pass-key" required placeholder="Password">
-            </div>
-            <div class="button">
-                <button id="regBtn2" type="submit">CHANGE</button>
-            </div>
+            </label>
+            <div class="button"><button id="regBtn2" type="submit">CHANGE</button></div>
         </form>
     </div>
 {% endblock %}
