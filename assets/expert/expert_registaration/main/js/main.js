@@ -1,5 +1,4 @@
-const requests = new Requests(url)
-
+requests = new Requests(url, csrfToken)
 document.getElementById("regBtn").onclick = async (event) => {
     event.preventDefault();
     let csrf_token = document.querySelector('input[name="csrfmiddlewaretoken"]').value
@@ -20,5 +19,7 @@ document.getElementById("regBtn").onclick = async (event) => {
         return
     }
     const blurEl = document.getElementById("blur");
+    const popup = document.getElementById('popup')
     blurEl.classList.toggle("active");
+    popup.classList.toggle('active')
 };
