@@ -26,3 +26,8 @@ class ExpertRegView(View):
             else:
                 result = {'ok': True, 'message': 'success', 'expert': expert}
         return JsonResponse(result)
+
+    @staticmethod
+    def put(request):
+        data = json.loads(request.body)
+        return JsonResponse({'ok': True, 'message': ''})
