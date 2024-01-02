@@ -8,7 +8,7 @@ const btnCloseWindow = document.getElementById('btn-close-window')
 const generalContainer = document.getElementById('general-container')
 const viewport = document.getElementById('viewport')
 const csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value
-const requests = new Requests(baseUrl + '/search/', csrfToken)
+let requests = new Requests(baseUrl + '/search/', csrfToken)
 function blurPage() {
     generalContainer.classList.toggle('blur')
     document.body.classList.toggle('freeze')
