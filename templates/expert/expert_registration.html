@@ -28,7 +28,7 @@
                         <input type="password" id="password" class="pass-key" required placeholder="Password">
                     </label>
                     <div class="button">
-                        <button id="regBtn" type="button">REGISTER</button>
+                        <button id="regBtn" type="submit">REGISTER</button>
                     </div>
                 </form>
             </div>
@@ -39,7 +39,7 @@
 	<div id="popup" class="pop">
         <div class="title"><h1 id="register-text">Change Password</h1></div>
         <div class="message"><span id="message2"></span></div>
-        <form action="#" method="post">
+        <form action="">
             {% csrf_token %}
             <label class="field" for="newusername">
                 <span class="fa fa-user"></span>
