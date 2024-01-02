@@ -97,6 +97,9 @@
             .not-found {
                 font-size: 40px;
                 color: rgba(183, 182, 182, 0.72);
+                visibility: visible;
+                width: auto;
+                height: auto;
             }
         }
     }
@@ -153,7 +156,7 @@
     user-select: none;
 }
 
-body.on-search {
+body.freeze {
     height: 100vh;
     overflow: hidden;
 }
@@ -201,9 +204,16 @@ body.on-search {
             justify-content: start;
             align-items: center;
 
+            * {
+                font-size: 0;
+                visibility: hidden;
+                width: 0;
+                height: 0;
+                transition: var(--trsn-child);
+            }
+
             .not-found {
                 margin: auto;
-                font-size: 0;
             }
         }
     }
@@ -389,7 +399,5 @@ header {
         }
     }
 }
-
-
 
 //-------------END Header----------------
