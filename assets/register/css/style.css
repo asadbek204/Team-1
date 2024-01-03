@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Baloo+2:wght@400;500;600;700;800&display=swap');
+@import "grid.css";
+@import "reset.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: #FFDE59;
+    --line: #2DF57D;
+    --Abel: 'Abel', sans-serif;
+    --Baloo: 'Baloo 2', sans-serif;
+    --dur: 300ms;
+}
+
+body {
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.box {
+    max-width: 1142px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.yellow-box {
+    background: var(--yellow);
+    max-height: 429px;
+    height: auto;
+    padding: 20px 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.yellow-box h1 {
+    font-size: 60px;
+    font-family: var(--Baloo);
+}
+
+.yellow-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.box-png {
+    border: 5px solid var(--yellow);
+}
+
+.main-text {
+    padding: 25px 70px;
+}
+
+.main-text h2 {
+    font-family: var(--Baloo);
+    max-width: 686px;
+    width: 100%;
+    font-size: 35px;
+    border-bottom: 3px solid var(--line);
+}
+
+.main-text p {
+    font-size: 20px;
+    font-family: var(--Abel);
+    font-weight: 400;
+}
+
+.bottom-title {
+    padding: 64px 0 64px 70px;
+}
+
+.bottom-title h2 {
+    font-size: 40px;
+    width: 100%;
+    font-family: var(--Baloo);
+
+}
+
+.text-1 {
+    max-width: 751px;
+    width: 100%;
+    border-bottom: 3px solid var(--line);
+}
+
+.text-2 {
+    max-width: 555px;
+    width: 100%;
+    border-bottom: 3px solid var(--line);
+}
+
+.text-3 {
+    max-width: 1065px;
+    width: 100%;
+    border-bottom: 3px solid var(--line);
+}
+
+.register {
+    max-width: 1143px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.register-input {
+    max-width: 947px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.register-input input {
+    border: 1px solid #EAB801;
+    padding: 10px 20px;
+    font-size: 20px;
+    outline: none;
+    background: #D3D3D3;
+    color: #494949;
+}
+
+.register-input > input {
+    max-width: 947px;
+    width: 100%;
+}
+
+.flex-input {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.flex-input > input {
+    max-width: 457px;
+    width: 100%;
+}
+
+main {
+    max-width: 947px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.icons {
+    max-width: 359px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.icons a {
+    margin: 0 10px;
+}
+
+.line {
+    background: #F5C24D;
+    max-width: 425px;
+    width: 100%;
+    margin: 20px auto 2px auto;
+    height: 6px;
+}
+
+.icon-text {
+    color: #494949;
+    font-size: 20px;
+    text-align: center;
+}
+
+.main-input {
+    margin: 50px 0;
+}
+
+.main-input input {
+    max-width: 947px;
+    width: 100%;
+    border: 1px solid #EAB801;
+    padding: 10px 20px;
+    font-size: 20px;
+    outline: none;
+    background: #D3D3D3;
+    color: #494949;
+}
+
+.input-bottom-text {
+    color: #939393;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 10px 0 40px 0;
+}
+
+.block-text > h3 {
+    color: #494949;
+    text-align: center;
+    font-weight: 700;
+    line-height: 24px;
+    border: 5px solid #EAB801;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+/* Define color variables */
+:root {
+    --color-brand-primary: #EAB801;
+    --color-hover: lighten(var(--color-brand-primary), 35%);
+    --color-focus: #4176E0;
+    --color-active: #39D4ED;
+}
+
+/* Define the SVG icon as a data URL */
+input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+}
+
+/* Style the label associated with the checkbox */
+input[type="checkbox"] + label {
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 7rem 1fr;
+    line-height: 24px;
+    font-weight: bold;
+    padding: 20px 0;
+    box-shadow: inset 0 0 0 0rem transparent, inset 0 0 0 0 var(--color-brand-primary);
+    transition: 0.2s;
+}
+
+/* Style the pseudo-element before the label */
+input[type="checkbox"] + label:before {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    justify-self: center;
+    box-shadow: inset 0 0 0 0.5rem var(--color-brand-primary), 0 0 0 0 var(--color-brand-primary);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1% 1%;
+    background-image: url("data:image/svg+xml,%3Csvg height='100px' width='100px' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 20' x='0px' y='0px'%3E%3Ctitle%3Echeckmark%3C/title%3E%3Cg data-name='Layer 2'%3E%3Cg data-name='Layer 1'%3E%3Cpath d='M22.76,1.34l-2.15,2c-.68.72-1.39,1.4-2,2.13a46.43,46.43,0,0,0-3.65,4.56A36.5,36.5,0,0,0,12,15a26.45,26.45,0,0,0-1.1,2.59c-.16.44-.3.87-.43,1.31a9.59,9.59,0,0,0-.27,1.19L6.27,20v0a3.62,3.62,0,0,0-.08-.51A5.83,5.83,0,0,0,6,18.84a12.41,12.41,0,0,0-.48-1.37,18.5,18.5,0,0,0-1.43-2.66,23.55,23.55,0,0,0-1.88-2.49C1.54,11.53.78,10.78,0,10l.54-.7.54-.7.46.3c.79.54,1.56,1.10,2.3,1.71A24.7,24.7,0,0,1,6.38,13a23.63,23.63,0,0,1,1.66,2c.3-.58.63-1.15,1-1.71a40.22,40.22,0,0,1,3.67-5A47.16,47.16,0,0,1,17,3.88c.74-.7,1.54-1.34,2.31-2l.05,0L21.68,0l.54.67Z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+/* Style the label on hover */
+input[type="checkbox"] + label:hover {
+    box-shadow: inset 0 0 0 0.5rem rgba(var(--color-brand-primary), .75);
+    background-color: var(--color-hover);
+}
+
+/* Style the pseudo-element before the label on hover */
+input[type="checkbox"] + label:hover:before {
+    box-shadow: inset 0 0 0 0.20rem var(--color-brand-primary), 0 0 0 0.25rem var(--color-brand-primary);
+}
+
+input[type="checkbox"]:checked + label:before {
+    background-color: var(--color-brand-primary);
+    background-size: 100% 100%;
+    box-shadow: inset 0 0 0 0rem var(--color-brand-primary), 0 0 0 0.5rem var(--color-brand-primary);
+}
+
+
+.btn {
+    max-width: 359px;
+    width: 100%;
+    height: 65px;
+    color: #000;
+    background: #42E452;
+    border-radius: 35px;
+    font-size: 35px;
+    border: 2px solid  #42E452;
+    margin: 27px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: .7;
+    transition: .5s ease;
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .yellow-box img {
+        width: 300px;
+    }
+}

@@ -1,14 +1,18 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
 
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'register/css/style.css' %}">
+{% endblock %}
+
 {% block content %}
-    <div class="container">
+    <div class="container" style="margin-top: 4vh">
         <div class="box" style="background: #F0F0F0;">
             <div class="yellow-box">
                 <div class="title">
                     <h1>РЕГИСТРАЦИЯ</h1>
                 </div>
-                <img src="{% static 'main/img/note_book.png' %}" alt="" width="457" height="459">
+                <img src="{% static 'register/img/note_book.png' %}" alt="" width="457" height="459">
             </div>
             <div class="register-input">
                 <div class="flex-input">
@@ -23,10 +27,10 @@
             </div>
             <main>
                 <div class="icons">
-                    <a href="#"><img src="{% static 'main/img/google.png' %}" alt=""></a>
-                    <a href="#"><img src="{% static 'main/img/facebook.png' %}" alt=""></a>
-                    <a href="#"><img src="{% static 'main/img/insta.png' %}" alt=""></a>
-                    <a href="#"><img src="{% static 'main/img/tg.png' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'register/img/google.png' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'register/img/facebook.png' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'register/img/insta.png' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'register/img/tg.png' %}" alt=""></a>
                 </div>
                 <div class="line"></div>
                 <h3 class="icon-text">Регистрация с помощью социальных сетей</h3>
@@ -62,10 +66,9 @@
                 </div>
                 
                  <input type="checkbox" id="alpha-5">
-                <label for="alpha-5">Даю согласие образовательному порталу "НИКА" на обработку моих персональных данных *
-Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё согласие Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных данных, в соответствии с ...</label>
+                <label for="alpha-5">Даю согласие образовательному порталу "НИКА" на обработку моих персональных данных * Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё согласие Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных данных, в соответствии с ...</label>
             </main>
         </div>
-    
-    <button type="submit" class="btn">ГОТОВО</button>
+        <button type="submit" class="btn">ГОТОВО</button>
+    </div>
 {% endblock %}
