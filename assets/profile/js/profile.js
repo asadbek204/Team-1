@@ -78,3 +78,6 @@ for (let input of document.getElementsByTagName('input')){
     input.ondrop = e => false
 }
 setGender().then()
+const oldPasswordInput = document.getElementById('old-password')
+const newPasswordInput = document.getElementById('new-password')
+

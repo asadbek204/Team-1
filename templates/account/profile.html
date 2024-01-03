@@ -39,7 +39,7 @@
                         <div>
                             <span class="display-none" id="email-message"></span>
                             <label class="info-text" for="">
-                                <input class="info-text" type="submit" id="email" value="{{ request.user.last_name|default:'Ваше Е-mail' }}" name="email">
+                                <input class="info-text" type="submit" id="email" value="{{ request.user.email|default:'Ваше Е-mail' }}" name="email">
                             </label>
                         </div>
                     </div>
@@ -48,13 +48,13 @@
                     <div>
                     <span class="display-none" id="birth-date-message"></span>
                         <label class="info-text" for="">
-                            <input class="info-text" type="submit" id="birth-date" value="{{ request.user.last_name|default:'Дата рождения' }}" name="participant-birthday">
+                            <input class="info-text" type="submit" id="birth-date" value="{{ participant.birthday|default:'Дата рождения' }}" name="participant-birthday">
                         </label>
                     </div>
                     <div>
                         <span class="display-none" id="address-message"></span>
                         <label class="info-text" for="">
-                            <input class="info-text" type="submit" id="address" value="Ваше адрес" name="participant-address">
+                            <input class="info-text" type="submit" id="address" value={{ participant.address|default:'Ваше адрес' }} name="participant-address">
                         </label>
                     </div>
                     <form action="" class="gender-info">
@@ -98,12 +98,34 @@
             <button class="change-password" id="btn-change-password">change password</button>
         </div>
         <div class="certificates">
-            <span class="date">01 - декабр - 2023 год</span>
-            <div class="certificate"><img src="" alt=""></div>
+            <span class="date">{{ date }}</span>
+            {% for certificate in certificates %}
+                <a href="{% url '' %}" class="certificate"><img src="{{ certificate.image.url }}" alt=""></a>
+            {% endfor %}
         </div>
     </div>
 </main>
 {% endblock %}
 {% block modal %}
-	
+	<div class="change-password-container display-none">
+        <label for="">
+            <span class="display-none" id="password-message"></span>
+            <input class="modal-input" id="old-password" type="text" name="password">
+        </label>
+        <label for="">
+            <span class="display-none" id="newpassword-message"></span>
+            <input class="modal-input" id="new-password" type="text" name="newpassword">
+        </label>
+        <label for="">
+            <span class="display-none" id="re-newpassword-message"></span>
+            <input class="modal-input" id="re-new-password" type="text" name="newpassword">
+        </label>
+    </div>
+    <div class="logout">
+        <label for="">
+            <span class="display-none" id="logout-message"></span>
+            <input class="modal-input" id="password" type="text" name="password">
+        </label>
+        <button class="confirm-logout" id="confirm-logout" type="button"></button>
+    </div>
 {% endblock %}
