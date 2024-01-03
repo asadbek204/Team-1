@@ -13,15 +13,19 @@
                 <img src="{% static 'competition/detail/img/note_book.png' %}" alt="" width="457" height="459">
             </div>
             <div class="register-input">
-                <div class="flex-input">
-                    <input type="text" placeholder="имя">
-                    <input type="text" placeholder="ФАМИЛИЯ">
-                </div>
-                <input type="text" placeholder="Ваше Е-mail">
-                <div class="flex-input">
-                    <input type="text" placeholder="Ваше пароль">
-                    <input type="text" placeholder="Повторить пароль">
-                </div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="flex-input">
+                        <input type="text" placeholder="имя" name="first_name">
+                        <input type="text" placeholder="ФАМИЛИЯ" name="last_name">
+                    </div>
+                    <input type="text" placeholder="Ваше Е-mail" name="email">
+                    <div class="flex-input">
+                        <input type="text" placeholder="Ваше пароль" name="password">
+                        <input type="text" placeholder="Повторить пароль" name="confirm_password">
+                        {{ form.errors }}
+                    </div>
+                </form>
             </div>
             <main>
                 <div class="icons">
@@ -56,6 +60,30 @@
                 </div>
                  <input type="checkbox" id="alpha-5">
                 <label for="alpha-5">Даю согласие образовательному порталу "НИКА" на обработку моих персональных данных * Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё согласие Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных данных, в соответствии с ...</label>
+                <label for="bravo">УЧАСТНИК – работы на конкурсы отправляются только от имени одного Автора, но могут
+                    быть указаны разные Руководители работ</label>
+
+                <input type="checkbox" id="alpha-2">
+                <label for="alpha-2">РУКОВОДИТЕЛЬ РАБОТ – работы на конкурсы могут отправляться от разных Авторов, но от
+                    одного Руководителя</label>
+
+                <input type="checkbox" id="alpha-3">
+                <label for="alpha-3">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут отправляться
+                    от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
+
+                <input type="checkbox" id="alpha-4">
+                <label for="alpha-4">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут отправляться
+                    от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
+
+                <div class="block-text">
+                    <h3>Согласие</h3>
+                </div>
+
+                <input type="checkbox" id="alpha-5">
+                <label for="alpha-5">Даю согласие образовательному порталу "НИКА" на обработку моих персональных данных
+                    * Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё согласие
+                    Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных данных,
+                    в соответствии с ...</label>
             </main>
         </div>
         <button type="submit" class="btn">ГОТОВО</button>
