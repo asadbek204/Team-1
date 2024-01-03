@@ -1,12 +1,11 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
-
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'profile/css/profile.css' %}">
     <script src="{% static 'profile/js/profile.js' %}" defer></script>
+    <script defer>let array = [{% for com in competitions %}'competition-{{ forloop.counter }}', {% endfor %}]</script>
 	<title>Profile</title>
 {% endblock %}
-
 {% block content %}
 <main class="profile-main">
     <div class="container">
@@ -14,35 +13,66 @@
             <h2 class="profile-h2">Личные данные</h2>
             <div class="profile-content">
                 <div class="block left">
-                    <div class="img">
-                        <img src="{% static 'profile/img/def-user-photo.png' %}" alt="">
-                    </div>
+                    <label for="" class="img">
+                        <img id="photo" src="{% static 'profile/img/def-user-photo.png' %}" alt="">
+                        <input class="display-none" type="file" id="submit-photo" name="photo">
+                    </label>
                     <div class="text">
-                        <input class="info-text" type="submit" value="Ваше имя" name="name">
-                        <input class="info-text" type="submit" value="Ваше фамилия" name="surname">
-                        <input class="info-text" type="submit" value="Ваше номер телефона" name="phone">
-                        <input class="info-text" type="submit" value="Ваше Е-mail" name="email">
+                        <div>
+                            <span class="display-none" id="name-message"></span>
+                            <label class="info-text" for="">
+                                <input class="info-text" type="submit" id="name" value="{{ request.user.first_name|default:'Ваше имя' }}" name="first_name">
+                            </label>
+                        </div>
+                        <div>
+                        <span class="display-none" id="surname-message"></span>
+                            <label class="info-text" for="">
+                                <input class="info-text" type="submit" id="surname" value="{{ request.user.last_name|default:'Ваше фамилия' }}" name="last_name">
+                            </label>
+                        </div>
+                        <div>
+                            <span class="display-none" id="phone-message"></span>
+                            <label class="info-text" for="">
+                                <input class="info-text" type="submit" id="phone" value="{{ request.user.phone|default:'Ваше номер телефона' }}" name="phone">
+                            </label>
+                        </div>
+                        <div>
+                            <span class="display-none" id="email-message"></span>
+                            <label class="info-text" for="">
+                                <input class="info-text" type="submit" id="email" value="{{ request.user.last_name|default:'Ваше Е-mail' }}" name="email">
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div class="block right">
-                    <input class="info-text" type="submit" value="Дата рождения" name="birth-date">
-                    <input class="info-text" type="submit" value="Ваше адрес" name="address">
-                    <div class="gender-info">
+                    <div>
+                    <span class="display-none" id="birth-date-message"></span>
+                        <label class="info-text" for="">
+                            <input class="info-text" type="submit" id="birth-date" value="{{ request.user.last_name|default:'Дата рождения' }}" name="participant-birthday">
+                        </label>
+                    </div>
+                    <div>
+                        <span class="display-none" id="address-message"></span>
+                        <label class="info-text" for="">
+                            <input class="info-text" type="submit" id="address" value="Ваше адрес" name="participant-address">
+                        </label>
+                    </div>
+                    <form action="" class="gender-info">
                         <div class="gender-block">
                             <div class="gender-img"><img src="{% static 'profile/img/femail.png' %}" alt=""></div>
                             <label for="female-check" class="gender-check">
-                                <img src="{% static 'profile/img/check-false.png' %}" alt="">
+                                <img id="female" src="{% static 'profile/img/check-false.png' %}" alt="">
                             </label>
-                            <input class="display-none" type="checkbox" name="female" id="female-check">
+                            <input class="display-none" type="radio" name="female" id="female-check">
                         </div>
                         <div class="gender-block">
                             <div class="gender-img"><img src="{% static 'profile/img/male.png' %}" alt=""></div>
                             <label for="male-check" class="gender-check">
-                                <img src="{% static 'profile/img/check-false.png' %}" alt="">
+                                <img id="male" src="{% static 'profile/img/check-false.png' %}" alt="">
                             </label>
-                            <input class="display-none" type="checkbox" name="male" id="male-check">
+                            <input class="display-none" type="radio" checked name="male" id="male-check">
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -51,7 +81,7 @@
                 <span class="com-span">Текущие конкурсы</span>
             </div>
             {% for competition in competitions %}
-            <div class="competition" id="{{ forloop.counter }}">
+            <div class="competition" id="competition-{{ forloop.counter }}">
                 <div class="img"><img src="{{ competition.img.url }}" alt=""></div>
                 <div class="description">
                     <span class="title">{{ competition.title }}</span>
@@ -73,7 +103,4 @@
         </div>
     </div>
 </main>
-<script>
-    let array = [{% for com in competitions %}'{{ forloop.counter }}', {% endfor %}]
-</script>
 {% endblock %}

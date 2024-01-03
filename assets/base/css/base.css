@@ -32,6 +32,12 @@
   box-sizing: border-box;
 }
 
+.display-none {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 .close-search-window.display-none {
   visibility: hidden;
   width: 0;

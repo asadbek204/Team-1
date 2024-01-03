@@ -6,15 +6,10 @@ from about.models import Region
 # Create your models here.
 
 class UserModel(AbstractUser):
-    GENDER_CHOICE = (
-        ('M', 'Male'),
-        ('F', 'Female'),
-    )
     photo = models.ImageField(upload_to='users_image/', null=True, blank=True)
     phone = models.CharField(max_length=20)
     password = models.CharField(max_length=256)
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICE)
-
+    gender = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -22,14 +17,15 @@ class UserModel(AbstractUser):
 class School(models.Model):
     school_name = models.CharField(max_length=20)
     number = models.PositiveIntegerField()
-    region = models.ForeignKey(Region, on_delete=models.CASCADE)
+    region = models.ForeignKey(Region, on_delete=models.DO_NOTHING)
 
 
 class Participant(models.Model):
     birthday = models.DateField()
     address = models.CharField(max_length=100)
-    school = models.ForeignKey(School, on_delete=models.CASCADE)
-    region = models.ForeignKey(Region, on_delete=models.CASCADE)
+    school = models.ForeignKey(School, on_delete=models.DO_NOTHING)
+    region = models.ForeignKey(Region, on_delete=models.DO_NOTHING)
+    user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
 
 
 class Expert(models.Model):
