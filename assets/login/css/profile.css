@@ -1,18 +1,61 @@
 :root {
   --orange: #f5c24d;
 }
-
+/*************** Team leader edits **********************/
+.remember-box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 6vh;
+  gap: .7vw;
+}
+.remember {
+  cursor: pointer;
+  position: relative;
+  width: 3vh;
+  height: 50%;
+  background-color: #F2D146;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+}
+.remember i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 57px;
+  transform: translate(-35%, -60%);
+  text-shadow: -2px 3px 10px rgba(128, 128, 128, 0.8);
+  color: white;
+}
+.message {
+  color: red;
+  background-color: transparent;
+  width: 100%;
+  height: 5vh;
+  font-size: 40px;
+}
+span {
+  transition: .1s ease-in-out;
+}
+span.display-none {
+  transition: .1s ease-in-out;
+}
+.profile {
+  text-align: center;
+}
+/**********************************************************/
 * {
   margin: 0;
   padding: 0;
   outline: none;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
 }
 input {
   display: block;
 }
-
 .body {
   width: 100%;
   background-image: url("../../profile_contact_mixin/imgs/background.jpg");
@@ -22,54 +65,45 @@ input {
 .a {
   color: rgba(2, 2, 2, 0.42);
 }
-
 .block {
   width: 70%;
   margin: 0 auto;
-  padding: 20px 0px 100px 0px;
+  padding: 20px 0 100px 0;
 }
-
 .p_img {
   display: flex;
   height: 500px;
   margin: 20px auto 50px auto;
 }
-
 .p_h_text {
   font-family: "Baloo 2", sans-serif;
   font-size: 60px;
   font-weight: 700;
   line-height: 112px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   margin-top: 60px;
   margin-left: 100px;
 }
-
 .profile {
   background: var(--orange);
   margin: 0 auto;
   padding: 100px 0;
-  text-align: start;
 }
-
 .p_form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
 label {
   font-family: "Alegreya Sans", sans-serif;
   font-size: 35px;
   text-align: start;
 }
-
 label span {
   font-size: 20px;
 }
-
 .profile_input {
   width: 700px;
   height: 60px;
@@ -79,29 +113,22 @@ label span {
   border-radius: 100px;
   padding: 0 50px;
 }
-
 .profile_input_check {
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
-
 .profile_checkbox {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
 }
-
 .zapomnit {
-  font-size: 20px;
+  font-size: 24px;
 }
-
 .zb_pr {
   font-size: 35px;
 }
-
 .profile_btn {
-  margin: 0 auto;
-  margin-top: 80px;
-  margin-bottom: 100px;
+  margin: 80px auto 100px auto;
   padding: 20px 85px;
   color: black;
   background: #2df57d;
@@ -111,18 +138,15 @@ label span {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.24),
     0 10px 30px 0 rgba(0, 0, 0, 0.19);
 }
-
 .profile_btn:hover {
   cursor: pointer;
   transition-duration: 1.1s;
   background-color: #006b1b;
   color: black;
 }
-
 .center {
   text-align: center;
 }
-
 .white_hr {
   /*margin-top: 45px;*/
   background: white;
@@ -131,33 +155,28 @@ label span {
   height: 3px;
   margin: 10px auto 45px auto;
 }
-
 .pr_text {
   font-size: 30px;
 }
-
 .p_icons {
   margin-right: 20px;
 }
-
 @media (max-width: 1024px) {
   .p_img {
     display: flex;
     height: 300px;
     margin: 20px auto 50px auto;
   }
-
   .p_h_text {
     font-family: "Baloo 2", sans-serif;
     font-size: 45px;
     font-weight: 700;
     line-height: 112px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     margin-top: 30px;
     margin-left: 70px;
   }
-
   .profile_input {
     width: 500px;
     height: 50px;
@@ -167,24 +186,19 @@ label span {
     border-radius: 100px;
     padding: 0 50px;
   }
-
   label {
     font-family: "Alegreya Sans", sans-serif;
     font-size: 30px;
   }
-
   label span {
     font-size: 20px;
   }
-
   .zapomnit {
     font-size: 20px;
   }
-
   .zb_pr {
     font-size: 30px;
   }
-
   .profile_btn {
     margin: 0 auto;
     margin-top: 70px;
@@ -198,15 +212,12 @@ label span {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.24),
       0 10px 30px 0 rgba(0, 0, 0, 0.19);
   }
-  
-
   .profile_btn:hover {
     cursor: pointer;
     transition-duration: 1.1s;
     background-color: #006b1b;
     color: black;
   }
-
   .white_hr {
     /*margin-top: 45px;*/
     background: white;
@@ -215,11 +226,9 @@ label span {
     height: 3px;
     margin: 10px auto 45px auto;
   }
-  
   .pr_text {
     font-size: 25px;
   }
-  
   .p_icons{
     margin-right: 15px;
   }
@@ -229,28 +238,20 @@ label span {
     height: 50px;
   }
 }
-
-
-
-
-
 @media (max-width:879px){
   .block{
     width: 100%;
-
   }
-
   .p_h_text {
     font-family: "Baloo 2", sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 112px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     margin-top: 10px;
     margin-left: 60px;
   }
-
   .profile_input {
     width: 600px;
     height: 50px;
@@ -260,24 +261,18 @@ label span {
     border-radius: 100px;
     padding: 0 10px;
   }
-
-
 }
-
-
 @media (max-width:629px) {
-
   .p_h_text {
     font-family: "Baloo 2", sans-serif;
     font-size: 45px;
     font-weight: 700;
     line-height: 112px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     margin-top: 10px;
     margin-left: 60px;
   }
-
   .profile_input {
     width: 400px;
     height: 50px;
@@ -287,11 +282,9 @@ label span {
     border-radius: 100px;
     padding: 0 10px;
   }
-
   .zb_pr {
     font-size: 25px;
   }
-
   .profile_btn {
     margin: 0 auto;
     margin-top: 70px;
@@ -305,27 +298,19 @@ label span {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.24),
       0 10px 30px 0 rgba(0, 0, 0, 0.19);
   }
-  
-
   .profile_btn:hover {
     cursor: pointer;
     transition-duration: 1.1s;
     background-color: #006b1b;
     color: black;
   }
-
-  
 }
-
 @media (max-width:480px){
-
   .p_img {
     display: flex;
     height: 200px;
     margin: 20px auto 50px auto;
   }
-  
-
   .p_h_text {
     font-family: "Baloo 2", sans-serif;
     font-size: 25px;
@@ -334,8 +319,6 @@ label span {
     margin-top: 10px;
     margin-left: 60px;
   }
-
-
   .profile_input {
     width: 300px;
     height: 50px;
@@ -345,33 +328,22 @@ label span {
     border-radius: 100px;
     padding: 0 10px;
   }
-
   label {
     font-family: "Alegreya Sans", sans-serif;
     font-size: 20px;
   }
-
   label span {
     font-size: 15px;
   }
-
   .zapomnit {
     font-size: 20px;
   }
-
   .zb_pr {
     font-size: 20px;
   }
-
-
-
-
-
-
   .center{
     margin-top: 20px;
   }
-
   .white_hr {
     /*margin-top: 45px;*/
     background: white;
@@ -380,11 +352,9 @@ label span {
     height: 3px;
     margin: 10px auto 20px auto;
   }
-  
   .pr_text {
     font-size: 15px;
   }
-  
   .p_icons{
     margin-right: 15px;
   }
@@ -393,7 +363,4 @@ label span {
     width: 30px;
     height: 30px;
   }
-
-
-
 }
