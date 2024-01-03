@@ -7,9 +7,9 @@ from about.models import Region
 
 class UserModel(AbstractUser):
     photo = models.ImageField(upload_to='users_image/', null=True, blank=True)
-    phone = models.CharField(max_length=20)
+    phone = models.CharField(max_length=20, null=True, blank=True)
     password = models.CharField(max_length=256)
-    gender = models.BooleanField()
+    gender = models.BooleanField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

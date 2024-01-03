@@ -6,58 +6,112 @@
 {% block content %}
     <div class="container" style="margin-top: 4vh">
         <div class="box" style="background: #F0F0F0;">
-            <div class="yellow-box">
-                <div class="title">
-                    <h1>РЕГИСТРАЦИЯ</h1>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="yellow-box">
+                    <div class="title">
+                        <h1>РЕГИСТРАЦИЯ</h1>
+                    </div>
+                    <img src="{% static 'competition/detail/img/note_book.png' %}" alt="" width="457" height="459">
                 </div>
-                <img src="{% static 'competition/detail/img/note_book.png' %}" alt="" width="457" height="459">
-            </div>
-            <div class="register-input">
-                <div class="flex-input">
-                    <input type="text" placeholder="имя">
-                    <input type="text" placeholder="ФАМИЛИЯ">
+                <div class="register-input">
+
+                    <div class="flex-input">
+                        <input type="text" placeholder="имя" name="first_name">
+                        <span>{{ form.errors.first_name }}</span>
+                        <input type="text" placeholder="ФАМИЛИЯ" name="last_name">
+                        <span>{{ form.errors.last_name }}</span>
+                    </div>
+                    <input type="email" placeholder="Ваше Е-mail" name="email">
+                    <span>{{ form.errors.email }}</span>
+                    <div class="flex-input">
+                        <input type="password" placeholder="Ваше пароль" name="password">
+                        {{ form.errors.password }}
+                        <input type="password" placeholder="Повторить пароль" name="confirm_password">
+                        <span>{{ form.errors.confirm_password }}</span>
+                    </div>
                 </div>
-                <input type="text" placeholder="Ваше Е-mail">
-                <div class="flex-input">
-                    <input type="text" placeholder="Ваше пароль">
-                    <input type="text" placeholder="Повторить пароль">
-                </div>
-            </div>
-            <main>
-                <div class="icons">
-                    <a href="#"><img src="{% static 'competition/detail/img/google.png' %}" alt=""></a>
-                    <a href="#"><img src="{% static 'competition/detail/img/facebook.png' %}" alt=""></a>
-                    <a href="#"><img src="{% static 'competition/detail/img/insta.png' %}" alt=""></a>
-                    <a href="#"><img src="{% static 'competition/detail/img/tg.png' %}" alt=""></a>
-                </div>
-                <div class="line"></div>
-                <h3 class="icon-text">Регистрация с помощью социальных сетей</h3>
-                <div class="main-input">
-                    <input type="text" placeholder="ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ">
-                    <p class="input-bottom-text">краткое наименование образовательного учреждения</p>
-                    <input type="text" placeholder="РЕГИОН (область, республика, ...)">
-                    <p class="input-bottom-text">выберите значения</p>
-                </div>
-                <div class="block-text">
-                    <h3>ВЫБЕРИТЕ СТАТУС, ВЫ СОГЛАШАЕТЕСЬ С УСЛОВИЯМИ БОНУСНОЙ ПРОГРАММЫ</h3>
-                </div>
-                <input type="checkbox" id="alpha">
-                <label for="alpha">НЕТ</label>
-                <input type="checkbox" id="bravo">
-                <label for="bravo">УЧАСТНИК – работы на конкурсы отправляются только от имени одного Автора, но могут быть указаны разные Руководители работ</label>
-                <input type="checkbox" id="alpha-2">
-                <label for="alpha-2">РУКОВОДИТЕЛЬ РАБОТ – работы на конкурсы могут отправляться от разных Авторов, но от одного Руководителя</label>
-                <input type="checkbox" id="alpha-3">
-                <label for="alpha-3">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут отправляться от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
-                <input type="checkbox" id="alpha-4">
-                <label for="alpha-4">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут отправляться от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
-                <div class="block-text">
-                    <h3>Согласие</h3>
-                </div>
-                 <input type="checkbox" id="alpha-5">
-                <label for="alpha-5">Даю согласие образовательному порталу "НИКА" на обработку моих персональных данных * Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё согласие Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных данных, в соответствии с ...</label>
-            </main>
+                <main>
+                    <div class="icons">
+                        <a href="#"><img src="{% static 'competition/detail/img/google.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'competition/detail/img/facebook.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'competition/detail/img/insta.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'competition/detail/img/tg.png' %}" alt=""></a>
+                    </div>
+                    <div class="line"></div>
+                    <h3 class="icon-text">Регистрация с помощью социальных сетей</h3>
+                    <div class="main-input">
+                        <input type="text" placeholder="ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ">
+                        <p class="input-bottom-text">краткое наименование образовательного учреждения</p>
+                        <input type="text" placeholder="РЕГИОН (область, республика, ...)">
+                        <p class="input-bottom-text">выберите значения</p>
+                    </div>
+                    <div class="block-text">
+                        <h3>ВЫБЕРИТЕ СТАТУС, ВЫ СОГЛАШАЕТЕСЬ С УСЛОВИЯМИ БОНУСНОЙ ПРОГРАММЫ</h3>
+                    </div>
+                    <input type="checkbox" id="alpha">
+                    <label for="alpha">НЕТ</label>
+                    <input type="checkbox" id="bravo">
+                    <label for="bravo">УЧАСТНИК – работы на конкурсы отправляются только от имени одного Автора, но
+                        могут
+                        быть указаны разные Руководители работ</label>
+                    <input type="checkbox" id="alpha-2">
+                    <label for="alpha-2">РУКОВОДИТЕЛЬ РАБОТ – работы на конкурсы могут отправляться от разных Авторов,
+                        но от
+                        одного Руководителя</label>
+                    <input type="checkbox" id="alpha-3">
+                    <label for="alpha-3">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
+                        отправляться
+                        от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
+                    <input type="checkbox" id="alpha-4">
+                    <label for="alpha-4">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
+                        отправляться
+                        от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
+                    <div class="block-text">
+                        <h3>Согласие</h3>
+                    </div>
+                    <input type="checkbox" id="alpha-5">
+                    <label for="alpha-5">Даю согласие образовательному порталу "НИКА" на обработку моих персональных
+                        данных
+                        * Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё
+                        согласие
+                        Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных
+                        данных,
+                        в соответствии с ...</label>
+                    <label for="bravo">УЧАСТНИК – работы на конкурсы отправляются только от имени одного Автора, но
+                        могут
+                        быть указаны разные Руководители работ</label>
+
+                    <input type="checkbox" id="alpha-2">
+                    <label for="alpha-2">РУКОВОДИТЕЛЬ РАБОТ – работы на конкурсы могут отправляться от разных Авторов,
+                        но от
+                        одного Руководителя</label>
+
+                    <input type="checkbox" id="alpha-3">
+                    <label for="alpha-3">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
+                        отправляться
+                        от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
+
+                    <input type="checkbox" id="alpha-4">
+                    <label for="alpha-4">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
+                        отправляться
+                        от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
+
+                    <div class="block-text">
+                        <h3>Согласие</h3>
+                    </div>
+
+                    <input type="checkbox" id="alpha-5">
+                    <label for="alpha-5">Даю согласие образовательному порталу "НИКА" на обработку моих персональных
+                        данных
+                        * Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё
+                        согласие
+                        Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных
+                        данных,
+                        в соответствии с ...</label>
+                </main>
+                <button type="submit" class="btn">ГОТОВО</button>
+            </form>
         </div>
-        <button type="submit" class="btn">ГОТОВО</button>
     </div>
 {% endblock %}
