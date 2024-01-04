@@ -22,8 +22,7 @@ footer {
   justify-content: start;
   align-items: center;
   gap: 1vh;
-  padding: 4vh 1vw;
-  padding-bottom: 2vh;
+  padding: 4vh 1vw 2vh 1vw;
 }
 .profile-main .container .profile {
   width: 100%;
@@ -93,6 +92,19 @@ footer {
 .profile-main .container .profile .profile-content .block.right .gender-info .gender-block .gender-img img {
   width: 100%;
 }
+.profile-main .container .com-head {
+  width: 100%;
+  padding: 1vh 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FAFAFA;
+}
+.profile-main .container .com-head .com-span {
+  font-size: 36px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
 .profile-main .container .competitions {
   background-color: rgba(238, 238, 238, 0.5960784314);
   width: 100%;
@@ -101,19 +113,11 @@ footer {
   padding: 1vh 2vw;
   display: flex;
   flex-direction: column;
-  gap: 1vh;
-}
-.profile-main .container .competitions .com-head {
-  width: 100%;
-  padding: 1vh 1vw;
-  display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: #FAFAFA;
-}
-.profile-main .container .competitions .com-head .com-span {
-  font-size: 36px;
-  font-family: "Inter", sans-serif;
-  font-weight: bold;
+  gap: 1vh;
+  color: #b6b4b4;
+  font-size: 40px;
 }
 .profile-main .container .competitions .competition {
   width: 100%;
@@ -188,6 +192,11 @@ footer {
   flex-direction: column;
   padding: 1%;
   overflow-y: scroll;
+}
+.profile-main .side-bar .certificates .cer-not-found {
+  margin: auto;
+  color: #b6b4b4;
+  font-size: 40px;
 }
 .info-text {
   display: flex;
@@ -267,28 +276,27 @@ span {
   }
 }
 .close-block:hover {
-  transition: var(--trsn-parent);
+  transition: var(--trsn-child);
 }
 .close-block:hover .btn-close {
-  transition: var(--trsn-parent);
+  transition: var(--trsn-child);
   transform: translate(0, 50%);
 }
 
 .logout.display-none,
 .change-password-container.display-none {
-  width: 0;
-  height: 0;
   transition: var(--trsn-child);
 }
 .logout.display-none *,
 .change-password-container.display-none * {
   width: 0;
   height: 0;
-  transition: var(--trsn-parent);
+  visibility: hidden;
 }
 
 .change-password-container,
 .logout {
+  visibility: visible;
   transition: var(--trsn-child);
   position: absolute;
   top: 50%;
@@ -305,6 +313,10 @@ span {
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: -1px 1px 2px rgba(128, 128, 128, 0.34);
 }
+.change-password-container *,
+.logout * {
+  visibility: visible;
+}
 .change-password-container label,
 .logout label {
   width: 100%;
@@ -317,7 +329,6 @@ span {
 .logout .modal-input {
   width: 60%;
   height: 4vh;
-  transition: var(--trsn-parent);
   background-color: white;
 }
 .change-password-container button,
@@ -325,6 +336,13 @@ span {
   width: 60%;
   height: 4vh;
   background-color: #ececec;
+}
+
+.display-none {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
 }
 
 .change-password-container {

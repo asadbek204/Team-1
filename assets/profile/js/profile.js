@@ -1,5 +1,13 @@
 const colors = ['#F5C24D', '#F6510A', '#0000FF', '#F5CF4B', '#F5F24D', '#F651AA', '#000FFF', '#F5B24C']
-for (let id of array) document.getElementById(id).style.backgroundColor = colors[Math.round(Math.random()*10+1)]
+if (array.length === 0) document.getElementById('competitions-view').innerText = 'Competitions not found'
+else for (let id of array) document.getElementById(id).style.backgroundColor = colors[Math.round(Math.random()*10+1)]
+const a = document.getElementById('certificates-view')
+if (a.children.length <= 1)  {
+    b = document.createElement('span')
+    b.className = 'cer-not-found'
+    b.innerText = 'Certificates not found'
+    a.appendChild(b)
+}
 const nameInput = document.getElementById('name')
 const surnameInput = document.getElementById('surname')
 const phoneInput = document.getElementById('phone')
@@ -88,6 +96,8 @@ const close = (modal) => (event) => {
     closeBlock.className = 'display-none'
     modal.classList.add('display-none')
     event.target.className = 'display-none'
+    hideMessage()
+    focused.input.value = ''
 }
 btnChangePassword.onclick = (event) => {
     const Select = (subInput=undefined) => (event) => {

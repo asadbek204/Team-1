@@ -2,6 +2,7 @@ from django.contrib.auth import logout
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from competition.models import QuestionnaireModel
 from ..models import Participant, UserModel
 from django.views.generic import View
 import json
@@ -13,7 +14,12 @@ class ProfileView(View):
     @login_required(login_url='login')
     def get(request):
         participant = Participant.objects.get(user=request.user)
-        return render(request, 'account/profile.html', context={'participant': participant})
+        competitions = QuestionnaireModel.objects.filter(participant=participant).only('competition')
+        context = {
+            'participant': participant,
+            'competitions': competitions
+        }
+        return render(request, 'account/profile.html', context=context)
 
     @staticmethod
     @login_required(login_url='login')

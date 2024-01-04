@@ -76,18 +76,18 @@
                 </div>
             </div>
         </div>
-        <div class="competitions">
-            <div class="com-head">
-                <span class="com-span">Текущие конкурсы</span>
-            </div>
+        <div class="com-head">
+            <span class="com-span">Текущие конкурсы</span>
+        </div>
+        <div class="competitions" id="competitions-view">
             {% for competition in competitions %}
-            <div class="competition" id="competition-{{ forloop.counter }}">
-                <div class="img"><img src="{{ competition.img.url }}" alt=""></div>
-                <div class="description">
-                    <span class="title">{{ competition.title }}</span>
-                    <p class="text">{{ competition.description }}</p>
+                <div class="competition" id="competition-{{ forloop.counter }}">
+                    <div class="img"><img src="{{ competition.img.url }}" alt=""></div>
+                    <div class="description">
+                        <span class="title">{{ competition.title }}</span>
+                        <p class="text">{{ competition.description }}</p>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
     </div>
@@ -97,7 +97,7 @@
             <button class="logout-button" id="btn-logout">logout</button>
             <button class="change-password" id="btn-change-password">change password</button>
         </div>
-        <div class="certificates">
+        <div class="certificates" id="certificates-view">
             <span class="date">{{ date }}</span>
             {% for certificate in certificates %}
                 <a href="{% url '' %}" class="certificate"><img src="{{ certificate.image.url }}" alt=""></a>
@@ -114,15 +114,15 @@
         <span class="display-none" id="change-password-message"></span>
         <label for="">
             <span class="display-none" id="old-password-message"></span>
-            <input class="modal-input" id="old-password" type="password" name="password">
+            <input class="modal-input" id="old-password" type="password" name="password" placeholder="enter your password">
         </label>
         <label for="">
             <span class="display-none" id="new-password-message"></span>
-            <input class="modal-input" id="new-password" disabled type="password" name="newpassword">
+            <input class="modal-input" id="new-password" disabled type="password" name="newpassword" placeholder="enter new password">
         </label>
         <label for="">
             <span class="display-none" id="re-new-password-message"></span>
-            <input class="modal-input" id="re-new-password" disabled type="password" name="newpassword">
+            <input class="modal-input" id="re-new-password" disabled type="password" name="newpassword" placeholder="confirm password">
         </label>
         <button class="confirm-change-password" id="confirm-change-password" type="submit">change password</button>
     </div>
@@ -130,7 +130,7 @@
         <span class="display-none" id="logout-message"></span>
         <label for="">
             <span class="display-none" id="password-message"></span>
-            <input class="modal-input" id="password" type="password" name="password">
+            <input class="modal-input" id="password" type="password" name="password" placeholder="enter your password">
         </label>
         <button class="confirm-logout" id="confirm-logout" disabled type="submit">logout</button>
     </div>

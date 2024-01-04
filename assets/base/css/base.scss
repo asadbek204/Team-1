@@ -33,6 +33,11 @@
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track {
+  width: 0;
+}
+
 //-------------Search-window-------------
 .display-none {
     visibility: hidden;

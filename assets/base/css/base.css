@@ -32,6 +32,11 @@
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track {
+  width: 0;
+}
+
 .display-none {
   visibility: hidden;
   width: 0;
