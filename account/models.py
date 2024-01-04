@@ -21,8 +21,8 @@ class School(models.Model):
 
 
 class Participant(models.Model):
-    birthday = models.DateField()
-    address = models.CharField(max_length=100)
+    birthday = models.DateField(null=True, blank=True)
+    address = models.CharField(max_length=100, null=True, blank=True)
     school = models.ForeignKey(School, on_delete=models.DO_NOTHING)
     region = models.ForeignKey(Region, on_delete=models.DO_NOTHING)
     user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
