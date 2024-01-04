@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.contrib.auth import login
@@ -27,17 +29,20 @@ class ExpertRegView(View):
             except Expert.DoesNotExist:
                 result = {'ok': False, 'message': 'expert does not exist'}
             else:
-                result = {'ok': True, 'message': 'success'}
+                result = {'ok': True, 'message': 'success', 'expert_id': expert.id}
         return JsonResponse(result)
 
     def put(self, request):
+        response = self.post(request)
+        data = json.loads(response.__dict__['_container'][0])
+        if not data.get('ok'):
+            return response
+        expert_id = data.get('expert_id')
         data = json.loads(request.body)
-        user = UserModel.objects.filter(username=data.get('username')).first()
-        data = self.post()
-        expert = Expert.objects.get(user=request.user)
+        expert = Expert.objects.get(id=expert_id)
         if data.get('newusername', False) and data.get('newpassword', False):
             expert.user.username = data['newusername']
             expert.user.set_password(data['newpassword'])
             expert.user.save()
             login(request, expert.user)
-        return JsonResponse({'ok': True, 'message': 'success'})
+        return JsonResponse({'ok': False, 'message': 'debug'})
