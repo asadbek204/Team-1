@@ -16,8 +16,10 @@ const birthDateInput = document.getElementById('birth-date')
 const addressInput = document.getElementById('address')
 const maleInput = document.getElementById('male-check')
 const femaleInput = document.getElementById('female-check')
+const femaleIcon = document.getElementById('female-icon')
 const maleCheck = document.getElementById('male')
 const femaleCheck = document.getElementById('female')
+const maleIcon = document.getElementById('male-icon')
 requests.url = url
 const focused = {input: null, value: null, type: null, message: null}
 const unFocus = () => {
@@ -78,7 +80,9 @@ emailInput.onclick = Select('email')
 birthDateInput.onclick = Select('date')
 addressInput.onclick = Select('text')
 maleCheck.onclick = maleInput.click
+maleIcon.onclick = maleInput.click
 femaleCheck.onclick = femaleInput.click
+femaleIcon.onclick = femaleInput.click
 maleInput.onclick = Gender(femaleInput)
 femaleInput.onclick = Gender(maleInput)
 for (let input of document.getElementsByTagName('input')){input.onpaste = e => false; input.ondrop = e => false}
