@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate
 from django.shortcuts import render, redirect
 from account.forms import SignUpForm
 
@@ -11,6 +12,7 @@ def register_view(request):
             user = form.save(commit=False)
             user.set_password(form.cleaned_data['password'])
             user.save()
+            authenticate(request, username=user.username, password=form.cleaned_data['password'])
             return redirect('home')
     return render(request, 'account/register.html', context={
         "form": form
