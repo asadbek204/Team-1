@@ -107,25 +107,29 @@
 </main>
 {% endblock %}
 {% block modal %}
-	<div class="change-password-container display-none">
+    <button class="display-none" id="btn-close" type="button"></button>
+	<div class="change-password-container display-none" id="modal-change-pass">
+        <span class="display-none" id="change-password-message"></span>
+        <label for="">
+            <span class="display-none" id="old-password-message"></span>
+            <input class="modal-input" id="old-password" type="password" name="password">
+        </label>
+        <label for="">
+            <span class="display-none" id="new-password-message"></span>
+            <input class="modal-input" id="new-password" disabled type="password" name="newpassword">
+        </label>
+        <label for="">
+            <span class="display-none" id="re-new-password-message"></span>
+            <input class="modal-input" id="re-new-password" disabled type="password" name="newpassword">
+        </label>
+        <button class="confirm-change-password" id="confirm-change-password" type="button"></button>
+    </div>
+    <div class="logout display-none" id="modal-logout">
+        <span class="display-none" id="logout-message"></span>
         <label for="">
             <span class="display-none" id="password-message"></span>
-            <input class="modal-input" id="old-password" type="text" name="password">
+            <input class="modal-input" id="password" type="password" name="password">
         </label>
-        <label for="">
-            <span class="display-none" id="newpassword-message"></span>
-            <input class="modal-input" id="new-password" type="text" name="newpassword">
-        </label>
-        <label for="">
-            <span class="display-none" id="re-newpassword-message"></span>
-            <input class="modal-input" id="re-new-password" type="text" name="newpassword">
-        </label>
-    </div>
-    <div class="logout">
-        <label for="">
-            <span class="display-none" id="logout-message"></span>
-            <input class="modal-input" id="password" type="text" name="password">
-        </label>
-        <button class="confirm-logout" id="confirm-logout" type="button"></button>
+        <button class="confirm-logout" id="confirm-logout" disabled type="button"></button>
     </div>
 {% endblock %}
