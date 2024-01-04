@@ -107,8 +107,10 @@
 </main>
 {% endblock %}
 {% block modal %}
-    <button class="display-none" id="btn-close" type="button"></button>
-	<div class="change-password-container display-none" id="modal-change-pass">
+    <div class="display-none" id="close-block">
+        <button class="display-none" id="btn-close" type="button">&times;</button>
+    </div>
+    <div class="change-password-container display-none" id="modal-change-pass">
         <span class="display-none" id="change-password-message"></span>
         <label for="">
             <span class="display-none" id="old-password-message"></span>
@@ -122,7 +124,7 @@
             <span class="display-none" id="re-new-password-message"></span>
             <input class="modal-input" id="re-new-password" disabled type="password" name="newpassword">
         </label>
-        <button class="confirm-change-password" id="confirm-change-password" type="button"></button>
+        <button class="confirm-change-password" id="confirm-change-password" type="submit">change password</button>
     </div>
     <div class="logout display-none" id="modal-logout">
         <span class="display-none" id="logout-message"></span>
@@ -130,6 +132,6 @@
             <span class="display-none" id="password-message"></span>
             <input class="modal-input" id="password" type="password" name="password">
         </label>
-        <button class="confirm-logout" id="confirm-logout" disabled type="button"></button>
+        <button class="confirm-logout" id="confirm-logout" disabled type="submit">logout</button>
     </div>
 {% endblock %}

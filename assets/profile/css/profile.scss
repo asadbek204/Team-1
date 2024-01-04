@@ -261,11 +261,114 @@ input[type=number] {
 .message {
   color: red;
   background-color: transparent;
-  width: 100%;
+  width: 60%;
   height: 5vh;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 span {
   transition: .1s ease-in-out;
+}
+
+.btn-close {
+  transition: var(--trsn-parent);
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  font-size: 40px;
+  background-color: white;
+  color: rgba(192, 190, 190, 0.9);
+  transform: translate(0, -100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-block {
+  position: absolute;
+  height: 10vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  transition: var(--trsn-parent);
+  animation: btn-close-animation 1s ease-in-out;
+}
+
+@keyframes btn-close-animation {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 100%);
+  }
+}
+
+.close-block:hover {
+  transition: var(--trsn-parent);
+
+  .btn-close {
+    transition: var(--trsn-parent);
+    transform: translate(0, 50%);
+  }
+}
+
+.logout.display-none,
+.change-password-container.display-none {
+  width: 0;
+  height: 0;
+  transition: var(--trsn-child);
+
+  * {
+    width: 0;
+    height: 0;
+    transition: var(--trsn-parent);
+  }
+}
+
+.change-password-container,
+.logout {
+  transition: var(--trsn-child);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 40%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10vh 0;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: -1px 1px 2px rgba(128, 128, 128, 0.34);
+
+  label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-input {
+    width: 60%;
+    height: 4vh;
+    transition: var(--trsn-parent);
+    background-color: white;
+  }
+
+  button {
+    width: 60%;
+    height: 4vh;
+    background-color: #ececec;
+  }
+}
+
+.change-password-container {
+  height: 50%;
 }

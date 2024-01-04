@@ -12,7 +12,8 @@ class LoginView(View):
     def get(request):
         if not request.user.is_authenticated:
             return render(request, 'account/login.html')
-        return redirect('profile')
+        next_path = request.GET.get('next')
+        return redirect('profile' if not next_path else next_path)
 
     @staticmethod
     def post(request):

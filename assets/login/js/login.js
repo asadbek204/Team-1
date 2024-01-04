@@ -13,8 +13,8 @@ const hideMessage = () => {messageBox.className = 'display-none'; messageBox.inn
 username.oninput = (e) => {e.target.value = e.target.value.toLowerCase()}
 document.getElementById('btn-login').onclick = async (e) => {
     e.preventDefault()
-    if (username.value.length <= 4) return showMessage('username is to short')
-    if (password.value.length <= 8) return showMessage('password is to short')
+    if (username.value.length < 4) return showMessage('username is to short')
+    if (password.value.length < 8) return showMessage('password is to short')
     const data = await (await requests.POST({username: username.value, password: password.value})).json()
     if (!data.ok) return showMessage(data.message)
     if (rememberCheck.checked) await storeUser()

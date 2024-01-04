@@ -76,6 +76,7 @@ femaleInput.onclick = Gender(maleInput)
 for (let input of document.getElementsByTagName('input')){input.onpaste = e => false; input.ondrop = e => false}
 setGender().then()
 const btnClose = document.getElementById('btn-close')
+const closeBlock = document.getElementById('close-block')
 const modalChangePassword = document.getElementById('modal-change-pass')
 const btnChangePassword = document.getElementById('btn-change-password')
 const oldPasswordInput = document.getElementById('old-password')
@@ -84,31 +85,35 @@ const reNewPasswordInput = document.getElementById('re-new-password')
 const confirmChangePassword = document.getElementById('confirm-change-password')
 const close = (modal) => (event) => {
     blurPage()
+    closeBlock.className = 'display-none'
     modal.classList.add('display-none')
+    event.target.className = 'display-none'
 }
 btnChangePassword.onclick = (event) => {
     const Select = (subInput=undefined) => (event) => {
         let input = event.target
         input.oninput = (event) => {
             confirmChangePassword.disabled = true
-            if (!input.validity.valid) return showMessage(`invalid ${input.name}`)
-            if (input.value.length < 8) return showMessage('min length 4')
+            if (input.value.length < 8) return showMessage('min length 8')
             hideMessage()
             if (subInput) subInput.disabled = false
-            else confirmChangePassword.disabled = false
+            else if (newPasswordInput.value === input.value) confirmChangePassword.disabled = false
+            else showMessage('passwords not equal')
         }
         focus(input)
     }
     oldPasswordInput.onfocus = Select(newPasswordInput)
     newPasswordInput.onfocus = Select(reNewPasswordInput)
     reNewPasswordInput.onfocus = Select()
+    closeBlock.className = 'close-block'
     btnClose.className = 'btn-close'
     btnClose.onclick = close(modalChangePassword)
     blurPage()
     modalChangePassword.classList.remove('display-none')
     confirmChangePassword.onclick = async (event) => {
+        event.preventDefault()
         focused.message = document.getElementById('change-password-message')
-        const data = await (await requests.POST({password: oldPasswordInput.value, newpassword: newPasswordInput.value})).json()
+        const data = await (await requests.PUT({password: oldPasswordInput.value, newpassword: newPasswordInput.value})).json()
         if (!data.ok) return showMessage(data.message)
         document.location.reload(true)
     }
@@ -118,16 +123,22 @@ const passwordInput = document.getElementById('password')
 const btnLogout = document.getElementById('btn-logout')
 const confirmLogout = document.getElementById('confirm-logout')
 btnLogout.onclick = (event) => {
-    requests.url += 'logout/'
-    passwordInput.onfocus = Select('password')
-    passwordInput.removeEventListener('focusout', unFocus)
+    passwordInput.oninput = (event) => {
+        focus(passwordInput)
+        let input = event.target
+        if (input.value.length < 8) return showMessage('min length 8')
+        hideMessage()
+        confirmLogout.disabled = false
+    }
+    closeBlock.className = 'close-block'
     btnClose.className = 'btn-close'
     btnClose.onclick = close(modalLogout)
     blurPage()
     modalLogout.classList.remove('display-none')
     confirmLogout.onclick = async (event) => {
+        event.preventDefault()
         focused.message = document.getElementById('logout-message')
-        const data = await (await requests.POST({password: passwordInput.value})).json()
+        const data = await (await requests.PUT({password: passwordInput.value})).json()
         if (!data.ok) return showMessage(data.message)
         document.location.reload(true)
     }
