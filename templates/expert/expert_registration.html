@@ -17,8 +17,7 @@
             <div class="content">
                 <div class="title">Registration Form</div>
                  <div class="message"><span id="message1"></span></div>
-                <form action="#" method="post">
-                    {% csrf_token %}
+                <div>
                     <label class="field" for="username">
                         <span class="fa fa-user"></span>
                         <input type="text" value="" id="username" required placeholder="Username">
@@ -28,9 +27,9 @@
                         <input type="password" id="password" class="pass-key" required placeholder="Password">
                     </label>
                     <div class="button">
-                        <button id="regBtn" type="submit">REGISTER</button>
+                        <button id="regBtn" type="button">REGISTER</button>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -40,7 +39,6 @@
         <div class="title"><h1 id="register-text">Change Password</h1></div>
         <div class="message"><span id="message2"></span></div>
         <div>
-{#            {% csrf_token %}#}
             <label class="field" for="newusername">
                 <span class="fa fa-user"></span>
                 <input type="text" value="" id="newusername" required placeholder="Username">
