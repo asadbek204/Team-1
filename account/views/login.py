@@ -17,7 +17,7 @@ class LoginView(View):
     @staticmethod
     def post(request):
         try:
-            username, password = json.loads(request.body).items()
+            (_, username), (_, password) = json.loads(request.body).items()
             try:
                 if '@' in username:
                     user = UserModel.objects.get(email=username)
@@ -29,6 +29,6 @@ class LoginView(View):
                 if user.check_password(password):
                     login(request, user)
                     return JsonResponse({'ok': True, 'message': 'successfully logged in'})
-                return JsonResponse({'ok': False, 'message': 'user not found'})
+                return JsonResponse({'ok': False, 'message': 'wrong password'})
         except ValueError:
             return JsonResponse({'ok': False, 'message': 'wrong parameters'}, status=404)
