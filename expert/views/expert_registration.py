@@ -27,15 +27,14 @@ class ExpertRegView(View):
             except Expert.DoesNotExist:
                 result = {'ok': False, 'message': 'expert does not exist'}
             else:
-                result = {'ok': True, 'message': 'success', 'expert_id': expert.id}
+                result = {'ok': True, 'message': 'success'}
         return JsonResponse(result)
 
     def put(self, request):
-        data = self.post(request)
-        if data.get('ok', False):
-            return JsonResponse({'ok': False, 'message': data.get('message')})
-        expert = Expert.objects.get(id=data.get('expert_id'))
         data = json.loads(request.body)
+        user = UserModel.objects.filter(username=data.get('username')).first()
+        data = self.post()
+        expert = Expert.objects.get(user=request.user)
         if data.get('newusername', False) and data.get('newpassword', False):
             expert.user.username = data['newusername']
             expert.user.set_password(data['newpassword'])

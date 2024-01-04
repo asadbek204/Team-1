@@ -29,10 +29,10 @@ class Participant(models.Model):
 
 
 class Expert(models.Model):
-    about = models.TextField()
-    image = models.ImageField(upload_to="account/media")
-    expert_token = models.CharField(max_length=100)
-    profession = models.CharField(max_length=100)
-    last_checked_competition = models.PositiveIntegerField()
+    about = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to="account/media", null=True, blank=True)
+    expert_token = models.CharField(max_length=100, null=True, blank=True)
+    profession = models.CharField(max_length=100, null=True, blank=True)
+    last_checked_competition = models.PositiveIntegerField(null=True, blank=True)
     user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
 

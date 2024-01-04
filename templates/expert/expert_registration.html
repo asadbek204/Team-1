@@ -39,7 +39,7 @@
 	<div id="popup" class="pop">
         <div class="title"><h1 id="register-text">Change Password</h1></div>
         <div class="message"><span id="message2"></span></div>
-        <form action="">
+        <div>
             {% csrf_token %}
             <label class="field" for="newusername">
                 <span class="fa fa-user"></span>
@@ -49,7 +49,7 @@
                 <span class="fa fa-lock"></span>
                 <input type="password" id="newpassword" class="pass-key" required placeholder="Password">
             </label>
-            <div class="button"><button id="regBtn2" type="submit">CHANGE</button></div>
-        </form>
+            <div class="button"><button id="regBtn2" type="button">CHANGE</button></div>
+        </div>
     </div>
 {% endblock %}

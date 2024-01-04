@@ -5,13 +5,13 @@
     box-sizing: border-box;
 }
 
-.bbb{
+.bbb {
     width: 100%;
     background-color: cyan;
     min-height: 100vh;
 }
 
-.my_container{
+.my_container {
     width: 80%;
     margin: 0 auto;
     background-color: cyan;
@@ -19,7 +19,7 @@
     padding-bottom: 20px;
 }
 
-.box1{
+.box1 {
     background-color: #A0F0E0;
     width: 100%;
     height: 100px;
@@ -32,7 +32,7 @@
 }
 
 
-.search{
+.search {
     width: 400px;
     height: 60px;
     border-radius: 60px;
@@ -42,13 +42,13 @@
     padding-left: 10px;
 }
 
-.it{
+.it {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.check{
+.check {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -56,7 +56,7 @@
     /*box-shadow: 2px 0 0 0 #A9A9A9;*/
 }
 
-button{
+button {
     width: 120px;
     height: 30px;
     border-radius: 8px;
@@ -67,12 +67,12 @@ button{
     box-shadow: 0 2px #A9A9A9;
 }
 
-.create{
+.create {
     width: 200px;
     height: 40px;
 }
 
-.box2{
+.box2 {
     background-color: white;
     width: 100%;
     border-radius: 20px;
@@ -81,7 +81,7 @@ button{
     padding: 10px 0;
 }
 
-.card1{
+.card1 {
     background-color: #F0FFAA99;
     width: 95%;
     margin: 20px auto;
@@ -95,18 +95,18 @@ button{
 
 }
 
-img{
+img {
     width: 120px;
     height: 120px;
     border-radius: 10px;
 }
 
-.name{
+.name {
     /*background-color: #FF0000;*/
     /*margin-left: 30px;*/
 }
 
-.text{
+.text {
     /*background-color: #10AA0F;*/
     width: 30%;
     height: 100px;
@@ -116,24 +116,142 @@ img{
 }
 
 
-.form > form{
+.form > form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     /*margin-left: 90px;*/
 }
 
-.delete{
+.delete {
     background-color: #FF0000;
     color: black;
     margin: 5px;
 }
 
-.edit{
+.edit {
     color: black;
     margin: 5px;
 }
 
 @media (max-width: 244px) {
 
+}
+
+.message {
+    color: red;
+    background-color: transparent;
+    width: 60%;
+    height: 5vh;
+    font-size: 18px;
+}
+
+span {
+    transition: 0.1s ease-in-out;
+}
+
+.btn-close {
+    transition: var(--trsn-parent);
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    font-size: 40px;
+    background-color: white;
+    color: rgba(192, 190, 190, 0.9);
+    transform: translate(0, -100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-block {
+    position: absolute;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    transition: var(--trsn-parent);
+    animation: btn-close-animation 1s ease-in-out;
+}
+
+@keyframes btn-close-animation {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 100%);
+    }
+}
+
+.close-block:hover {
+    transition: var(--trsn-child);
+}
+
+.close-block:hover .btn-close {
+    transition: var(--trsn-child);
+    transform: translate(0, 50%);
+}
+
+.create-expert.display-none {
+    transition: var(--trsn-child);
+}
+
+.create-expert.display-none * {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.create-expert {
+    visibility: visible;
+    transition: var(--trsn-child);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 40%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10vh 0;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: -1px 1px 2px rgba(128, 128, 128, 0.34);
+}
+
+.create-expert * {
+    visibility: visible;
+}
+
+.create-expert label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-expert .modal-input {
+    width: 60%;
+    height: 4vh;
+    background-color: white;
+}
+
+.create-expert button {
+    width: 60%;
+    height: 4vh;
+    background-color: #ececec;
+}
+
+.display-none {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
 }
