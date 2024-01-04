@@ -9,7 +9,7 @@ class SignUpForm(forms.ModelForm):
 
     class Meta:
         model = UserModel
-        fields = ('email', 'password')
+        fields = ('username', 'email', 'password')
         widgets = {
             'password': forms.PasswordInput()
         }
