@@ -7,7 +7,9 @@ def create_expert(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
-        user = UserModel.objects.create(username=username, password=password)
+
+        user = UserModel.objects.create(username=username)
+        user.set_password(password)
         user.save()
         expert = Expert(user=user)
         expert.save()

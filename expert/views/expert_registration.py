@@ -20,16 +20,19 @@ class ExpertRegView(View):
     def post(request):
         data = json.loads(request.body)
         try:
-            user = UserModel.objects.get(username=data['username'], password=data['password'])
+            user = UserModel.objects.get(username=data['username'])
         except UserModel.DoesNotExist:
             result = {'ok': False, 'message': 'user does not exist'}
         else:
-            try:
-                expert = Expert.objects.get(user=user)
-            except Expert.DoesNotExist:
-                result = {'ok': False, 'message': 'expert does not exist'}
+            if user.check_password(data['password']):
+                try:
+                    expert = Expert.objects.get(user=user)
+                except Expert.DoesNotExist:
+                    result = {'ok': False, 'message': 'expert does not exist'}
+                else:
+                    result = {'ok': True, 'message': 'success', 'expert_id': expert.id}
             else:
-                result = {'ok': True, 'message': 'success', 'expert_id': expert.id}
+                result = {'ok': False, 'message': 'wrong password'}
         return JsonResponse(result)
 
     def put(self, request):
@@ -45,4 +48,5 @@ class ExpertRegView(View):
             expert.user.set_password(data['newpassword'])
             expert.user.save()
             login(request, expert.user)
-        return JsonResponse({'ok': False, 'message': 'debug'})
+            return JsonResponse({'ok': True, 'message': 'success'})
+        return JsonResponse({'ok': False, 'message': 'change your information'})

@@ -13,7 +13,7 @@ document.getElementById("regBtn").onclick = async (event) => {
 }
 document.getElementById('regBtn2').onclick = async (event) => {
     event.preventDefault()
-    const newUsernameInput = document.getElementById('newpassword')
+    const newUsernameInput = document.getElementById('newusername')
     const newPasswordInput = document.getElementById('newpassword')
     if ((usernameInput.value === newUsernameInput.value) || (passwordInput.value === newPasswordInput.value)) return message.innerText = "you must change your username and password"
     let body = {username: usernameInput.value, password: passwordInput.value, newusername: newUsernameInput.value, newpassword: newPasswordInput.value}
