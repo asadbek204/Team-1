@@ -19,11 +19,16 @@ class LoginView(View):
         try:
             username, password = json.loads(request.body).items()
             try:
-                user = UserModel.objects.get(username=username, password=password)
+                if '@' in username:
+                    user = UserModel.objects.get(email=username)
+                else:
+                    user = UserModel.objects.get(username=username)
             except UserModel.DoesNotExist:
                 return JsonResponse({'ok': False, 'message': 'user not found'})
             else:
-                login(request, user)
-                return JsonResponse({'ok': True, 'message': 'successfully logged in'})
+                if user.check_password(password):
+                    login(request, user)
+                    return JsonResponse({'ok': True, 'message': 'successfully logged in'})
+                return JsonResponse({'ok': False, 'message': 'user not found'})
         except ValueError:
             return JsonResponse({'ok': False, 'message': 'wrong parameters'}, status=404)
