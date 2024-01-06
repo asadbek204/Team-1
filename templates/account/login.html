@@ -44,15 +44,24 @@
                 <div class="center">
                     <a class="a pr_text" href="#">войдите через аккаунт социальной сети</a>
                     <hr class="white_hr"/>
-                    <form action="{% provider_login_url google process='login' %}" method="post">
+                    <form action="{% provider_login_url 'google' process='login' %}" method="post">
                         {% csrf_token %}
                         <button class="p_icons" type="submit"><img
                                 src="{% static 'login/imgs/g+.svg' %}" alt=""></button>
-                        <a href="" class="p_icons"><img src="{% static 'login/imgs/f.svg' %}" alt=""></a>
-                        <a href="" class="p_icons"><img src="{% static 'login/imgs/intsa.svg' %}" alt=""/></a>
-                        <a href="" class="p_icons"> <img src="{% static 'login/imgs/tg.svg' %}" alt=""/> </a>
                     </form>
-
+                    <form action="{% provider_login_url 'facebook' process='login' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="p_icons"><img
+                                src="{% static 'login/imgs/f.svg' %}" alt=""></button>
+                    </form>
+                    <form action="{% provider_login_url 'github' process='login' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="p_icons"><img src="{% static 'login/imgs/github.png' %}" alt=""></button>
+                    </form>
+                    <form action="{% provider_login_url 'linkedin_oauth2' process='login' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit"  class="p_icons"> <img src="{% static 'login/imgs/tg.svg' %}" alt=""/> </button>
+                    </form>
                 </div>
             </div>
         </div>
