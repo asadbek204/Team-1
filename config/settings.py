@@ -30,12 +30,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+
+
     'competition',
     'account',
     'home',
     'administration',
     'about',
-    'expert'
+    'expert',
 ]
 
 MIDDLEWARE = [
@@ -125,7 +127,6 @@ STATICFILES_DIRS = BASE_DIR / "assets",
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'account.UserModel'
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

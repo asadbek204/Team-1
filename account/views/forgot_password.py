@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from account.models import UserModel
+from accountsss.models import UserModel
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.views.generic import View

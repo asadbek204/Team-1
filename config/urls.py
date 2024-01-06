@@ -10,7 +10,7 @@ urlpatterns = [
     path('site/', include('administration.urls')),
     path('account/', include('account.urls')),
     path('competition/', include('competition.urls')),
-    path('expert/', include('expert.urls'))
+    path('expert/', include('expert.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

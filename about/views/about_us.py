@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from ..models import AdvantagesModel
-from account.models import Expert
+# from account.models import Expert
 
 
 def about_view(request):
