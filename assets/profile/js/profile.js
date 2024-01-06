@@ -85,7 +85,6 @@ femaleCheck.onclick = femaleInput.click
 femaleIcon.onclick = femaleInput.click
 maleInput.onclick = Gender(femaleInput)
 femaleInput.onclick = Gender(maleInput)
-for (let input of document.getElementsByTagName('input')){input.onpaste = e => false; input.ondrop = e => false}
 setGender().then()
 const btnClose = document.getElementById('btn-close')
 const closeBlock = document.getElementById('close-block')
@@ -102,6 +101,7 @@ const close = (modal) => (event) => {
     event.target.className = 'display-none'
     hideMessage()
     focused.input.value = ''
+    requests.url = url
 }
 btnChangePassword.onclick = (event) => {
     const Select = (subInput=undefined) => (event) => {
@@ -122,13 +122,17 @@ btnChangePassword.onclick = (event) => {
     closeBlock.className = 'close-block'
     btnClose.className = 'btn-close'
     btnClose.onclick = close(modalChangePassword)
+    focus(oldPasswordInput)
     blurPage()
     modalChangePassword.classList.remove('display-none')
     confirmChangePassword.onclick = async (event) => {
         event.preventDefault()
         focused.message = document.getElementById('change-password-message')
         const data = await (await requests.PUT({password: oldPasswordInput.value, newpassword: newPasswordInput.value})).json()
-        if (!data.ok) return showMessage(data.message)
+        if (!data.ok) {
+            btnForgotPassword.className = 'btn-forgot-password'
+            return showMessage(data.message)
+        }
         document.location.reload(true)
     }
 }
@@ -138,8 +142,8 @@ const btnLogout = document.getElementById('btn-logout')
 const confirmLogout = document.getElementById('confirm-logout')
 btnLogout.onclick = (event) => {
     passwordInput.oninput = (event) => {
-        focus(passwordInput)
         let input = event.target
+        focus(input)
         if (input.value.length < 8) return showMessage('min length 8')
         hideMessage()
         confirmLogout.disabled = false
@@ -153,7 +157,41 @@ btnLogout.onclick = (event) => {
         event.preventDefault()
         focused.message = document.getElementById('logout-message')
         const data = await (await requests.PUT({password: passwordInput.value})).json()
+        if (!data.ok) {
+            btnForgotPassword2.className = 'btn-forgot-password'
+            return showMessage(data.message)
+        }
+        document.location.reload(true)
+    }
+}
+const modalForgotPassword = document.getElementById('modal-forgot-password')
+const email2forgotInput = document.getElementById('email2forgot')
+const btnForgotPassword = document.getElementById('btn-forgot-password')
+const btnForgotPassword2 = document.getElementById('btn-forgot-password2')
+const confirmForgotPassword = document.getElementById('send-email')
+const forgotPassword = async event => {
+    btnClose.click()
+    email2forgotInput.oninput = (event) => {
+        let input = event.target
+        focus(input)
+        if (!input.validity.valid) return showMessage(`invalid ${input.name}`)
+        hideMessage()
+        confirmForgotPassword.disabled = false
+    }
+    closeBlock.className = 'close-block'
+    btnClose.className = 'btn-close'
+    btnClose.onclick = close(modalForgotPassword)
+    blurPage()
+    requests.url += 'forgot_password/'
+    focused.message = document.getElementById('forgot-password-message')
+    modalForgotPassword.classList.remove('display-none')
+    await requests.GET()
+    showMessage('please check your email')
+    confirmForgotPassword.onclick = async (event) => {
+        const data = await (await requests.PUT({password: email2forgotInput.value})).json()
         if (!data.ok) return showMessage(data.message)
         document.location.reload(true)
     }
 }
+btnForgotPassword.onclick = forgotPassword
+btnForgotPassword2.onclick = forgotPassword

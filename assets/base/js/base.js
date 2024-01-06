@@ -12,6 +12,7 @@ let requests = new Requests(baseUrl + '/search/', csrfToken)
 function blurPage() {
     generalContainer.classList.toggle('blur')
     document.body.classList.toggle('freeze')
+    window.scrollTo(0, 0)
 }
 function openSearchWindow() {
     searchWindow.classList.toggle('active')

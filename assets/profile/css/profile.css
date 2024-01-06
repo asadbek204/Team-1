@@ -283,10 +283,12 @@ span {
   transform: translate(0, 50%);
 }
 
+.forgot-password.display-none,
 .logout.display-none,
 .change-password-container.display-none {
   transition: var(--trsn-child);
 }
+.forgot-password.display-none *,
 .logout.display-none *,
 .change-password-container.display-none * {
   width: 0;
@@ -294,6 +296,7 @@ span {
   visibility: hidden;
 }
 
+.forgot-password,
 .change-password-container,
 .logout {
   visibility: visible;
@@ -313,10 +316,12 @@ span {
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: -1px 1px 2px rgba(128, 128, 128, 0.34);
 }
+.forgot-password *,
 .change-password-container *,
 .logout * {
   visibility: visible;
 }
+.forgot-password label,
 .change-password-container label,
 .logout label {
   width: 100%;
@@ -325,6 +330,7 @@ span {
   justify-content: center;
   align-items: center;
 }
+.forgot-password .modal-input,
 .change-password-container .modal-input,
 .logout .modal-input {
   padding-left: 1vw;
@@ -332,11 +338,18 @@ span {
   height: 4vh;
   background-color: white;
 }
+.forgot-password button,
 .change-password-container button,
 .logout button {
   width: 60%;
   height: 4vh;
   background-color: #ececec;
+}
+.forgot-password .btn-forgot-password,
+.change-password-container .btn-forgot-password,
+.logout .btn-forgot-password {
+  font-size: 18px;
+  color: gray;
 }
 
 .display-none {

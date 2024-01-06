@@ -1,9 +1,9 @@
 from django.contrib.auth import logout
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from competition.models import QuestionnaireModel
-from ..models import Participant, UserModel
+from ..models import Participant, UserModel, Expert
 from django.views.generic import View
 import json
 
@@ -13,8 +13,13 @@ class ProfileView(View):
     @staticmethod
     @login_required(login_url='login')
     def get(request):
-        participant = Participant.objects.get(user=request.user)
-        competitions = QuestionnaireModel.objects.filter(participant=participant).only('competition')
+        participant = Participant.objects.filter(user=request.user)
+        if not participant.exists():
+            expert = Expert.objects.filter(user=request.user)
+            if not expert.exists():
+                return redirect('registration')
+            return render(request, 'account/profile.html', {'participant': expert[0]})
+        competitions = QuestionnaireModel.objects.filter(participant=participant.first()).only('competition')
         context = {
             'participant': participant,
             'competitions': competitions
@@ -26,15 +31,15 @@ class ProfileView(View):
     def put(request):
         data = json.loads(request.body)
         if password := data.get('password', False):
-            if request.user.check_password(password):
-                if new_password := data.get('newpassword', False):
-                    request.user.set_password(new_password)
-                    request.user.save()
-                    return JsonResponse({'ok': True, 'message': 'successfully updated'})
+            if not request.user.check_password(password):
+                return JsonResponse({'ok': False, 'message': 'wrong password'})
+            if new_password := data.get('newpassword', False):
+                request.user.set_password(new_password)
+                request.user.save()
+                return JsonResponse({'ok': True, 'message': 'successfully updated'})
+            else:
                 logout(request)
                 return JsonResponse({'ok': True, 'message': 'successfully log outed'})
-            else:
-                return JsonResponse({'ok': False, 'message': 'wrong password'})
         participant_data = {}
         user_data = {}
         for key, value in data.items():
