@@ -3,7 +3,7 @@ from pprint import pprint
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.contrib.auth import login
-from account.models import Expert, UserModel
+from user_account.models import Expert, UserModel
 import json
 from django.views.generic import View
 

@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate
 from django.shortcuts import render, redirect
-from account.forms import SignUpForm
-from account.models import Participant, School
+from user_account.forms import SignUpForm
+from user_account.models import Participant, School
 from about.models import Region
 
 
@@ -24,7 +24,7 @@ def register_view(request):
             authenticate(request, username=user.username, password=form.cleaned_data['password'])
             return redirect('login')
     regions = Region.objects.all()
-    return render(request, 'account/register.html', context={
+    return render(request, 'account/signup.html', context={
         "form": form,
         'regions': regions
     })

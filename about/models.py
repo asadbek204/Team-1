@@ -9,7 +9,7 @@ class Region(models.Model):
 
 class Result(models.Model):
     score = models.PositiveIntegerField()
-    expert = models.ForeignKey('account.Expert', on_delete=models.CASCADE)
+    expert = models.ForeignKey('user_account.Expert', on_delete=models.CASCADE)
     questionnaire = models.ForeignKey('competition.QuestionnaireModel', on_delete=models.CASCADE)
 
 

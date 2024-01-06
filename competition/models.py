@@ -1,5 +1,5 @@
 from django.db import models
-from account.models import UserModel, Expert, Region, Participant
+from user_account.models import UserModel, Expert, Region, Participant
 
 
 # Create your models here.

@@ -8,9 +8,10 @@ urlpatterns = [
     path('', include('home.urls')),
     path('about/', include('about.urls')),
     path('site/', include('administration.urls')),
-    path('account/', include('account.urls')),
+    path('account/', include('user_account.urls')),
     path('competition/', include('competition.urls')),
     path('expert/', include('expert.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

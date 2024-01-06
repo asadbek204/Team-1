@@ -2,7 +2,7 @@ from django.contrib.auth import login
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.views.generic import View
-from account.models import UserModel
+from user_account.models import UserModel
 import json
 
 

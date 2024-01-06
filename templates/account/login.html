@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load socialaccount %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'login/css/profile.css' %}">
     <script defer src="{% static 'login/js/login.js' %}"></script>
@@ -30,20 +31,28 @@
                             <div class="remember-box">
                                 <label for="remember-me" class="a zapomnit">запомнить</label>
                                 <input class="display-none" type="checkbox" name="remember" id="remember-me">
-                                <button class="remember" type="button" id="remember"><i class="display-none bi bi-check" id="check-icon"></i></button>
+                                <button class="remember" type="button" id="remember"><i class="display-none bi bi-check"
+                                                                                        id="check-icon"></i></button>
                             </div>
                             <a class="a zb_pr" href="#"> забыли пароль</a>
                         </div>
-                        <div class="center"><button type="submit" class="profile_btn" id="btn-login">ВОЙТИ</button></div>
+                        <div class="center">
+                            <button type="submit" class="profile_btn" id="btn-login">ВОЙТИ</button>
+                        </div>
                     </div>
                 </div>
                 <div class="center">
                     <a class="a pr_text" href="#">войдите через аккаунт социальной сети</a>
                     <hr class="white_hr"/>
-                    <a href="" class="p_icons"><img src="{% static 'login/imgs/g+.svg' %}" alt=""></a>
-                    <a href="" class="p_icons"><img src="{% static 'login/imgs/f.svg' %}" alt=""></a>
-                    <a href="" class="p_icons"><img src="{% static 'login/imgs/intsa.svg' %}" alt=""/></a>
-                    <a href="" class="p_icons"> <img src="{% static 'login/imgs/tg.svg' %}" alt=""/> </a>
+                    <form action="{% provider_login_url google process='login' %}" method="post">
+                        {% csrf_token %}
+                        <button class="p_icons" type="submit"><img
+                                src="{% static 'login/imgs/g+.svg' %}" alt=""></button>
+                        <a href="" class="p_icons"><img src="{% static 'login/imgs/f.svg' %}" alt=""></a>
+                        <a href="" class="p_icons"><img src="{% static 'login/imgs/intsa.svg' %}" alt=""/></a>
+                        <a href="" class="p_icons"> <img src="{% static 'login/imgs/tg.svg' %}" alt=""/> </a>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -51,8 +60,8 @@
 {% endblock %}
 {#------------------- Team leader edits -------------------#}
 {% block modal %}
-	<section class="forgot-password">
-        
+    <section class="forgot-password">
+
     </section>
 {% endblock %}
 {#---------------------------------------------------------#}

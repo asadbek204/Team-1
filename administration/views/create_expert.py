@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate
 from django.shortcuts import render
-# from account.models import Expert, UserModel
+from user_account.models import Expert, UserModel
 
 
 def create_expert(request):

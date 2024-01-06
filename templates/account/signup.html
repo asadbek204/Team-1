@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load socialaccount %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'competition/detail/css/style.css' %}">
 {% endblock %}
@@ -34,10 +35,13 @@
                 </div>
                 <main>
                     <div class="icons">
-                        <a href="#"><img src="{% static 'competition/detail/img/google.png' %}" alt=""></a>
-                        <a href="#"><img src="{% static 'competition/detail/img/facebook.png' %}" alt=""></a>
-                        <a href="#"><img src="{% static 'competition/detail/img/insta.png' %}" alt=""></a>
-                        <a href="#"><img src="{% static 'competition/detail/img/tg.png' %}" alt=""></a>
+                        <form action="{% provider_login_url google process='login' %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit"><img src="{% static 'competition/detail/img/google.png' %}" alt=""></button>
+                            <a href="#"><img src="{% static 'competition/detail/img/facebook.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'competition/detail/img/insta.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'competition/detail/img/tg.png' %}" alt=""></a>
+                        </form>
                     </div>
                     <div class="line"></div>
                     <h3 class="icon-text">Регистрация с помощью социальных сетей</h3>
