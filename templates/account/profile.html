@@ -59,14 +59,14 @@
                     </div>
                     <form action="" class="gender-info">
                         <div class="gender-block">
-                            <div class="gender-img"><img src="{% static 'profile/img/femail.png' %}" alt=""></div>
+                            <div class="gender-img" id="female-icon"><img src="{% static 'profile/img/femail.png' %}" alt=""></div>
                             <label for="female-check" class="gender-check">
                                 <img id="female" src="{% static 'profile/img/check-false.png' %}" alt="">
                             </label>
                             <input class="display-none" type="radio" name="female" id="female-check">
                         </div>
                         <div class="gender-block">
-                            <div class="gender-img"><img src="{% static 'profile/img/male.png' %}" alt=""></div>
+                            <div class="gender-img" id="male-icon"><img src="{% static 'profile/img/male.png' %}" alt=""></div>
                             <label for="male-check" class="gender-check">
                                 <img id="male" src="{% static 'profile/img/check-false.png' %}" alt="">
                             </label>
@@ -125,6 +125,7 @@
             <input class="modal-input" id="re-new-password" disabled type="password" name="newpassword" placeholder="confirm password">
         </label>
         <button class="confirm-change-password" id="confirm-change-password" type="submit">change password</button>
+        <span class="display-none" id="btn-forgot-password">forgot password</span>
     </div>
     <div class="logout display-none" id="modal-logout">
         <span class="display-none" id="logout-message"></span>
@@ -133,5 +134,14 @@
             <input class="modal-input" id="password" type="password" name="password" placeholder="enter your password">
         </label>
         <button class="confirm-logout" id="confirm-logout" disabled type="submit">logout</button>
+        <span class="display-none" id="btn-forgot-password2">forgot password</span>
+    </div>
+    <div class="forgot-password display-none" id="modal-forgot-password">
+        <span class="display-none" id="forgot-password-message"></span>
+        <label for="email2forgot">
+            <span class="display-none" id="email2forgot-message"></span>
+            <input class="modal-input" id="email2forgot" type="password" name="password">
+        </label>
+        <button class="send-email" id="send-email" type="button">confirm email</button>
     </div>
 {% endblock %}

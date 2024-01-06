@@ -326,6 +326,7 @@ span {
   }
 }
 
+.forgot-password.display-none,
 .logout.display-none,
 .change-password-container.display-none {
   transition: var(--trsn-child);
@@ -337,6 +338,7 @@ span {
   }
 }
 
+.forgot-password,
 .change-password-container,
 .logout {
   visibility: visible;
@@ -379,6 +381,13 @@ span {
     width: 60%;
     height: 4vh;
     background-color: #ececec;
+  }
+
+  .btn-forgot-password {
+    //width: 20%;
+    //height: 1vh;
+    font-size: 18px;
+    color: gray;
   }
 }
 
