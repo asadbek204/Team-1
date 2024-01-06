@@ -1,12 +1,6 @@
-<<<<<<< HEAD:user_account/views/forgot_password.py
-from django.shortcuts import render, redirect
-from accountsss.models import UserModel
-from django.contrib.auth.decorators import login_required
-=======
+from user_account.models import UserModel
 import json, random, string, time
 from django.contrib.auth import login
-from account.models import UserModel
->>>>>>> forgot_password:account/views/forgot_password.py
 from django.http import JsonResponse
 from django.views.generic import View
 from django.core.mail import send_mail
