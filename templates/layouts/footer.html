@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+
 <link rel="stylesheet" href="{% static 'base/css/footer.css' %}">
 <!-- ======= Footer ======= -->
 <footer>
@@ -6,27 +8,27 @@
         <div class="footer-custom">
             <div class="footer-lists">
                 <div class="footer-list-wrap">
-                    <h5 class="ftr-hdr">Карта сайта</h5>
+                    <h5 class="ftr-hdr">{% trans 'Карта сайта' %}</h5>
                     <ul class="ftr-links-sub">
-                        <li><a href="" rel="">Главная</a></li>
-                        <li><a href="" rel="">Результаты</a></li>
-                        <li><a href="" rel="">О нас</a></li>
-                        <li><a href="">Правила</a></li>
-                        <li><a href="">Работы</a></li>
+                        <li><a href="" rel="">{% trans 'Главная'%}</a></li>
+                        <li><a href="" rel="">{% trans 'Результаты' %}</a></li>
+                        <li><a href="" rel="">{% trans 'О нас' %}</a></li>
+                        <li><a href="">{% trans 'Правила' %}</a></li>
+                        <li><a href="">{% trans 'Работы' %}</a></li>
                     </ul>
                 </div>
                 <div class="footer-list-wrap">
-                    <h5 class="ftr-hdr">Контакты</h5>
+                    <h5 class="ftr-hdr">{% trans 'Контакты' %}</h5>
                     <ul class="ftr-links-sub">
                         <li><a href="">+998 71 234 56 78</a></li>
                         <li><a href="">befirst@gmail.com</a></li>
-                        <li><a href="">г. Ташкент, Юнусабадский район, ул Узбекистан</a></li>
+                        <li><a href="">{% trans 'г. Ташкент, Юнусабадский район, ул Узбекистан' %}</a></li>
                     </ul>
                     <br>
                     <br> <br>
                 </div>
                 <div class="footer-list-wrap f-social">
-                    <h5 class="ftr-hdr">Мы в соцсетях:</h5>
+                    <h5 class="ftr-hdr">{% trans 'Мы в соцсетях:' %}</h5>
                     <div class="social-links">
                         <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>

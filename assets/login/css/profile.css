@@ -238,6 +238,9 @@ label span {
     height: 50px;
   }
 }
+.d-flex{
+  display: flex;
+}
 @media (max-width:879px){
   .block{
     width: 100%;

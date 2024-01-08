@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-09 01:06+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: config/settings.py:117
+msgid "Русский"
+msgstr ""
+
+#: config/settings.py:118
+msgid "English"
+msgstr ""
+
+#: config/settings.py:119
+msgid "Uzbek"
+msgstr ""
+
+#: templates/layouts/footer.html:11
+msgid "Карта сайта"
+msgstr ""
+
+#: templates/layouts/footer.html:13 templates/layouts/navbar.html:24
+msgid "Главная"
+msgstr ""
+
+#: templates/layouts/footer.html:14 templates/layouts/navbar.html:27
+msgid "Результаты"
+msgstr ""
+
+#: templates/layouts/footer.html:15 templates/layouts/navbar.html:30
+msgid "О нас"
+msgstr ""
+
+#: templates/layouts/footer.html:16
+msgid "Правила"
+msgstr ""
+
+#: templates/layouts/footer.html:17 templates/layouts/navbar.html:25
+msgid "Работы"
+msgstr ""
+
+#: templates/layouts/footer.html:21
+msgid "Контакты"
+msgstr ""
+
+#: templates/layouts/footer.html:25
+msgid "г. Ташкент, Юнусабадский район, ул Узбекистан"
+msgstr ""
+
+#: templates/layouts/footer.html:31
+msgid "Мы в соцсетях:"
+msgstr ""
+
+#: templates/layouts/navbar.html:10
+msgid "ВХОД"
+msgstr ""
+
+#: templates/layouts/navbar.html:12
+msgid "РЕГИСТРАЦИЯ"
+msgstr ""
+
+#: templates/layouts/navbar.html:26
+msgid "Правило"
+msgstr ""
+
+#: templates/layouts/navbar.html:28
+msgid "Конкурс"
+msgstr ""
+
+#: templates/layouts/navbar.html:29
+msgid "Эксперты"
+msgstr ""
+
+#: templates/layouts/navbar.html:31
+msgid "Личный кабинет"
+msgstr ""

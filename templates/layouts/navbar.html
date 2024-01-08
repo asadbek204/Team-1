@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <div class="nav-block">
     <div class="mini-control-bar">
         <div class="control-block">
@@ -6,9 +7,9 @@
                 <img class="flag-icon" src="{% static 'base/img/flag.png' %}" alt="">
                 <div class="h-line"></div>
             </div>
-            <a href="#" class="nav-link">ВХОД</a>
+            <a href="#" class="nav-link">{% trans 'ВХОД' %}</a>
             <div class="h-line"></div>
-            <a class="nav-link" href="#">РЕГИСТРАЦИЯ</a>
+            <a class="nav-link" href="#">{% trans 'РЕГИСТРАЦИЯ' %}</a>
         </div>
     </div>
     <nav class="site-navigation">
@@ -20,14 +21,14 @@
             </button>
         </div>
         <div class="nav-links">
-            <a class="nav-link" href="#">Главная</a>
-            <a class="nav-link" href="#">Работы</a>
-            <a class="nav-link" href="#">Правило</a>
-            <a class="nav-link" href="#">Результаты</a>
-            <a class="nav-link" href="#">Конкурс</a>
-            <a class="nav-link" href="#">Эксперты</a>
-            <a class="nav-link" href="#">О нас</a>
-            <a class="nav-link active" href="#">Личный кабинет</a>
+            <a class="nav-link" href="#">{% trans 'Главная' %}</a>
+            <a class="nav-link" href="#">{% trans 'Работы' %}</a>
+            <a class="nav-link" href="#">{% trans 'Правило' %}</a>
+            <a class="nav-link" href="#">{% trans 'Результаты' %}</a>
+            <a class="nav-link" href="#">{% trans 'Конкурс' %}</a>
+            <a class="nav-link" href="#">{% trans 'Эксперты' %}</a>
+            <a class="nav-link" href="#">{% trans 'О нас' %}</a>
+            <a class="nav-link active" href="#">{% trans 'Личный кабинет' %}</a>
         </div>
         <div class="three-dots" id="menu-button">
             <div class="dot"></div>

@@ -44,7 +44,8 @@
                 <div class="center">
                     <a class="a pr_text" href="#">войдите через аккаунт социальной сети</a>
                     <hr class="white_hr"/>
-                    <form action="{% provider_login_url 'google' process='login' %}" method="post">
+                  <div class="d-flex">
+                        <form action="{% provider_login_url 'google' process='login' %}" method="post">
                         {% csrf_token %}
                         <button class="p_icons" type="submit"><img
                                 src="{% static 'login/imgs/g+.svg' %}" alt=""></button>
@@ -62,6 +63,7 @@
                         {% csrf_token %}
                         <button type="submit"  class="p_icons"> <img src="{% static 'login/imgs/tg.svg' %}" alt=""/> </button>
                     </form>
+                  </div>
                 </div>
             </div>
         </div>
