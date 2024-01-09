@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'payment/css/payment.css' %}">
@@ -9,30 +10,30 @@
 {% block content %}
 <main class="payment-main">
     <div class="top-banner">
-        <h1 class="payment-h1">ОПЛАТА</h1>
+        <h1 class="payment-h1">{% trans 'ОПЛАТА' %}</h1>
     </div>
     <div class="payment-body">
-        <h3 class="form-h3">Оформление оплаты</h3>
+        <h3 class="form-h3">{% trans 'Оформление оплаты' %}</h3>
         <form action="{% url 'payment' %}" method="POST">
             {% csrf_token %}
             <div class="initial-block">
                 <div class="personal-initials">
                     <div class="input-block">
-                        <label for="name-input">Ваше имя</label>
+                        <label for="name-input">{% trans 'Ваше имя' %}</label>
                         {{form.name}}
                     </div>
                     <div class="input-block">
-                        <label for="phone-input">Ваше номер телефона</label>
+                        <label for="phone-input">{% trans 'Ваше номер телефона' %}</label>
                         {{form.phone}}
                     </div>
                 </div>
                 <div class="payment-initials">
                     <div class="input-block">
-                        <label for="category-input">ОПЛАТА ПО КАТЕГОРИЯМИ</label>
+                        <label for="category-input">{% trans 'ОПЛАТА ПО КАТЕГОРИЯМИ' %}</label>
                         {{form.category}}
                     </div>
                     <div class="input-block">
-                        <label for="card-number">НОМЕР КАРТЫ</label>
+                        <label for="card-number">{% trans 'НОМЕР КАРТЫ' %}</label>
                         {{form.card_number}}
                     </div>
                 </div>
@@ -40,12 +41,12 @@
             <div class="h-line m-top-bottom"></div>
             <div class="payment">
                 <div class="pay-input-block">
-                    <label for="payment-amount">СУММА</label>
+                    <label for="payment-amount">{% trans 'СУММА' %}</label>
                     {{form.summa}}
                 </div>
-                <button class="btn-pay" type="submit" id="btn-pay">ОПЛАТИТ</button>
+                <button class="btn-pay" type="submit" id="btn-pay">{% trans 'ОПЛАТИТ' %}</button>
             </div>
-            <span class="quick-payment-text">быстрый способ оплаты</span>
+            <span class="quick-payment-text">{% trans 'быстрый способ оплаты' %}</span>
             <div class="h-line"></div>
             <div class="payment-services">
                 <div class="pay-service">

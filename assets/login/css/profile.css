@@ -382,6 +382,10 @@ span {
   font-size: 0;
 }
 
+.d-flex{
+  display: flex;
+}
+
 .change-password-container {
   height: 50%;
 }

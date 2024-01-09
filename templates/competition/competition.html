@@ -1,90 +1,93 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'competition/competition.css' %}">
 {% endblock %}
 {% block content %}
     <div class="container konkurs">
-        <div class="mt-4 mb-4">
-            <span class="konkurs_text">КОНКУРС</span>
-            <p class="konkurs_lorem ">Lorem eqfwe qefwlekm qlfml ipsum dolor sdflsnklvkndflbvkdnfvnflbkvenfvlit amet consectetur adipisicing elit. Itaque voluptatem similique, quidem, architecto et iure ab vitae fuga tempore sunt consectetur perspiciatis odio dolor nisi nostrum blanditiis natus ducimus commodi!</p>
-            <a href="#" class="konkurs_button btn btn-danger">отправить заявку на участие</a>
-        </div>
-        <div class="competitions d-flex justify-content-between pt-4" style="height: 22rem;">
-            <div class="card" style="width: 22rem; height: 20rem;">
-                <img src="{% static 'img/img1.svg'%}" class="rounded" alt="..." style="width: 350px;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card_button btn d-flex align-items-center">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card card_yellow" style="width: 22rem; height: 20rem;">
-                <img src="{% static 'img/img1.svg'%}" class="rounded" alt="..." style="width: 350px;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card_button_red btn btn d-flex align-items-center">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 22rem; height: 20rem;">
-                <img src="{% static 'img/img1.svg'%}" class="rounded" alt="..." style="width: 350px;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn card_button d-flex align-items-center">Go somewhere</a>
-                </div>
+    <div class="mt-4 mb-4">
+        <span class="konkurs_text">{% trans 'КОНКУРС' %}</span>
+        <p class="konkurs_lorem ">{% trans 'Поэтому за наслаждением и тому подобным, действительно, архитектором и правом уйти от жизни на время следует боль проницательной ненависти, если только мы не родимся с лестью, ведущей к удобству!' %}</p>
+        <a href="#" class="konkurs_button btn btn-danger">{% trans 'отправить заявку на участие' %}</a>
+    </div>
+    <div class="competitions d-flex justify-content-between pt-4" style="height: 22rem;">
+        <div class="card" style="width: 22rem; height: 20rem;">
+            <img src="{% static 'img/img1.svg' %}" class="rounded" alt="..." style="width: 350px;">
+            <div class="card-body">
+                <h5 class="card-title">{% trans 'Название карты' %}</h5>
+                <p class="card-text">{% trans 'Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого. Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого.' %}</p>
+                <a href="#" class="card_button btn d-flex align-items-center">{% trans 'Пойти куда-нибудь' %}</a>
             </div>
         </div>
-        <div class="competitions d-flex justify-content-between pt-4" style="height: 22rem;">
-            <div class="card card_yellow" style="width: 22rem; height: 20rem;">
-                <img src="{% static 'img/img1.svg'%}" class="rounded" alt="..." style="width: 350px;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card_button_red btn btn d-flex align-items-center">Go somewhere</a>
-                </div>
+        <div class="card" style="width: 22rem; height: 20rem;">
+            <img src="{% static 'img/img1.svg' %}" class="rounded" alt="..." style="width: 350px;">
+            <div class="card-body">
+                <h5 class="card-title">{% trans 'Название карты' %}</h5>
+                <p class="card-text">{% trans 'Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого. Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого.' %}</p>
+                <a href="#" class="card_button btn d-flex align-items-center">{% trans 'Пойти куда-нибудь' %}</a>
             </div>
-            <div class="card" style="width: 22rem; height: 20rem;">
-                <img src="{% static 'img/img1.svg'%}" class="rounded" alt="..." style="width: 350px;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card_button btn d-flex align-items-center">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card card_yellow" style="width: 22rem; height: 20rem;">
-                <img src="{% static 'img/img1.svg'%}" class="rounded" alt="..." style="width: 350px;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card_button_red btn btn d-flex align-items-center">Go somewhere</a>
-                </div>
+        </div>
+        <div class="card" style="width: 22rem; height: 20rem;">
+            <img src="{% static 'img/img1.svg' %}" class="rounded" alt="..." style="width: 350px;">
+            <div class="card-body">
+                <h5 class="card-title">{% trans 'Название карты' %}</h5>
+                <p class="card-text">{% trans 'Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого. Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого.' %}</p>
+                <a href="#" class="card_button btn d-flex align-items-center">{% trans 'Пойти куда-нибудь' %}</a>
             </div>
         </div>
         <div class="competitions d-flex justify-content-between pt-4" style="height: 22rem;">
             <div class="card" style="width: 22rem; height: 20rem;">
-                <img src="{% static 'img/img1.svg'%}" class="rounded" alt="..." style="width: 350px;">
+                <img src="{% static 'img/img1.svg' %}" class="rounded" alt="..." style="width: 350px;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card_button btn d-flex align-items-center">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card card_yellow" style="width: 22rem; height: 20rem;">
-                <img src="{% static 'img/img1.svg'%}" class="rounded" alt="..." style="width: 350px;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card_button_red btn btn d-flex align-items-center">Go somewhere</a>
+                    <h5 class="card-title">{% trans 'Название карты' %}</h5>
+                    <p class="card-text">{% trans 'Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого. Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого.' %}</p>
+                    <a href="#" class="card_button btn d-flex align-items-center">{% trans 'Пойти куда-нибудь' %}</a>
                 </div>
             </div>
             <div class="card" style="width: 22rem; height: 20rem;">
-                <img src="{% static 'img/img1.svg'%}" class="rounded" alt="..." style="width: 350px;">
+                <img src="{% static 'img/img1.svg' %}" class="rounded" alt="..." style="width: 350px;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn card_button d-flex align-items-center">Go somewhere</a>
+                    <h5 class="card-title">{% trans 'Название карты' %}</h5>
+                    <p class="card-text">{% trans 'Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого. Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого.' %}</p>
+                    <a href="#" class="card_button btn d-flex align-items-center">{% trans 'Пойти куда-нибудь' %}</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 22rem; height: 20rem;">
+                <img src="{% static 'img/img1.svg' %}" class="rounded" alt="..." style="width: 350px;">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Название карты' %}</h5>
+                    <p class="card-text">{% trans 'Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого. Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого.' %}</p>
+                    <a href="#" class="card_button btn d-flex align-items-center">{% trans 'Пойти куда-нибудь' %}</a>
+                </div>
+            </div>
+        </div>
+        <div class="competitions d-flex justify-content-between pt-4" style="height: 22rem;">
+            <div class="card" style="width: 22rem; height: 20rem;">
+                <img src="{% static 'img/img1.svg' %}" class="rounded" alt="..." style="width: 350px;">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Название карты' %}</h5>
+                    <p class="card-text">{% trans 'Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого. Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого.' %}</p>
+                    <a href="#" class="card_button btn d-flex align-items-center">{% trans 'Пойти куда-нибудь' %}</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 22rem; height: 20rem;">
+                <img src="{% static 'img/img1.svg' %}" class="rounded" alt="..." style="width: 350px;">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Название карты' %}</h5>
+                    <p class="card-text">{% trans 'Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого. Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого.' %}</p>
+                    <a href="#" class="card_button btn d-flex align-items-center">{% trans 'Пойти куда-нибудь' %}</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 22rem; height: 20rem;">
+                <img src="{% static 'img/img1.svg' %}" class="rounded" alt="..." style="width: 350px;">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Название карты' %}</h5>
+                    <p class="card-text">{% trans 'Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого. Несколько кратких примеров текста, которые будут основываться на заголовке карточки и составлять основную часть ее содержимого.' %}</p>
+                    <a href="#" class="card_button btn d-flex align-items-center">{% trans 'Пойти куда-нибудь' %}</a>
                 </div>
             </div>
         </div>
@@ -100,7 +103,7 @@
             <a class="next d-flex align-items-center" href="#"><i class="bi bi-caret-right"></i></a>
         </div>
         <div class="div_button d-flex flex-row-reverse bd-highlight ">
-            <a href="#" class="atpravit_a  btn btn-danger d-flex align-items-center justify-content-center" >отправить заявку</a>
+            <a href="#" class="atpravit_a  btn btn-danger d-flex align-items-center justify-content-center">{% trans 'отправить заявку' %}</a>
         </div>
     </div>
 {% endblock %}

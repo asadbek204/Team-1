@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block extra_head %}
     <title>Questionare</title>
     <link rel="stylesheet" href="{% static 'join/css/join.css' %}">
@@ -10,17 +11,21 @@
         <div class="join">
             <div class="texts">
                 <div class="join-text">
-                    <h1 class="member">УчастИЕ В конкурсЕ</h1>
+                    <h1 class="member">{% trans 'Участие В конкурсе' %}</h1>
                 </div>
                 <div class="text-p">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    <p>
+                       {% blocktranslate %}
+                       	Для клиента очень важно знать о его потребностях, но в то же время происходит то же самое.
+                         с упорным трудом
+                         и
+                         с какой-то сильной болью. Подойдя к мельчайшим деталям, кто
+                       {% endblocktranslate %}
+                    </p>
                 </div>
                 <div class="join-info">
                     <a href="">
-                        <button>подробное</button>
+                        <button>{% trans 'подробное' %}</button>
                     </a>
                 </div>
             </div>
@@ -28,8 +33,8 @@
         <div class="inputs">
             <div class="input-content">
                 <div class="questionnaire">
-                    <h2>АНКЕТА</h2>
-                    <p>пожалуйста, заполните эту форму, чтобы создать учетную запись</p>
+                    <h2>{% trans 'АНКЕТА' %}</h2>
+                    <p>{% trans 'пожалуйста, заполните эту форму, чтобы создать учетную запись' %}</p>
                     <hr style="width: 450px">
                 </div>
                 <div class="form">
@@ -38,10 +43,10 @@
                             {% csrf_token %}
                             <div class="flex">
                                 <div class="input">
-                                    <input type="text" placeholder="Имя:" name="first_name">
+                                    <input type="text" placeholder="{% trans 'Имя' %}:" name="first_name">
                                 </div>
                                 <div class="input">
-                                    <input type="text" placeholder="Фамилия:" name="last_name">
+                                    <input type="text" placeholder="{% trans 'Фамилия' %}:" name="last_name">
                                 </div>
                             </div>
                             <div class="selectors">
@@ -54,19 +59,19 @@
                                     </div>
                                     <div class="selector">
                                         <select name="category" id="">
-                                            <option value="young">young</option>
-                                            <option value="Лет:">middle</option>
+                                            <option value="young">{% trans 'возраст' %}</option>
+                                            <option value="Лет:">{% trans 'средний возраст' %}</option>
                                         </select>
                                     </div>
                                     <div class="selector">
                                         <select name="region" id="">
-                                            <option value="Tashkent">Tashkent</option>
-                                            <option value="Samarkand">Samarkand</option>
+                                            <option value="Tashkent">{% trans 'Ташкент' %}</option>
+                                            <option value="Samarkand">{% trans 'Самарканд' %}</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="phone">
-                                    <input type="text" placeholder="Телефон:" name="phone_number">
+                                    <input type="text" placeholder="{% trans 'Телефон' %}:" name="phone_number">
                                 </div>
                                 <div class="gender-info">
                                     <div class="gender-block">
@@ -88,12 +93,12 @@
                                 </div>
                                 <div class="textarea">
                                     <textarea name="comment" id="" cols="30" rows="10"
-                                              placeholder="Ваш коммент..."></textarea>
+                                              placeholder="{% trans 'Ваш коммент...' %}"></textarea>
                                 </div>
                                 <input type="checkbox" id="checkbox">
-                                <label for="checkbox" class="remember">Запомнить</label>
+                                <label for="checkbox" class="remember">{% trans 'Запомнить' %}</label>
                                 <div class="button">
-                                    <button type="submit" class="ok">OK</button>
+                                    <button type="submit" class="ok">{% trans 'OK' %}</button>
                                 </div>
                             </div>
                         </form>

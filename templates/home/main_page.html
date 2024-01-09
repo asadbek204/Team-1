@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block extra_head %}
 	<link rel="stylesheet" href="{% static 'main/css/main_page.css' %}">
@@ -13,7 +14,7 @@
         <div class="container">
             <div class="main_page">
                 <div class="main_part">
-                    <h1 class="text_h1">МЕРОПРИЯТИЯ ОБРАЗОВАТЕЛЬНОГО ПОРТАЛА</h1>
+                    <h1 class="text_h1">{% trans 'МЕРОПРИЯТИЯ ОБРАЗОВАТЕЛЬНОГО ПОРТАЛА' %}</h1>
                     <img class="logo_ph" src="{% static 'main/imgs/logo.png' %}" alt="">
                 </div>
                 <div class="children">

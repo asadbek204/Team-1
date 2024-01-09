@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'gallery/gallery.css' %}">
 {% endblock %}
@@ -10,16 +11,18 @@
                 <div class="title">
                     <div class="content">
                         <div class="content-title">
-                            <h1>ГАЛЛЕРИЯ</h1>
+                            <h1>{% trans 'ГАЛЛЕРИЯ' %}</h1>
                         </div>
                         <div class="content-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut
                                 labore
                                 et ut
                                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis Lorem ipsum dolor sit amet,
                                 consectetur
-                                adipiscing elit, sed do eiusmod tempor incididaliqua. </p>
+                                adipiscing elit, sed do eiusmod tempor incididaliqua. 
+                            </p>
                         </div>
                     </div>
                     <div class="content">
@@ -35,7 +38,7 @@
                         </div>
                         <a href="" class="regions">
                             <button class="region">
-                                СТАТИСТИКА ПО РЕГИОНАМ
+                                {% trans 'СТАТИСТИКА ПО РЕГИОНАМ' %}
                             </button>
                         </a>
                     </div>

@@ -1,5 +1,6 @@
 {% extends "layouts/base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block extra_head %}
     {#-----------BOOTSTRAP------------#}
@@ -46,22 +47,25 @@
 {#            -----------START------------#}
             <div class="start">
                 <div class="start-txt">
-                    <h6>О НАС</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    <h6>{% trans 'О НАС' %}</h6>
+                    <p>{% blocktranslate %}
+                    	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         labore
                         et ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Lorem ipsum dolor sit
                         amet,
                         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                         aliqua.
+                    {% endblocktranslate %}
                     </p>
                 </div>
             </div>
             {#-----------ABOUT US------------#}
             <div class="about-us">
                 <div class="about-txt">
-                    <h2>О НАС</h2>
-                    <h4>информация о конкурсах</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                    <h2>{% trans 'О НАС' %}</h2>
+                    <h4> {% trans 'информация о конкурсах' %}</h4>
+                    <p> {% blocktrans %}
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
                         ut
                         laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
                         tation
@@ -77,6 +81,7 @@
                         dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
                         facilisis at vero eros et accumsan et iusto odio dignissim qui blanddit praesent luptatum zzril
                         delenit augue duis dolore te feugait nulla facilisi.
+                        {% endblocktrans %}
                     </p>
                 </div>
                 <hr class="hr-grey">
@@ -146,9 +151,12 @@
             {#-----------EXPERTS------------#}
             <div class="experts">
                 <div class="experts-txt">
-                    <h4>ЭКСПЕРТЫ</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodore et dolore magna
-                        aliqua.</p>
+                    <h4>{% trans 'ЭКСПЕРТЫ' %}</h4>
+                    <p>{% blocktrans %}
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodore et dolore magna
+                        aliqua.
+                        {% endblocktrans %}
+                    </p>
                     <div class="dots">
                         <div><i class="fa-solid fa-circle me-5" style="font-size: 100%"></i></div>
                         <div><i class="fa-solid fa-circle me-5" style="font-size: 100%"></i></div>
