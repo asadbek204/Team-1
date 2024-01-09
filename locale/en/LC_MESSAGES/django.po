@@ -31,7 +31,7 @@ msgstr ""
 
 #: templates/about/about-us.html:50 templates/about/about-us.html:65
 msgid "О НАС"
-msgstr ""
+msgstr "ABOUT US"
 
 #: templates/about/about-us.html:51
 msgid ""
@@ -47,10 +47,27 @@ msgid ""
 "                        aliqua.\n"
 "                    "
 msgstr ""
+"\n"
+"                    \tLorem ipsum dolor sit amet, consectetur adipiscing "
+"elit, sed do eiusmod tempor incididunt\n"
+"                        labore\n"
+"                        et ut labore et dolore magna aliqua. Ut enim ad "
+"minim veniam, quis Lorem ipsum dolor sit\n"
+"                        amet,\n"
+"                        consectetur adipiscing elit, sed do eiusmod tempor "
+"incididunt ut labore et dolore magna\n"
+"                        aliqua.\n"
+"                    "
+
+
+
+
+
+
 
 #: templates/about/about-us.html:66
 msgid "информация о конкурсах"
-msgstr ""
+msgstr "information about competitions"
 
 #: templates/about/about-us.html:67
 msgid ""
@@ -88,7 +105,7 @@ msgstr ""
 
 #: templates/about/about-us.html:154
 msgid "ЭКСПЕРТЫ"
-msgstr ""
+msgstr "EXPERTS"
 
 #: templates/about/about-us.html:155
 msgid ""
@@ -101,16 +118,16 @@ msgstr ""
 
 #: templates/about/regions.html:16
 msgid "Регион"
-msgstr ""
+msgstr "Region"
 
 #: templates/about/regions.html:17
 msgid "кол.во участников"
-msgstr ""
+msgstr "number of participants"
 
 #: templates/about/regions.html:18
 #, python-format
 msgid "%% по Узбекистану"
-msgstr ""
+msgstr "%%in Uzbekistan"
 
 #: templates/about/regions.html:54
 #, python-format
@@ -118,23 +135,27 @@ msgid ""
 "\n"
 "        РАБОТЫ ПО РЕГИОНАМ В %(years.0)s-%(years.1)s УЧЕБНОМ ГОДУ\n"
 "        "
+
 msgstr ""
+"\n"
+"        WORK BY REGION IN %(years.0)s-%(years.1)s ACADEMIC YEAR\n"
+"        "
 
 #: templates/about/regions.html:60 templates/competition/join.html:68
 msgid "Ташкент"
-msgstr ""
+msgstr "Tashkent"
 
 #: templates/about/regions.html:62
 msgid "конкурсы"
-msgstr ""
+msgstr "competitions"
 
 #: templates/about/regions.html:63
 msgid "участники"
-msgstr ""
+msgstr "participants"
 
 #: templates/about/results.html:19
 msgid "О РEЗУЛЬТАТАХ"
-msgstr ""
+msgstr "ABOUT THE RESULTS"
 
 #: templates/about/results.html:21
 msgid ""
@@ -152,83 +173,99 @@ msgid ""
 "                        molestie lacus, a ultrices justo mauris eu\n"
 "                    "
 msgstr ""
+"\n"
+"                    \t   Lorem ipsum dolor sit amet, consectetur adipiscing "
+"elit. Duis vehicula sagittis libero quis\n"
+"                        sodales. Sed gravida augue eu odio ultrices, et "
+"cursus turpis maximus. Nam aliquam efficitur\n"
+"                        posuere. Nulla egestas, massa ac pretium luctus, mi "
+"lacus pulvinar turpis, at laoreet risus elit\n"
+"                        at sapien. Curabitur sagittis, neque id pulvinar "
+"pellentesque, magna libero consequat sapien,\n"
+"                        sed vehicula erat arcu vel velit. In cursus, dui "
+"ultricies tristique bibendum, nunc orci\n"
+"                        molestie lacus, a ultrices justo mauris eu\n"
+"                    "
+
+
+
 
 #: templates/account/login.html:21
 msgid "ЛИЧНЫЙ КАБИНЕТ"
-msgstr ""
+msgstr "PERSONAL AREA"
 
 #: templates/account/login.html:27
 msgid "Логин"
-msgstr ""
+msgstr "Login"
 
 #: templates/account/login.html:27
 msgid "(E-MAIL)"
-msgstr ""
+msgstr "(E-MAIL)"
 
 #: templates/account/login.html:29 templates/expert/expert_registration.html:28
 #: templates/expert/expert_registration.html:49
 msgid "Пароль"
-msgstr ""
+msgstr "Password"
 
 #: templates/account/login.html:33
 msgid "запомнить"
-msgstr ""
+msgstr "remember"
 
 #: templates/account/login.html:38
 msgid "забыли пароль"
-msgstr ""
+msgstr "Forgot your password"
 
 #: templates/account/login.html:41
 msgid "ВОЙТИ"
-msgstr ""
+msgstr "TO COME IN"
 
 #: templates/account/login.html:46
 msgid "войдите через аккаунт социальной сети"
-msgstr ""
+msgstr "log in via social network account"
 
 #: templates/account/profile.html:14
 msgid " Личные данные"
-msgstr ""
+msgstr "Personal data"
 
 #: templates/account/profile.html:81
 msgid "Текущие конкурсы"
-msgstr ""
+msgstr "Current competitions"
 
 #: templates/account/profile.html:98 templates/account/profile.html:136
 msgid "выйти"
-msgstr ""
+msgstr "exit"
 
 #: templates/account/profile.html:99 templates/account/profile.html:128
 msgid "изменить пароль"
-msgstr ""
+msgstr "change password"
 
 #: templates/account/profile.html:118 templates/account/profile.html:122
 #: templates/account/profile.html:134
 msgid "Введите новый пароль"
-msgstr ""
+msgstr "Enter a new password"
 
 #: templates/account/profile.html:126
 msgid "Подтвердите пароль"
-msgstr ""
+msgstr "Confirm the password"
 
 #: templates/account/signup.html:15
 #: templates/expert/expert_registration.html:14
 #: templates/expert/expert_registration.html:31
 #: templates/layouts/navbar.html:12
 msgid "РЕГИСТРАЦИЯ"
-msgstr ""
+msgstr "REGISTRATION"
 
 #: templates/account/signup.html:49
 msgid "Регистрация с помощью социальных сетей"
-msgstr ""
+msgstr "Registration using social networks"
 
 #: templates/account/signup.html:52
 msgid "краткое наименование образовательного учреждения"
-msgstr ""
+msgstr "short name of the educational institution"
 
 #: templates/account/signup.html:54
 msgid "выберите значения"
-msgstr ""
+msgstr "select values"
 
 #: templates/account/signup.html:63 templates/account/signup.html:108
 msgid ""
@@ -239,8 +276,15 @@ msgid ""
 "                            быть указаны разные Руководители работ\n"
 "                        "
 msgstr ""
+"\n"
+"                            PARTICIPANT – works are sent to competitions "
+"only on behalf of one Author, but\n"
+"                            can\n"
+"                            different work managers should be indicated\n"
+"                        "
 
 #: templates/account/signup.html:71 templates/account/signup.html:117
+
 msgid ""
 "\n"
 "                            РУКОВОДИТЕЛЬ РАБОТ – работы на конкурсы могут "
@@ -248,10 +292,19 @@ msgid ""
 "                            но от\n"
 "                            одного Руководителя\n"
 "                        "
+
+
 msgstr ""
+"\n"
+"                            be sent from different Authors, WORK SUPERVISOR – works for "
+"competitions can be sent from different Authors,,\n"
+"                           but from\n"
+"                            one Head\n"
+"                        "
 
 #: templates/account/signup.html:79 templates/account/signup.html:87
 #: templates/account/signup.html:126 templates/account/signup.html:135
+
 msgid ""
 "\n"
 "                            ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – "
@@ -260,9 +313,18 @@ msgid ""
 "                            от разных Авторов и разных Руководителей, но от "
 "одной образовательной организации\n"
 "                        "
+
 msgstr ""
+"\n"
+"                            ORGANIZER FROM AN EDUCATIONAL ORGANIZATION – works for"
+"competitions can\n"
+"                            go\n"
+"                            from different Authors and different Leaders, but from "
+"one educational organization\n"
+"                        "
 
 #: templates/account/signup.html:98 templates/account/signup.html:148
+
 msgid ""
 "\n"
 "                            Даю согласие образовательному порталу \"НИКА\" "
@@ -277,114 +339,126 @@ msgid ""
 "                            в соответствии с ...\n"
 "                        "
 msgstr ""
+"\n"
+"                            I give my consent to the educational portal 'NIKA' to process my "
+"personal\n"
+"                            data\n"
+"                           * By clicking the “REGISTRATION” button, I accept the"
+"terms of the User Agreement and give my\n"
+"                            agreement\n"
+"                            Educational portal <<BFIRST>> (сайт https://"
+"for processing my personal\n"
+"                            data,\n"
+"                            in accordance with ...\n"
+"                        "
 
 #: templates/account/signup.html:143
 msgid "Согласие"
-msgstr ""
+msgstr "Agreement"
 
 #: templates/account/signup.html:159
 msgid "ГОТОВО"
-msgstr ""
+msgstr "READY"
 
 #: templates/administration/contact.html:17
 #: templates/administration/contact.html:34
 msgid "КОНТАКТЫ"
-msgstr ""
+msgstr "CONTACTS"
 
 #: templates/administration/contact.html:40
 msgid "Toshkent shaxri, Yunusobod tumani, O’zbekiston ko’chasi"
-msgstr ""
+msgstr "Toshkent shaxri, Yunusobod tumani, O’zbekiston ko’chasi"
 
 #: templates/administration/contact.html:59
 msgid "ОТПРАВИТ"
-msgstr ""
+msgstr "WILL SEND"
 
 #: templates/administration/create_expert.html:18
 msgid "Поиск"
-msgstr ""
+msgstr "Search"
 
 #: templates/administration/create_expert.html:23
 msgid "СОЗДАТЬ ЭКСПЕРТА"
-msgstr ""
+msgstr "CREATE AN EXPERT"
 
 #: templates/administration/create_expert.html:32
 msgid "имя пользователя: имя пользователя"
-msgstr ""
+msgstr "username: username"
 
 #: templates/administration/create_expert.html:33
 #: templates/administration/create_expert.html:56
 msgid "имя: имя"
-msgstr ""
+msgstr "first_name: name"
 
 #: templates/administration/create_expert.html:34
 msgid "фамилия"
-msgstr ""
+msgstr "surname"
 
 #: templates/administration/create_expert.html:35
 #: templates/administration/create_expert.html:58
 msgid "адрес"
-msgstr ""
+msgstr "address"
 
 #: templates/administration/create_expert.html:45
 msgid "Редактировать"
-msgstr ""
+msgstr "Edit"
 
 #: templates/administration/create_expert.html:46
 #: templates/administration/create_expert.html:67
 msgid "Удалить"
-msgstr ""
+msgstr "Delete"
 
 #: templates/administration/create_expert.html:55
 msgid "username: username"
-msgstr ""
+msgstr "username: username"
 
 #: templates/administration/create_expert.html:57
 msgid "фамилия:фамилия"
-msgstr ""
+msgstr "last_name:last name"
 
 #: templates/administration/create_expert.html:66
 msgid " Редактировать"
-msgstr ""
+msgstr "Edit"
 
 #: templates/administration/payment.html:13
 msgid "ОПЛАТА"
-msgstr ""
+msgstr "PAYMENT"
 
 #: templates/administration/payment.html:16
 msgid "Оформление оплаты"
-msgstr ""
+msgstr "Making a payment"
 
 #: templates/administration/payment.html:22
 msgid "Ваше имя"
-msgstr ""
+msgstr "your name"
 
 #: templates/administration/payment.html:26
 msgid "Ваше номер телефона"
-msgstr ""
+msgstr "Your phone number"
 
 #: templates/administration/payment.html:32
 msgid "ОПЛАТА ПО КАТЕГОРИЯМИ"
-msgstr ""
+msgstr "PAYMENT BY CATEGORIES"
 
 #: templates/administration/payment.html:36
 msgid "НОМЕР КАРТЫ"
-msgstr ""
+msgstr "CARD NUMBER"
 
 #: templates/administration/payment.html:44
 msgid "СУММА"
-msgstr ""
+msgstr "SUM"
 
 #: templates/administration/payment.html:47
 msgid "ОПЛАТИТ"
-msgstr ""
+msgstr "WILL PAY"
 
 #: templates/administration/payment.html:49
 msgid "быстрый способ оплаты"
-msgstr ""
+msgstr "fast payment method"
 
 #: templates/administration/pravila.html:16
 msgid "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ"
-msgstr ""
+msgstr "PRIVACY POLICY"
 
 #: templates/administration/pravila.html:18
 msgid ""
@@ -393,16 +467,22 @@ msgid ""
 "последний раз были обновлены 03-11-2021 <br>\n"
 "                            Общие положения\n"
 "                        "
+
 msgstr ""
+"\n"
+"                            Provisions of the Privacy Policy"
+"last updated 03-11-2021 <br>\n"
+"                            General provisions\n"
+"                        "
 
 #: templates/administration/pravila.html:23
 msgid "1. Оператором по обработке персональных данных сайта"
-msgstr ""
+msgstr "1. Operator for processing personal data of the site"
 
 #: templates/administration/pravila.html:24
 #: templates/administration/pravila.html:37
 msgid "оценика.рф"
-msgstr ""
+msgstr "RF.appraisal"
 
 #: templates/administration/pravila.html:25
 msgid ""
@@ -413,7 +493,15 @@ msgid ""
 "                            ОП\n"
 "                            «НИКА», оператор).\n"
 "                        "
+
 msgstr ""
+"                            is Educational\n"
+"                            <<NIKA>> portal (IP Andrey Vasilievich Isupov, INN"
+"434562712162, ОГРН 316435000061224) (next —\n"
+"                            OP\n"
+"                            <<NIKA>>, operator).\n"
+"                        "
+
 
 #: templates/administration/pravila.html:32
 msgid ""
@@ -422,7 +510,13 @@ msgid ""
 "распространяется на всех клиентов (далее — Посетители,\n"
 "                            пользователи), которые зашли на сайт\n"
 "                        "
+
 msgstr ""
+"\n"
+"                            2. This privacy policy"
+"applies to all clients (next to as Visitors\n"
+"                            users) who have visited the site\n"
+"                        "
 
 #: templates/administration/pravila.html:38
 msgid ""
@@ -444,7 +538,29 @@ msgid ""
 "                            (далее —\n"
 "                            Услуги).\n"
 "                        "
+
+
 msgstr ""
+"\n"
+"                            (next \n"
+"                            — Site), on their actions, which\n"
+"                            they\n"
+"                            may perform on the Site, including (but not"
+"limited to) registration on the Site (including\n"
+"                            through\n"
+"                            login using your social account"
+"networks), filling out an application for participation (and itself\n"
+"                            participation)\n"
+"                            in competitions, olympiads, quizzes, tests, "
+"posting (publication) of personal materials\n"
+" reviews\n"
+"reading published information, providing and "
+"receiving data of any type of information\n"
+" (next -\n"
+"Services).\n"
+"                        "
+
+
 
 #: templates/administration/pravila.html:53
 msgid ""
@@ -461,6 +577,18 @@ msgid ""
 "                            Услугами Сайта.\n"
 "                        "
 msgstr ""
+"\n"
+"                            3. Visitors unconditionally agree to the Policy"
+"confidentiality when using the Services,\n"
+"                            in\n"
+"                            which sets out the purposes and methods of collection"
+"information, as well as the conditions for its storage, etc.\n"
+"                            If\n"
+"                            The visitor does not agree with this policy"
+"confidentiality, then he has no right\n"
+"                            use\\n"
+"                            Site services.\n"
+"                        "
 
 #: templates/administration/pravila.html:63
 msgid ""
@@ -497,6 +625,39 @@ msgid ""
 "                            Российской Федерации.\n"
 "                        "
 msgstr ""
+"\n"
+"\n"
+" 4. To achieve goals, the operator carries out: "
+"collection, systematization, accumulation, storage,\n"
+"clarification\n"
+" (update, change), extract, "
+"use, transfer (provision, access),\n"
+"blocking\n"
+"deletion, destruction of personal data. Neither "
+"by the will of the OP <<NIKA>>, not by any decision\n"
+"third\n"
+"persons\n"
+"except as otherwise provided by law"
+"Russian Federation, no personal data\n"
+"may\n"
+" be transferred to third parties without specific and clear "
+"the Visitor's consent to this.\n"
+"Personal data is processed"
+"By mixed way operator: like with\n"
+"using\n"
+"So and\n"
+"without using automation tools.\n"
+"When collecting personal data the Operator"
+"provides their recording, systematization, accumulation,\n"
+"storage\n"
+"clarification (update, change), extraction"
+"personal data of Russian citizens\n"
+"Federation with\n"
+"using databases located in "
+"information systems located on\n"
+"territories\n"
+"Russian Federation.\n"
+" "
 
 #: templates/administration/pravila.html:89
 msgid "Передаваемые права третьим лицам"
@@ -504,15 +665,15 @@ msgstr ""
 
 #: templates/administration/pravila.html:90
 msgid "Регистрация Посетителей"
-msgstr ""
+msgstr "Transferable rights to third parties"
 
-#: templates/administration/pravila.html:91
+#: templates/administration/pravila.html:91Передаваемые права третьим лицам
 msgid "Цели использования персональной информации"
-msgstr ""
+msgstr "Purposes of using personal information"
 
 #: templates/competition/competition.html:10
 msgid "КОНКУРС"
-msgstr ""
+msgstr "CONTEST"
 
 #: templates/competition/competition.html:11
 msgid ""
@@ -520,10 +681,13 @@ msgid ""
 "правом уйти от жизни на время следует боль проницательной ненависти, если "
 "только мы не родимся с лестью, ведущей к удобству!"
 msgstr ""
+"Therefore, for pleasure and the like, indeed, the architect and "
+"the right to withdraw from life for a while follows the pain of penetrating hatred, if"
+"Only we are not born with flattery leading to convenience!"
 
 #: templates/competition/competition.html:12
 msgid "отправить заявку на участие"
-msgstr ""
+msgstr "send an application for participation"
 
 #: templates/competition/competition.html:18
 #: templates/competition/competition.html:26
@@ -535,7 +699,7 @@ msgstr ""
 #: templates/competition/competition.html:79
 #: templates/competition/competition.html:88
 msgid "Название карты"
-msgstr ""
+msgstr "Card name"
 
 #: templates/competition/competition.html:19
 #: templates/competition/competition.html:27
@@ -552,6 +716,10 @@ msgid ""
 "примеров текста, которые будут основываться на заголовке карточки и "
 "составлять основную часть ее содержимого."
 msgstr ""
+"Some brief examples of text that will be based on the title"
+"cards and make up the bulk of its contents. A few short "
+"examples of text that will be based on the card title and "
+"to form the bulk of its contents."
 
 #: templates/competition/competition.html:20
 #: templates/competition/competition.html:28
@@ -563,20 +731,20 @@ msgstr ""
 #: templates/competition/competition.html:81
 #: templates/competition/competition.html:90
 msgid "Пойти куда-нибудь"
-msgstr ""
+msgstr "Go somewhere"
 
 #: templates/competition/competition.html:106
 msgid "отправить заявку"
-msgstr ""
+msgstr "send an application"
 
 #: templates/competition/detail.html:187 templates/competition/detail.html:194
 #: templates/competition/detail.html:201
 msgid "Участвовать"
-msgstr ""
+msgstr "Participate"
 
 #: templates/competition/detail.html:211
 msgid "Игрушки и игры"
-msgstr ""
+msgstr "Toys and games"
 
 #: templates/competition/detail.html:212
 msgid ""
@@ -596,11 +764,28 @@ msgid ""
 "             6. Заказчику очень важно обратить внимание на процесс адиписки. "
 "Беда, рожденная.</p>\n"
 "            "
+
 msgstr ""
+"\n"
+" \t<p>Pain is important in itself, fat will follow. For benefit "
+"This elder exercise, especially\n"
+" which.</p>\n"
+"<p>1. It is very important for the customer to pay attention to the process"
+"adipiski. The rest, great!</p>\n"
+"<p>2. It is very important for the customer to pay attention to the process"
+"adipiski. The rest, great!</p>\n"
+"<p>3. It is very important for the customer to pay attention to the process"
+"adipiski. The rest, great!</p>\n"
+"4. Pain itself is very important, and it will be followed by deposition"
+"fat.</p>\n"
+" <р>5. The client should be very satisfied.</p>\n"
+" 6. It is very important for the customer to pay attention to the registration process."
+"Trouble born.</p>\n"
+" "
 
 #: templates/competition/join.html:14
 msgid "Участие В конкурсе"
-msgstr ""
+msgstr "Participation in the competition"
 
 #: templates/competition/join.html:18
 msgid ""
@@ -613,136 +798,144 @@ msgid ""
 "деталям, кто\n"
 "                       "
 msgstr ""
+"\n"
+"\tIt is very important for the client to know about his needs,"
+"but at the same time the same thing happens.\n"
+"with hard work\n"
+"and\n"
+"with some severe pain. Approaching the smallest"
+"details, who\n"
+" "
 
 #: templates/competition/join.html:28
 msgid "подробное"
-msgstr ""
+msgstr "detailed"
 
 #: templates/competition/join.html:36
 msgid "АНКЕТА"
-msgstr ""
+msgstr "QUESTIONNAIRE"
 
 #: templates/competition/join.html:37
 msgid "пожалуйста, заполните эту форму, чтобы создать учетную запись"
-msgstr ""
+msgstr "please fill out this form to create an account"
 
 #: templates/competition/join.html:46
 msgid "Имя"
-msgstr ""
+msgstr "Name"
 
 #: templates/competition/join.html:49
 msgid "Фамилия"
-msgstr ""
+msgstr "Surname"
 
 #: templates/competition/join.html:62
 msgid "возраст"
-msgstr ""
+msgstr "young"
 
 #: templates/competition/join.html:63
 msgid "средний возраст"
-msgstr ""
+msgstr "middle age"
 
 #: templates/competition/join.html:69
 msgid "Самарканд"
-msgstr ""
+msgstr "Samarkand"
 
 #: templates/competition/join.html:74
 msgid "Телефон"
-msgstr ""
+msgstr "Telephone"
 
 #: templates/competition/join.html:96
 msgid "Ваш коммент..."
-msgstr ""
+msgstr "Your comment..."
 
 #: templates/competition/join.html:99
 msgid "Запомнить"
-msgstr ""
+msgstr "Remember"
 
 #: templates/competition/join.html:101
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: templates/expert/expert_registration.html:19
 msgid "Форма регистрации"
-msgstr ""
+msgstr "Registration form"
 
 #: templates/expert/expert_registration.html:24
 #: templates/expert/expert_registration.html:45
 msgid "Имя пользователя"
-msgstr ""
+msgstr "Username"
 
 #: templates/expert/expert_registration.html:40
 msgid "Изменить пароль"
-msgstr ""
+msgstr "Change password"
 
 #: templates/expert/expert_registration.html:51
 msgid "ИЗМЕНЯТЬ"
-msgstr ""
+msgstr "CHANGE"
 
 #: templates/home/gallery.html:14
 msgid "ГАЛЛЕРИЯ"
-msgstr ""
+msgstr "GALLERY"
 
 #: templates/home/gallery.html:41
 msgid "СТАТИСТИКА ПО РЕГИОНАМ"
-msgstr ""
+msgstr "STATISTICS BY REGION"
 
 #: templates/home/main_page.html:17
 msgid "МЕРОПРИЯТИЯ ОБРАЗОВАТЕЛЬНОГО ПОРТАЛА"
-msgstr ""
+msgstr "EVENTS OF THE EDUCATIONAL PORTAL"
 
 #: templates/layouts/footer.html:11
 msgid "Карта сайта"
-msgstr ""
+msgstr "Site Map"
 
 #: templates/layouts/footer.html:13 templates/layouts/navbar.html:24
 msgid "Главная"
-msgstr ""
+msgstr "Main"
 
 #: templates/layouts/footer.html:14 templates/layouts/navbar.html:27
 msgid "Результаты"
-msgstr ""
+msgstr "results"
 
 #: templates/layouts/footer.html:15 templates/layouts/navbar.html:30
 msgid "О нас"
-msgstr ""
+msgstr "About us"
 
 #: templates/layouts/footer.html:16
 msgid "Правила"
-msgstr ""
+msgstr "Rules"
 
 #: templates/layouts/footer.html:17 templates/layouts/navbar.html:25
 msgid "Работы"
-msgstr ""
+msgstr "Works"
 
 #: templates/layouts/footer.html:21
 msgid "Контакты"
-msgstr ""
+msgstr "Contacts"
 
 #: templates/layouts/footer.html:25
 msgid "г. Ташкент, Юнусабадский район, ул Узбекистан"
-msgstr ""
+msgstr "Tashkent, Yunusabad district, Uzbekistan street"
 
 #: templates/layouts/footer.html:31
 msgid "Мы в соцсетях:"
-msgstr ""
+msgstr "We are in social networks:"
 
 #: templates/layouts/navbar.html:10
 msgid "ВХОД"
-msgstr ""
+msgstr "ENTRANCE"
 
 #: templates/layouts/navbar.html:26
 msgid "Правило"
-msgstr ""
+msgstr "Rule"
 
 #: templates/layouts/navbar.html:28
 msgid "Конкурс"
-msgstr ""
+msgstr "Contest"
 
 #: templates/layouts/navbar.html:29
 msgid "Эксперты"
-msgstr ""
+msgstr "Experts"
 
 #: templates/layouts/navbar.html:31
 msgid "Личный кабинет"
-msgstr ""
+msgstr "Personal Area"
