@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block extra_head %}
 	<title>Title</title>
@@ -12,9 +13,9 @@
     <div class="table">
         <div class="thead">
             <div class="tr">
-                <div class="th region">Регион</div>
-                <div class="th count">кол.во участников</div>
-                <div class="th count"> % по Узбекистану</div>
+                <div class="th region">{% trans 'Регион' %}</div>
+                <div class="th count">{% trans 'кол.во участников' %}</div>
+                <div class="th count"> {% trans '% по Узбекистану' %}</div>
             </div>
         </div>
         <div class="tbody">
@@ -49,13 +50,17 @@
 {% endblock %}
 
 {% block content %}
-    <h3 class="h3">РАБОТЫ ПО РЕГИОНАМ В {{ years.0 }}-{{ years.1 }} УЧЕБНОМ ГОДУ</h3>
+    <h3 class="h3">
+        {% blocktranslate %}
+        РАБОТЫ ПО РЕГИОНАМ В {{ years.0 }}-{{ years.1 }} УЧЕБНОМ ГОДУ
+        {% endblocktranslate %}
+    </h3>
     <div class="body">
         <div class="container">
-            <span class="region">Ташкент</span>
+            <span class="region">{% trans 'Ташкент' %}</span>
             <div class="info-head">
-                <span class="competitions">конкурсы</span>
-                <span class="participants">участники</span>
+                <span class="competitions">{% trans 'конкурсы' %}</span>
+                <span class="participants">{% trans 'участники' %}</span>
             </div>
             <div class="competition">
                 <div class="com-img-block">

@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'profile/css/profile.css' %}">
     <script src="{% static 'profile/js/profile.js' %}" defer></script>
@@ -10,7 +11,7 @@
 <main class="profile-main">
     <div class="container">
         <div class="profile">
-            <h2 class="profile-h2">Личные данные</h2>
+            <h2 class="profile-h2">{% trans ' Личные данные' %}</h2>
             <div class="profile-content">
                 <div class="block left">
                     <label for="" class="img">
@@ -77,7 +78,7 @@
             </div>
         </div>
         <div class="com-head">
-            <span class="com-span">Текущие конкурсы</span>
+            <span class="com-span">{% trans 'Текущие конкурсы' %}</span>
         </div>
         <div class="competitions" id="competitions-view">
             {% for competition in competitions %}
@@ -94,8 +95,8 @@
     <div class="side-bar">
         <div class="control-block">
             <div class="notifications"><img src="{% static 'profile/img/notification.png' %}" alt=""></div>
-            <button class="logout-button" id="btn-logout">logout</button>
-            <button class="change-password" id="btn-change-password">change password</button>
+            <button class="logout-button" id="btn-logout">{% trans 'выйти' %}</button>
+            <button class="change-password" id="btn-change-password">{% trans 'изменить пароль' %}</button>
         </div>
         <div class="certificates" id="certificates-view">
             <span class="date">{{ date }}</span>
@@ -114,24 +115,24 @@
         <span class="display-none" id="change-password-message"></span>
         <label for="">
             <span class="display-none" id="old-password-message"></span>
-            <input class="modal-input" id="old-password" type="password" name="password" placeholder="enter your password">
+            <input class="modal-input" id="old-password" type="password" name="password" placeholder="{% trans 'Введите новый пароль' %}">
         </label>
         <label for="">
             <span class="display-none" id="new-password-message"></span>
-            <input class="modal-input" id="new-password" disabled type="password" name="newpassword" placeholder="enter new password">
+            <input class="modal-input" id="new-password" disabled type="password" name="newpassword" placeholder="{% trans 'Введите новый пароль' %}">
         </label>
         <label for="">
             <span class="display-none" id="re-new-password-message"></span>
-            <input class="modal-input" id="re-new-password" disabled type="password" name="newpassword" placeholder="confirm password">
+            <input class="modal-input" id="re-new-password" disabled type="password" name="newpassword" placeholder="{% trans 'Подтвердите пароль' %}">
         </label>
-        <button class="confirm-change-password" id="confirm-change-password" type="submit">change password</button>
+        <button class="confirm-change-password" id="confirm-change-password" type="submit">{% trans 'изменить пароль' %}</button>
     </div>
     <div class="logout display-none" id="modal-logout">
         <span class="display-none" id="logout-message"></span>
         <label for="">
             <span class="display-none" id="password-message"></span>
-            <input class="modal-input" id="password" type="password" name="password" placeholder="enter your password">
+            <input class="modal-input" id="password" type="password" name="password" placeholder="{% trans 'Введите новый пароль' %}">
         </label>
-        <button class="confirm-logout" id="confirm-logout" disabled type="submit">logout</button>
+        <button class="confirm-logout" id="confirm-logout" disabled type="submit">{% trans 'выйти' %}</button>
     </div>
 {% endblock %}

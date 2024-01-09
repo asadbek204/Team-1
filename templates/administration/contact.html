@@ -1,22 +1,23 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block extra_head %}
-	  <link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
 {% endblock %}
-  
+
 
 
 {% block header %}
 
-<div class="body">
-    <div class="block">
-        <div class="contact_img">
-            <div class="w-70">
-                <h1 class="text_h1">КОНТАКТЫ</h1>
-                <img class="c_img" src="{% static 'contact/imgs/contact.svg' %}" alt="">
-            </div>
-            <div class="w-30">
+    <div class="body">
+        <div class="block">
+            <div class="contact_img">
+                <div class="w-70">
+                    <h1 class="text_h1">{% trans 'КОНТАКТЫ' %}</h1>
+                    <img class="c_img" src="{% static 'contact/imgs/contact.svg' %}" alt="">
+                </div>
+                <div class="w-30">
                     <img class="c_img_logo" src="{% static 'contact/imgs/contact_logo.svg' %}" alt="">
                 </div>
             </div>
@@ -30,13 +31,14 @@
                 </div>
 
                 <div class="contact_start_form w-50">
-                    <h3 class="text-h3">КОНТАКТЫ</h3>
+                    <h3 class="text-h3">{% trans 'КОНТАКТЫ' %}</h3>
 
 
                     <p>
                         <a href="https://www.google.com/maps?ll=41.352553,69.202337&z=15&t=m&hl=ru&gl=US&mapclient=embed&cid=4891086310459088154"
                            class="contact_a">
-                            Toshkent shaxri, Yunusobod tumani, O’zbekiston ko’chasi</a></p>
+                            {% trans 'Toshkent shaxri, Yunusobod tumani, O’zbekiston ko’chasi' %}</a>
+                    </p>
 
                     <p><a href="tel:+99897123-45-67" class="contact_a">+99897 123-45-67</a></p>
                     <br>
@@ -54,7 +56,7 @@
 
                         <div class="contact_block_btn">
                             <button type="submit" class="contact_btn">
-                                ОТПРАВИТ
+                                {% trans 'ОТПРАВИТ' %}
                             </button>
                         </div>
 

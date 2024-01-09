@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block extra_head %}
 	<title>Sign-in</title>
     <link href="{% static "expert/expert_registaration/main/css/main.css" %}" rel="stylesheet">
@@ -10,24 +11,24 @@
         <div class="box">
             <div class="yellow-box">
                 <div class="title">
-                    <h1 id="register-text">РЕГИСТРАЦИЯ</h1>
+                    <h1 id="register-text">{% trans 'РЕГИСТРАЦИЯ' %}</h1>
                 </div>
                 <img src="{% static 'expert/expert_registaration/main/img/registration.svg' %}" alt="">
             </div>
             <div class="content">
-                <div class="title">Registration Form</div>
+                <div class="title">{% trans 'Форма регистрации' %}</div>
                  <div class="message"><span id="message1"></span></div>
                 <div>
                     <label class="field" for="username">
                         <span class="fa fa-user"></span>
-                        <input type="text" value="" id="username" required placeholder="Username">
+                        <input type="text" value="" id="username" required placeholder="{% trans 'Имя пользователя' %}">
                     </label>
                     <label class="field space" for="password">
                         <span class="fa fa-lock"></span>
-                        <input type="password" id="password" class="pass-key" required placeholder="Password">
+                        <input type="password" id="password" class="pass-key" required placeholder="{% trans 'Пароль' %}">
                     </label>
                     <div class="button">
-                        <button id="regBtn" type="button">REGISTER</button>
+                        <button id="regBtn" type="button">{% trans 'РЕГИСТРАЦИЯ' %}</button>
                     </div>
                 </div>
             </div>
@@ -36,18 +37,18 @@
 {% endblock %}
 {% block modal %}
 	<div id="popup" class="pop">
-        <div class="title"><h1 id="register-text">Change Password</h1></div>
+        <div class="title"><h1 id="register-text">{% trans 'Изменить пароль' %}</h1></div>
         <div class="message"><span id="message2"></span></div>
         <div>
             <label class="field" for="newusername">
                 <span class="fa fa-user"></span>
-                <input type="text" value="" id="newusername" required placeholder="Username">
+                <input type="text" value="" id="newusername" required placeholder="{% trans 'Имя пользователя' %}">
             </label>
             <label class="field space" for="newpassword">
                 <span class="fa fa-lock"></span>
-                <input type="password" id="newpassword" class="pass-key" required placeholder="Password">
+                <input type="password" id="newpassword" class="pass-key" required placeholder="{% trans 'Пароль' %}">
             </label>
-            <div class="button"><button id="regBtn2" type="button">CHANGE</button></div>
+            <div class="button"><button id="regBtn2" type="button">{% trans 'ИЗМЕНЯТЬ' %}</button></div>
         </div>
     </div>
 {% endblock %}

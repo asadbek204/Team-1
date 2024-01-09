@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load socialaccount %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'login/css/profile.css' %}">
@@ -17,32 +18,32 @@
     <section class="body">
         <div class="block">
             <div class="p_img">
-                <h1 class="p_h_text">ЛИЧНЫЙ КАБИНЕТ</h1>
+                <h1 class="p_h_text">{% translate 'ЛИЧНЫЙ КАБИНЕТ' %}</h1>
             </div>
             <div class="profile">
                 <span class="display-none" id="login-message"></span>
                 <div class="p_form">
                     <div style="text-align: start">
-                        <label for="username" class="profile_label">Логин <span> (E-MAIL)</span></label>
+                        <label for="username" class="profile_label">{% trans 'Логин' %} <span> {% trans '(E-MAIL)' %}</span></label>
                         <input class="profile_input" type="text" placeholder="" id="username" name="username">
-                        <label for="password">Пароль</label>
+                        <label for="password">{% trans 'Пароль' %}</label>
                         <input class="profile_input" type="password" placeholder="" id="password" name="password">
                         <div class="profile_input_check">
                             <div class="remember-box">
-                                <label for="remember-me" class="a zapomnit">запомнить</label>
+                                <label for="remember-me" class="a zapomnit">{% trans 'запомнить' %}</label>
                                 <input class="display-none" type="checkbox" name="remember" id="remember-me">
                                 <button class="remember" type="button" id="remember"><i class="display-none bi bi-check"
                                                                                         id="check-icon"></i></button>
                             </div>
-                            <a class="a zb_pr" href="#"> забыли пароль</a>
+                            <a class="a zb_pr" href="#"> {% trans 'забыли пароль' %}</a>
                         </div>
                         <div class="center">
-                            <button type="submit" class="profile_btn" id="btn-login">ВОЙТИ</button>
+                            <button type="submit" class="profile_btn" id="btn-login">{% trans 'ВОЙТИ' %}</button>
                         </div>
                     </div>
                 </div>
                 <div class="center">
-                    <a class="a pr_text" href="#">войдите через аккаунт социальной сети</a>
+                    <a class="a pr_text" href="#">{% trans 'войдите через аккаунт социальной сети' %}</a>
                     <hr class="white_hr"/>
                   <div class="d-flex">
                         <form action="{% provider_login_url 'google' process='login' %}" method="post">

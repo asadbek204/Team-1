@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block extra_head %}
     <title>Title</title>
@@ -183,21 +184,21 @@
         <label for="s1" id="slide1">
             <div class="zoom-container" data-slide="1">
                 <img src="{% static 'competition/detail/img/boys-1.png' %}" alt="Image 1">
-                <button class="first-btn">Участвовать</button>
+                <button class="first-btn">{% trans 'Участвовать' %}</button>
                 <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
             </div>
         </label>
         <label for="s2" id="slide2">
             <div class="zoom-container" data-slide="2">
                 <img src="{% static 'competition/detail/img/boys-2.png' %}" alt="Image 2">
-                <button class="first-btn">Участвовать</button>
+                <button class="first-btn">{% trans 'Участвовать' %}</button>
                 <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
             </div>
         </label>
         <label for="s3" id="slide3">
             <div class="zoom-container" data-slide="3">
                 <img src="{% static 'competition/detail/img/boys-3.png' %}" alt="Image 3">
-                <button class="first-btn">Участвовать</button>
+                <button class="first-btn">{% trans 'Участвовать' %}</button>
                 <button class="icon-btn"><i class='bx bxs-share-alt'></i></button>
             </div>
         </label>
@@ -207,15 +208,17 @@
 
     <div class="container">
         <div class="yellow-text">
-            <h1>Игрушки и игры</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi exercitationem illum maiores, maxime
-                quae.</p>
-            <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
-            <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
-            <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magnam!</p>
-            <p>4. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-            <p>5. Lorem ipsum dolor sit amet.</p>
-            <p>6. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, natus.</p>
+            <h1>{% trans 'Игрушки и игры' %}</h1>
+            {% blocktranslate %}
+            	<p>Боль важна сама по себе, за жирением последуют. Для пользы этого упражнения старейшины, особенно
+                 который.</p>
+             <р>1. Заказчику очень важно обратить внимание на процесс адиписки. Остальные, отлично!</p>
+             <р>2. Заказчику очень важно обратить внимание на процесс адиписки. Остальные, отлично!</p>
+             <р>3. Заказчику очень важно обратить внимание на процесс адиписки. Остальные, отлично!</p>
+             4. Боль сама по себе очень важна, и за ней последует отложение жира.</p>
+             <р>5. Клиент должен быть очень доволен.</p>
+             6. Заказчику очень важно обратить внимание на процесс адиписки. Беда, рожденная.</p>
+            {% endblocktranslate %}
         </div>
     </div>
 

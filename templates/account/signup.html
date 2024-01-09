@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load socialaccount %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'competition/detail/css/style.css' %}">
@@ -11,7 +12,7 @@
                 {% csrf_token %}
                 <div class="yellow-box">
                     <div class="title">
-                        <h1>РЕГИСТРАЦИЯ</h1>
+                        <h1>{% trans 'РЕГИСТРАЦИЯ' %}</h1>
                     </div>
                     <img src="{% static 'competition/detail/img/note_book.png' %}" alt="" width="457" height="459">
                 </div>
@@ -37,85 +38,125 @@
                     <div class="icons">
                         <form action="{% provider_login_url google process='login' %}" method="post">
                             {% csrf_token %}
-                            <button type="submit"><img src="{% static 'competition/detail/img/google.png' %}" alt=""></button>
+                            <button type="submit"><img src="{% static 'competition/detail/img/google.png' %}" alt="">
+                            </button>
                             <a href="#"><img src="{% static 'competition/detail/img/facebook.png' %}" alt=""></a>
                             <a href="#"><img src="{% static 'competition/detail/img/insta.png' %}" alt=""></a>
                             <a href="#"><img src="{% static 'competition/detail/img/tg.png' %}" alt=""></a>
                         </form>
                     </div>
                     <div class="line"></div>
-                    <h3 class="icon-text">Регистрация с помощью социальных сетей</h3>
+                    <h3 class="icon-text">{% trans 'Регистрация с помощью социальных сетей' %}</h3>
                     <div class="main-input">
                         <input type="text" placeholder="ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ" name="school">
-                        <p class="input-bottom-text">краткое наименование образовательного учреждения</p>
+                        <p class="input-bottom-text">{% trans 'краткое наименование образовательного учреждения' %}</p>
                         <input type="text" placeholder="РЕГИОН (область, республика, ...)" name="region">
-                        <p class="input-bottom-text">выберите значения</p>
+                        <p class="input-bottom-text">{% trans 'выберите значения' %}</p>
                     </div>
                     <div class="block-text">
-                        <h3>ВЫБЕРИТЕ СТАТУС, ВЫ СОГЛАШАЕТЕСЬ С УСЛОВИЯМИ БОНУСНОЙ ПРОГРАММЫ</h3>
+                        <h3>{% trans'ВЫБЕРИТЕ СТАТУС, ВЫ СОГЛАШАЕТЕСЬ С УСЛОВИЯМИ БОНУСНОЙ ПРОГРАММЫ' %}</h3>
                     </div>
                     <input type="checkbox" id="alpha">
                     <label for="alpha">НЕТ</label>
                     <input type="checkbox" id="bravo">
-                    <label for="bravo">УЧАСТНИК – работы на конкурсы отправляются только от имени одного Автора, но
-                        могут
-                        быть указаны разные Руководители работ</label>
+                    <label for="bravo">
+                        {% blocktranslate %}
+                            УЧАСТНИК – работы на конкурсы отправляются только от имени одного Автора, но
+                            могут
+                            быть указаны разные Руководители работ
+                        {% endblocktranslate %}
+                    </label>
                     <input type="checkbox" id="alpha-2">
-                    <label for="alpha-2">РУКОВОДИТЕЛЬ РАБОТ – работы на конкурсы могут отправляться от разных Авторов,
-                        но от
-                        одного Руководителя</label>
+                    <label for="alpha-2">
+                        {% blocktranslate %}
+                            РУКОВОДИТЕЛЬ РАБОТ – работы на конкурсы могут отправляться от разных Авторов,
+                            но от
+                            одного Руководителя
+                        {% endblocktranslate %}
+                    </label>
                     <input type="checkbox" id="alpha-3">
-                    <label for="alpha-3">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
-                        отправляться
-                        от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
+                    <label for="alpha-3">
+                        {% blocktranslate %}
+                            ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
+                            отправляться
+                            от разных Авторов и разных Руководителей, но от одной образовательной организации
+                        {% endblocktranslate %}
+                    </label>
                     <input type="checkbox" id="alpha-4">
-                    <label for="alpha-4">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
-                        отправляться
-                        от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
+                    <label for="alpha-4">
+                        {% blocktrans %}
+                            ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
+                            отправляться
+                            от разных Авторов и разных Руководителей, но от одной образовательной организации
+                        {% endblocktrans %}
+                    </label>
                     <div class="block-text">
                         <h3>Согласие</h3>
                     </div>
                     <input type="checkbox" id="alpha-5">
-                    <label for="alpha-5">Даю согласие образовательному порталу "НИКА" на обработку моих персональных
-                        данных
-                        * Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё
-                        согласие
-                        Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных
-                        данных,
-                        в соответствии с ...</label>
-                    <label for="bravo">УЧАСТНИК – работы на конкурсы отправляются только от имени одного Автора, но
-                        могут
-                        быть указаны разные Руководители работ</label>
+                    <label for="alpha-5">
+                        {% blocktrans %}
+                            Даю согласие образовательному порталу "НИКА" на обработку моих персональных
+                            данных
+                            * Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё
+                            согласие
+                            Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных
+                            данных,
+                            в соответствии с ...
+                        {% endblocktrans %}</label>
+                    <label for="bravo">
+                        {% blocktrans %}
+                            УЧАСТНИК – работы на конкурсы отправляются только от имени одного Автора, но
+                            могут
+                            быть указаны разные Руководители работ
+                        {% endblocktrans %}
+                    </label>
 
                     <input type="checkbox" id="alpha-2">
-                    <label for="alpha-2">РУКОВОДИТЕЛЬ РАБОТ – работы на конкурсы могут отправляться от разных Авторов,
-                        но от
-                        одного Руководителя</label>
+                    <label for="alpha-2">
+                        {% blocktrans %}
+                            РУКОВОДИТЕЛЬ РАБОТ – работы на конкурсы могут отправляться от разных Авторов,
+                            но от
+                            одного Руководителя
+                        {% endblocktrans %}
+                    </label>
 
                     <input type="checkbox" id="alpha-3">
-                    <label for="alpha-3">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
-                        отправляться
-                        от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
+                    <label for="alpha-3">
+                        {% blocktrans %}
+                            ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
+                            отправляться
+                            от разных Авторов и разных Руководителей, но от одной образовательной организации
+                        {% endblocktrans %}
+                    </label>
 
                     <input type="checkbox" id="alpha-4">
-                    <label for="alpha-4">ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
-                        отправляться
-                        от разных Авторов и разных Руководителей, но от одной образовательной организации</label>
+                    <label for="alpha-4">
+                        {% blocktrans %}
+                            ОРГАНИЗАТОР ОТ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ – работы на конкурсы могут
+                            отправляться
+                            от разных Авторов и разных Руководителей, но от одной образовательной организации
+                        {% endblocktrans %}
+                    </label>
 
                     <div class="block-text">
-                        <h3>Согласие</h3>
+                        <h3>{% trans 'Согласие' %}</h3>
                     </div>
 
                     <input type="checkbox" id="alpha-5">
-                    <label for="alpha-5">Даю согласие образовательному порталу "НИКА" на обработку моих персональных
-                        данных
-                        * Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё
-                        согласие
-                        Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных
-                        данных,
-                        в соответствии с ...</label>
+                    <label for="alpha-5">
+                        {% blocktrans %}
+                            Даю согласие образовательному порталу "НИКА" на обработку моих персональных
+                            данных
+                            * Нажимая кнопку «РЕГИСТРАЦИЯ», я принимаю условия Пользовательского соглашения и даю своё
+                            согласие
+                            Образовательному порталу «BEFIRST» (сайт https://оценика.уз) на обработку моих персональных
+                            данных,
+                            в соответствии с ...
+                        {% endblocktrans %}
+                    </label>
                 </main>
-                <button type="submit" class="btn">ГОТОВО</button>
+                <button type="submit" class="btn">{% trans 'ГОТОВО' %}</button>
             </form>
         </div>
     </div>

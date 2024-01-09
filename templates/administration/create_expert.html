@@ -15,12 +15,12 @@
             <div class="box1">
                 <div class="it">
                     <form class="it">
-                        <input class="search" type="text" placeholder="Search">
+                        <input class="search" type="text" placeholder="{% trans 'Поиск' %}">
                         <input class="check" type="checkbox">
                     </form>
                 </div>
                 <div class="bn">
-                    <button class="create" type="button" id="btn-create"><strong>CREATE EXPERT</strong></button>
+                    <button class="create" type="button" id="btn-create"><strong>{% trans 'СОЗДАТЬ ЭКСПЕРТА' %}</strong></button>
                 </div>
             </div>
             <div class="box2">
@@ -29,19 +29,21 @@
                         <img src={% static 'create_expert/img/Rectangle 973.png' %}>
                     </div>
                     <div class="name">
-                        <h3>username: username</h3>
-                        <h3>first_name: name</h3>
-                        <h3>last_name: surname</h3>
-                        <h3>e-mail: e-mail-addres</h3>
+                        <h3>{% trans 'имя пользователя: имя пользователя' %}</h3>
+                        <h3>{% trans 'имя: имя' %}</h3>
+                        <h3>{% trans 'фамилия' %}</h3>
+                        <h3>e-mail: e-mail-{% trans 'адрес' %}</h3>
                     </div>
                     <div class="text">
-                        <p>Quisque iaculis lorem vestibulum eros vehicula, non congue elit dictum. Donec mollis aliquet
-                            lorem, eu porttitor sapien semper in. Duis ac erat luctus, gravida .....</p>
+                        <p>
+                            Quisque iaculis loremvestibulum eros vehicula, non congue elit dictum. Донец моллис аликет
+                            Лорем, eu porttitor sapien semper in. Duis ac Erat luctus, gradida .....
+                          </p>
                     </div>
                     <div class="form">
                         <form>
-                            <button class="edit" type="submit"> Edit <i class="fa-solid fa-pen"></i></button>
-                            <button class="delete" type="submit"> Delete <i class="fa-solid fa-user-minus"></i></button>
+                            <button class="edit" type="submit"> {% trans 'Редактировать' %} <i class="fa-solid fa-pen"></i></button>
+                            <button class="delete" type="submit"> {% trans 'Удалить' %} <i class="fa-solid fa-user-minus"></i></button>
                         </form>
                     </div>
                 </div>
@@ -50,10 +52,10 @@
                         <img src={% static 'create_expert/img/Rectangle 973.png' %}>
                     </div>
                     <div class="name">
-                        <h3>username: username</h3>
-                        <h3>first_name: name</h3>
-                        <h3>last_name: surname</h3>
-                        <h3>e-mail: e-mail-addres</h3>
+                        <h3>{% trans 'username: username' %}</h3>
+                        <h3>{% trans 'имя: имя' %}</h3>
+                        <h3>{% trans 'фамилия:фамилия' %}</h3>
+                        <h3>e-mail: e-mail-{% trans 'адрес' %}</h3>
                     </div>
                     <div class="text">
                         <p>Quisque iaculis lorem vestibulum eros vehicula, non congue elit dictum. Donec mollis aliquet
@@ -61,8 +63,8 @@
                     </div>
                     <div class="form">
                         <form>
-                            <button class="edit" type="submit"> Edit <i class="fa-solid fa-pen"></i></button>
-                            <button class="delete" type="submit"> Delete <i class="fa-solid fa-user-minus"></i></button>
+                            <button class="edit" type="submit">{% trans ' Редактировать' %} <i class="fa-solid fa-pen"></i></button>
+                            <button class="delete" type="submit"> {% trans 'Удалить' %} <i class="fa-solid fa-user-minus"></i></button>
                         </form>
                     </div>
                 </div>
