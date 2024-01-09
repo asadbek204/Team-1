@@ -6,9 +6,9 @@
                 <img class="flag-icon" src="{% static 'base/img/flag.png' %}" alt="">
                 <div class="h-line"></div>
             </div>
-            <a href="#" class="nav-link">ВХОД</a>
+            <a href="{% url 'login' %}" class="nav-link">ВХОД</a>
             <div class="h-line"></div>
-            <a class="nav-link" href="#">РЕГИСТРАЦИЯ</a>
+            <a class="nav-link" href="{% url 'registration' %}">РЕГИСТРАЦИЯ</a>
         </div>
     </div>
     <nav class="site-navigation">
@@ -20,14 +20,14 @@
             </button>
         </div>
         <div class="nav-links">
-            <a class="nav-link" href="#">Главная</a>
-            <a class="nav-link" href="#">Работы</a>
-            <a class="nav-link" href="#">Правило</a>
-            <a class="nav-link" href="#">Результаты</a>
-            <a class="nav-link" href="#">Конкурс</a>
-            <a class="nav-link" href="#">Эксперты</a>
-            <a class="nav-link" href="#">О нас</a>
-            <a class="nav-link active" href="#">Личный кабинет</a>
+            <a class="nav-link" href="{% url 'home' %}">Главная</a>
+            <a class="nav-link" href="{% url 'home' %}">Работы</a>
+            <a class="nav-link" href="{% url 'rules' %}">Правило</a>
+            <a class="nav-link" href="{% url 'result' %}">Результаты</a>
+            <a class="nav-link" href="{% url 'competition' %}">Конкурс</a>
+            <a class="nav-link" href="{% url 'experts' %}">Эксперты</a>
+            <a class="nav-link" href="{% url 'about' %}">О нас</a>
+            <a class="nav-link" href="{% url 'profile' %}">Личный кабинет</a>
         </div>
         <div class="three-dots" id="menu-button">
             <div class="dot"></div>
