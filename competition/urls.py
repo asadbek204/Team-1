@@ -3,7 +3,7 @@ from .views import competition_view, questionare, detail
 
 
 urlpatterns = [
-    path('', competition_view),
+    path('', competition_view, name='competition'),
     path('questionare/', questionare, name='questionare'),
     path('detail/', detail, name='detail')
 ]

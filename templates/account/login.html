@@ -34,7 +34,7 @@
                                 <button class="remember" type="button" id="remember"><i class="display-none bi bi-check"
                                                                                         id="check-icon"></i></button>
                             </div>
-                            <a class="a zb_pr" href="#"> забыли пароль</a>
+                            <button class="a zb_pr" id="btn-forgot-password" disabled> забыли пароль</button>
                         </div>
                         <div class="center">
                             <button type="submit" class="profile_btn" id="btn-login">ВОЙТИ</button>
@@ -69,8 +69,22 @@
 {% endblock %}
 {#------------------- Team leader edits -------------------#}
 {% block modal %}
-    <section class="forgot-password">
-
-    </section>
+    <div class="display-none" id="close-block">
+        <button class="display-none" id="btn-close" type="button">&times;</button>
+    </div>
+    <div class="forgot-password display-none" id="modal-confirm-password">
+        <label for="password2forgot">
+            <span class="display-none" id="password2forgot-message"></span>
+            <input class="modal-input" id="password2forgot" type="password" name="password" placeholder="enter your email">
+        </label>
+        <button class="send-email" id="confirm-email" type="button" disabled>confirm email</button>
+    </div>
+    <div class="forgot-password display-none" id="modal-forgot-password">
+        <label for="email2forgot">
+            <span class="display-none" id="email2forgot-message"></span>
+            <input class="modal-input" id="email2forgot" type="email" name="email" placeholder="enter your email">
+        </label>
+        <button class="send-email" id="send-email" type="button" disabled>send email</button>
+    </div>
 {% endblock %}
 {#---------------------------------------------------------#}
