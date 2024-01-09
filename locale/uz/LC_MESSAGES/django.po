@@ -31,7 +31,7 @@ msgstr ""
 
 #: templates/about/about-us.html:50 templates/about/about-us.html:65
 msgid "О НАС"
-msgstr ""
+msgstr "BIZ HAQIMIZDA"
 
 #: templates/about/about-us.html:51
 msgid ""
@@ -47,10 +47,21 @@ msgid ""
 "                        aliqua.\n"
 "                    "
 msgstr ""
+"\n"
+"                    \tO'g'riqning o'zi juda muhim, adipiscing kuzatiladi"
+"lekin shunday bir vaqtda sodir bo'ldi\n"
+"                        mashaqqatli mehnat bilan\n"
+"                        va katta mehnat va azob bilan. Qilish uchun"
+"Kechirasiz, kechirasiz, mijoz kim?\n"
+"                        amet,\n"
+"                        Murabbiylik jarayonini kuzatib boraman, lekin bir xil vaqtni beraman "
+"ular katta mehnat va azob bilan sodir bo'ldi\n"
+"                        biroz.\n"
+"                    "
 
 #: templates/about/about-us.html:66
 msgid "информация о конкурсах"
-msgstr ""
+msgstr "musobaqalar haqida ma'lumot"
 
 #: templates/about/about-us.html:67
 msgid ""
@@ -84,11 +95,42 @@ msgid ""
 "                        delenit augue duis dolore te feugait nulla "
 "facilisi.\n"
 "                        "
+
 msgstr ""
+"\n"
+"                        Lorem ipsum dolor sit amet, consectetuer adipiscing "
+"elit, sed diam nonummy nibh euismod tincidunt\n"
+"                        ut\n"
+"                        laoreet dolore magna aliquam erat volutpat. Ut wisi "
+"enim ad minim veniam, quis nostrud exerci\n"
+"                        tation\n"
+"                        ullamcorper suscipit lobortis nisl ut aliquip ex ea "
+"commodo consequat. Duis autem vel eum iriure\n"
+"                        dolor in hendrerit in vulputate velit esse molestie "
+"consequat, vel illum dolore eu feugiat nulla\n"
+"                        facilisis at vero eros et accumsan et iusto odio "
+"dignissim qui blanddit praesent luptatum zzril\n"
+"                        delenit augue duis dolore te feugait nulla "
+"facilisi.\n"
+"                        Lorem ipsum dolor sit amet, consectetuer adipiscing "
+"elit, sed diam nonummy nibh euismod\n"
+"                        tincidunt ut\n"
+"                        laoreet dolore magna aliquam erat volutpat. Ut wisi "
+"enim ad minim veniam, quis nostrud exerci\n"
+"                        tation\n"
+"                        ullamcorper suscipit lobortis nisl ut aliquip ex ea "
+"commodo consequat. Duis autem vel eum iriure\n"
+"                        dolor in hendrerit in vulputate velit esse molestie "
+"consequat, vel illum dolore eu feugiat nulla\n"
+"                        facilisis at vero eros et accumsan et iusto odio "
+"dignissim qui blanddit praesent luptatum zzril\n"
+"                        delenit augue duis dolore te feugait nulla "
+"facilisi.\n"
+"                        "
 
 #: templates/about/about-us.html:154
 msgid "ЭКСПЕРТЫ"
-msgstr ""
+msgstr "Mutaxassislar"
 
 #: templates/about/about-us.html:155
 msgid ""
@@ -101,16 +143,16 @@ msgstr ""
 
 #: templates/about/regions.html:16
 msgid "Регион"
-msgstr ""
+msgstr "Mintaqa"
 
 #: templates/about/regions.html:17
 msgid "кол.во участников"
-msgstr ""
+msgstr "ishtirokchilar soni"
 
 #: templates/about/regions.html:18
 #, python-format
 msgid "%% по Узбекистану"
-msgstr ""
+msgstr "O‘zbekiston uchun %%"
 
 #: templates/about/regions.html:54
 #, python-format
@@ -119,22 +161,24 @@ msgid ""
 "        РАБОТЫ ПО РЕГИОНАМ В %(years.0)s-%(years.1)s УЧЕБНОМ ГОДУ\n"
 "        "
 msgstr ""
-
+"\n"
+"        HUDUDLAR BO'YICHA ISHLASH %(years.0)s-%(years.1)s O'QUV YILI\n"
+"        "
 #: templates/about/regions.html:60 templates/competition/join.html:68
 msgid "Ташкент"
-msgstr ""
+msgstr "Tashkent"
 
 #: templates/about/regions.html:62
 msgid "конкурсы"
-msgstr ""
+msgstr "musobaqalar"
 
 #: templates/about/regions.html:63
 msgid "участники"
-msgstr ""
+msgstr "ishtirokchilar"
 
 #: templates/about/results.html:19
 msgid "О РEЗУЛЬТАТАХ"
-msgstr ""
+msgstr "NATIJALAR HAQIDA"
 
 #: templates/about/results.html:21
 msgid ""
@@ -155,80 +199,80 @@ msgstr ""
 
 #: templates/account/login.html:21
 msgid "ЛИЧНЫЙ КАБИНЕТ"
-msgstr ""
+msgstr "SHAXSIY KABINET"
 
 #: templates/account/login.html:27
 msgid "Логин"
-msgstr ""
+msgstr "Tizimga kirish"
 
 #: templates/account/login.html:27
 msgid "(E-MAIL)"
-msgstr ""
+msgstr "(Elektron pochta)"
 
 #: templates/account/login.html:29 templates/expert/expert_registration.html:28
 #: templates/expert/expert_registration.html:49
 msgid "Пароль"
-msgstr ""
+msgstr "Parol"
 
 #: templates/account/login.html:33
 msgid "запомнить"
-msgstr ""
+msgstr "eslab qoling"
 
 #: templates/account/login.html:38
 msgid "забыли пароль"
-msgstr ""
+msgstr "Parolni unutdingizmi"
 
 #: templates/account/login.html:41
 msgid "ВОЙТИ"
-msgstr ""
+msgstr "KIRISH UCHUN"
 
 #: templates/account/login.html:46
 msgid "войдите через аккаунт социальной сети"
-msgstr ""
+msgstr "ijtimoiy tarmoq hisobi orqali kiring"
 
 #: templates/account/profile.html:14
 msgid " Личные данные"
-msgstr ""
+msgstr "Shaxsiy ma'lumotlar"
 
 #: templates/account/profile.html:81
 msgid "Текущие конкурсы"
-msgstr ""
+msgstr "Текущие конкурсы"
 
 #: templates/account/profile.html:98 templates/account/profile.html:136
 msgid "выйти"
-msgstr ""
+msgstr "tizimdan chiqish"
 
 #: templates/account/profile.html:99 templates/account/profile.html:128
 msgid "изменить пароль"
-msgstr ""
+msgstr "parolni o'zgartirish"
 
 #: templates/account/profile.html:118 templates/account/profile.html:122
 #: templates/account/profile.html:134
 msgid "Введите новый пароль"
-msgstr ""
+msgstr "Yangi parolni kiriting"
 
 #: templates/account/profile.html:126
 msgid "Подтвердите пароль"
-msgstr ""
+msgstr "Parolni tasdiqlang"
 
 #: templates/account/signup.html:15
 #: templates/expert/expert_registration.html:14
 #: templates/expert/expert_registration.html:31
 #: templates/layouts/navbar.html:12
 msgid "РЕГИСТРАЦИЯ"
-msgstr ""
+msgstr "RO‘YXATDAN KETISH"
 
 #: templates/account/signup.html:49
 msgid "Регистрация с помощью социальных сетей"
-msgstr ""
+msgstr "Ijtimoiy tarmoqlarda ro'yxatdan o'tish"
 
 #: templates/account/signup.html:52
 msgid "краткое наименование образовательного учреждения"
-msgstr ""
+msgstr "краткое наименование образовательного учреждения"
 
 #: templates/account/signup.html:54
 msgid "выберите значения"
-msgstr ""
+msgstr "qiymatlarni tanlang"
 
 #: templates/account/signup.html:63 templates/account/signup.html:108
 msgid ""
@@ -239,7 +283,12 @@ msgid ""
 "                            быть указаны разные Руководители работ\n"
 "                        "
 msgstr ""
-
+"\n"
+"                            ISHTIROKCHI – ishlar tanlovlarga yuboriladi "
+"faqat bitta Muallif nomidan, lekin\n"
+"                            mumkin\n"
+"                            turli ish boshqaruvchilari ko'rsatilishi kerak\n"
+"                        "
 #: templates/account/signup.html:71 templates/account/signup.html:117
 msgid ""
 "\n"
@@ -249,7 +298,12 @@ msgid ""
 "                            одного Руководителя\n"
 "                        "
 msgstr ""
-
+"\n"
+"                            Ish menejeri - musobaqalar uchun ishlaydi "
+"turli mualliflardan yuborilgan,\n"
+"                            lekin dan\n"
+"                            bitta bosh\n"
+"                        "
 #: templates/account/signup.html:79 templates/account/signup.html:87
 #: templates/account/signup.html:126 templates/account/signup.html:135
 msgid ""
@@ -261,7 +315,13 @@ msgid ""
 "одной образовательной организации\n"
 "                        "
 msgstr ""
-
+"\n"
+"                            TA’LIM TASHKILOTIDAN TASHKILOTchi –"
+"musobaqalar uchun ishlaydi\n"
+"                            jo'natilyapti\n"
+"                            turli Mualliflar va turli Rahbarlardan, lekin dan "
+"bitta ta'lim tashkiloti\n"
+"                        "
 #: templates/account/signup.html:98 templates/account/signup.html:148
 msgid ""
 "\n"
@@ -277,114 +337,125 @@ msgid ""
 "                            в соответствии с ...\n"
 "                        "
 msgstr ""
-
+"\n"
+"                            Men \"NIKA\" ta'lim portaliga rozilik beraman."" "
+"shaxsiy ma'lumotlarimni qayta ishlash uchun\n"
+"                            ma'lumotlar\n"
+"                            * ""<<RO'YXAT>> tugmasini bosish orqali men qabul qilaman "
+"Foydalanuvchi shartnomasi shartlari va men o'zimni beraman\n"
+"                            kelishuv\n"
+"                            <<BEFIRST>> ta'lim portali (sayt https://"
+"otsenika.uz) shaxsiy ma'lumotlarimni qayta ishlash uchun\n"
+"                            ma'lumotlar,\n"
+"                           ga muvofiq...\n"
+"                        "
 #: templates/account/signup.html:143
 msgid "Согласие"
-msgstr ""
+msgstr "Shartnoma"
 
 #: templates/account/signup.html:159
 msgid "ГОТОВО"
-msgstr ""
+msgstr "TAYYOR"
 
 #: templates/administration/contact.html:17
 #: templates/administration/contact.html:34
 msgid "КОНТАКТЫ"
-msgstr ""
+msgstr "ALOQALAR"
 
 #: templates/administration/contact.html:40
 msgid "Toshkent shaxri, Yunusobod tumani, O’zbekiston ko’chasi"
 msgstr ""
 
 #: templates/administration/contact.html:59
-msgid "ОТПРАВИТ"
+msgid "YUBORADI"
 msgstr ""
 
 #: templates/administration/create_expert.html:18
 msgid "Поиск"
-msgstr ""
+msgstr "Qidirmoq"
 
 #: templates/administration/create_expert.html:23
 msgid "СОЗДАТЬ ЭКСПЕРТА"
-msgstr ""
+msgstr "MUXAFSIZ YARATING"
 
 #: templates/administration/create_expert.html:32
 msgid "имя пользователя: имя пользователя"
-msgstr ""
+msgstr "foydalanuvchi nomi: foydalanuvchi nomi"
 
 #: templates/administration/create_expert.html:33
 #: templates/administration/create_expert.html:56
 msgid "имя: имя"
-msgstr ""
+msgstr "ism: ism"
 
 #: templates/administration/create_expert.html:34
 msgid "фамилия"
-msgstr ""
+msgstr "фамилия"
 
 #: templates/administration/create_expert.html:35
 #: templates/administration/create_expert.html:58
 msgid "адрес"
-msgstr ""
+msgstr "manzil"
 
 #: templates/administration/create_expert.html:45
 msgid "Редактировать"
-msgstr ""
+msgstr "Tahrirlash"
 
 #: templates/administration/create_expert.html:46
 #: templates/administration/create_expert.html:67
 msgid "Удалить"
-msgstr ""
+msgstr "Oʻchirish"
 
 #: templates/administration/create_expert.html:55
 msgid "username: username"
-msgstr ""
+msgstr "foydalanuvchi nomi: foydalanuvchi nomi"
 
 #: templates/administration/create_expert.html:57
 msgid "фамилия:фамилия"
-msgstr ""
+msgstr "familiya: familiya"
 
 #: templates/administration/create_expert.html:66
 msgid " Редактировать"
-msgstr ""
+msgstr "Tahrirlash"
 
 #: templates/administration/payment.html:13
 msgid "ОПЛАТА"
-msgstr ""
+msgstr "TO'LOV"
 
 #: templates/administration/payment.html:16
 msgid "Оформление оплаты"
-msgstr ""
+msgstr "To'lovni qayta ishlash"
 
 #: templates/administration/payment.html:22
 msgid "Ваше имя"
-msgstr ""
+msgstr "ismingiz"
 
 #: templates/administration/payment.html:26
 msgid "Ваше номер телефона"
-msgstr ""
+msgstr "telefon raqamingiz"
 
 #: templates/administration/payment.html:32
 msgid "ОПЛАТА ПО КАТЕГОРИЯМИ"
-msgstr ""
+msgstr "TURUMLAR BO'YICHA TO'LOV"
 
 #: templates/administration/payment.html:36
 msgid "НОМЕР КАРТЫ"
-msgstr ""
+msgstr "KARTA RAQAMI"
 
 #: templates/administration/payment.html:44
 msgid "СУММА"
-msgstr ""
+msgstr "SUM"
 
 #: templates/administration/payment.html:47
 msgid "ОПЛАТИТ"
-msgstr ""
+msgstr "TO'LASH"
 
 #: templates/administration/payment.html:49
 msgid "быстрый способ оплаты"
-msgstr ""
+msgstr "tez to'lov usuli"
 
 #: templates/administration/pravila.html:16
 msgid "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ"
-msgstr ""
+msgstr "MAXFIYLIK SIYOSATI"
 
 #: templates/administration/pravila.html:18
 msgid ""
@@ -394,15 +465,19 @@ msgid ""
 "                            Общие положения\n"
 "                        "
 msgstr ""
-
+"\n"
+"                            Maxfiylik siyosati qoidalari"
+"oxirgi marta 2021-yil 03-11-da yangilangan <br>\n"
+"                            Umumiy holat\n"
+"                        "
 #: templates/administration/pravila.html:23
 msgid "1. Оператором по обработке персональных данных сайта"
-msgstr ""
+msgstr "1. Saytning shaxsiy ma'lumotlarini qayta ishlash operatori"
 
 #: templates/administration/pravila.html:24
 #: templates/administration/pravila.html:37
 msgid "оценика.рф"
-msgstr ""
+msgstr "оценика.рф"
 
 #: templates/administration/pravila.html:25
 msgid ""
@@ -414,7 +489,13 @@ msgid ""
 "                            «НИКА», оператор).\n"
 "                        "
 msgstr ""
-
+"\n"
+"                            tarbiyaviy hisoblanadi\n"
+"                            <<NIKA>> portali (IP Isupov Andrey Vasilevich, INN "
+"OGRN 4316435000061224 (keyingi o'rinlarda deb yuritiladi)\n"
+"                            OP\n"
+"                            <<NIKA>>, operator).\n"
+"                        "
 #: templates/administration/pravila.html:32
 msgid ""
 "\n"
@@ -423,7 +504,11 @@ msgid ""
 "                            пользователи), которые зашли на сайт\n"
 "                        "
 msgstr ""
-
+"\n"
+"                            2. Ushbu maxfiylik siyosati"
+"barcha mijozlarga (keyingi o'rinlarda tashrif buyuruvchilar deb yuritiladi)\n"
+"                            foydalanuvchilar) saytga tashrif buyurganlar\n"
+"                        "
 #: templates/administration/pravila.html:38
 msgid ""
 "\n"
@@ -445,7 +530,24 @@ msgid ""
 "                            Услуги).\n"
 "                        "
 msgstr ""
-
+"\n"
+"                            (Bundan keyin\n"
+"                            - veb-sayt), ularning harakatlari haqida, qaysi\n"
+"                            ular\n"
+"                            saytida amalga oshirishi mumkin, shu jumladan (lekin emas "
+"bilan cheklangan) Saytda ro'yxatdan o'tish (shu jumladan\n"
+"                            orqali\n"
+"                            ijtimoiy hisobingizdan foydalanib tizimga kiring "
+"tarmoqlar), ishtirok etish uchun arizani to'ldirish (va\n"
+"                            ishtirok etish)\n"
+"                            musobaqalarda, olimpiadalarda, viktorinalarda, testlarda, "
+"shaxsiy materiallarni joylashtirish (nashr qilish),\n"
+"                            sharhlar,\n"
+"                            nashr etilgan ma'lumotlarni o'qish, ta'minlash va"
+"har qanday turdagi ma'lumotlarni olish\n"
+"                            (Bundan keyin -\n"
+"                            Xizmatlar).\n"
+"                        "
 #: templates/administration/pravila.html:53
 msgid ""
 "\n"
@@ -461,7 +563,17 @@ msgid ""
 "                            Услугами Сайта.\n"
 "                        "
 msgstr ""
-
+"\n"
+"                            3. Mehmonlar Siyosatga so'zsiz rozilik bildiradilar"
+"xizmatlardan foydalanishda maxfiylikga,\n"
+"                            yig'ishning maqsadlari va usullarini belgilaydi "
+"ma'lumotlar, shuningdek, uni saqlash shartlari va boshqalar.\n"
+"                            Agar\n"
+"                            Mehmon bu siyosatga rozi emas "
+"maxfiylik, keyin u huquqiga ega emas\n"
+"                            rohatlaning\n"
+"                            Sayt xizmatlari.\n"
+"                        "
 #: templates/administration/pravila.html:63
 msgid ""
 "\n"
@@ -497,22 +609,53 @@ msgid ""
 "                            Российской Федерации.\n"
 "                        "
 msgstr ""
-
+"\n"
+"                            4. Maqsadlarga erishish uchun operator quyidagilarni amalga oshiradi:"
+"yig'ish, tizimlashtirish, to'plash, saqlash,\n"
+"                            tushuntirish\n"
+"                            (yangilash, o'zgartirish), chiqarish, "
+"foydalanish, uzatish (ta'minlash, kirish),\n"
+"                            blokirovka qilish,\n"
+"                            shaxsiy ma'lumotlarni yo'q qilish, yo'q qilish. Hech ham "
+"<<NIKA>> OPning irodasi bilan yoki biron birining qarori bilan\n"
+"                            uchinchi\n"
+"                            shaxslar,\n"
+"                            qonun hujjatlarida nazarda tutilgan hollar bundan mustasno "
+"Rossiya Federatsiyasi, shaxsiy ma'lumotlar emas\n"
+"                            mumkin\n"
+"                            aniq va aniq bo'lmagan holda uchinchi shaxslarga berilishi mumkin "
+"Tashrifchining bunga roziligi.\n"
+"                            Shaxsiy ma'lumotlarni qayta ishlash amalga oshiriladi"
+"Aralash operator tomonidan: kabi\n"
+"                            foydalanish,\n"
+"                            shunday va\n"
+"                            avtomatlashtirish vositalaridan foydalanmasdan.\n"
+"                            Shaxsiy ma'lumotlarni yig'ishda Operator "
+"ularning qayd etilishini, tizimlashtirilishini, to‘planishini ta’minlaydi;\n"
+"                            saqlash,\n"
+"                            aniqlashtirish (yangilash, o'zgartirish), chiqarib olish"
+"rossiya Federatsiyasi fuqarolarining shaxsiy ma'lumotlari\n"
+"                            bilan federatsiya\n"
+"                            joylashgan ma'lumotlar bazalaridan foydalanish "
+"joylashgan axborot tizimlari\n"
+"                            hududlar\n"
+"                            Rossiya Federatsiyasi.\n"
+"                        "
 #: templates/administration/pravila.html:89
 msgid "Передаваемые права третьим лицам"
-msgstr ""
+msgstr "Uchinchi shaxslarga o'tkazilishi mumkin bo'lgan huquqlar"
 
 #: templates/administration/pravila.html:90
 msgid "Регистрация Посетителей"
-msgstr ""
+msgstr "Mehmonlarni ro'yxatdan o'tkazish"
 
 #: templates/administration/pravila.html:91
 msgid "Цели использования персональной информации"
-msgstr ""
+msgstr "agar shaxsiy ma'lumotlardan foydalanilgan bo'lsa"
 
 #: templates/competition/competition.html:10
 msgid "КОНКУРС"
-msgstr ""
+msgstr "TANLOV"
 
 #: templates/competition/competition.html:11
 msgid ""
@@ -520,10 +663,12 @@ msgid ""
 "правом уйти от жизни на время следует боль проницательной ненависти, если "
 "только мы не родимся с лестью, ведущей к удобству!"
 msgstr ""
+"Shuning uchun, zavq va shunga o'xshash narsalar uchun, albatta, me'mor va"
+"bir muddat hayotni tark etish huquqi nafratning kirib borishi og'rig'i bo'lishi kerak, agar "
+"faqat biz qulaylikka olib keladigan xushomadgo'ylik bilan tug'ilmaganmiz!"#: templates/competition/competition.html:12
 
-#: templates/competition/competition.html:12
 msgid "отправить заявку на участие"
-msgstr ""
+msgstr "ishtirok etish uchun ariza yuborish"
 
 #: templates/competition/competition.html:18
 #: templates/competition/competition.html:26
@@ -535,7 +680,7 @@ msgstr ""
 #: templates/competition/competition.html:79
 #: templates/competition/competition.html:88
 msgid "Название карты"
-msgstr ""
+msgstr "Karta nomi"
 
 #: templates/competition/competition.html:19
 #: templates/competition/competition.html:27
@@ -552,7 +697,10 @@ msgid ""
 "примеров текста, которые будут основываться на заголовке карточки и "
 "составлять основную часть ее содержимого."
 msgstr ""
-
+"Sarlavhaga asoslangan matnning qisqacha misollari "
+"karta va uning mazmunining asosiy qismini tashkil qiladi. Bir nechta qisqa"
+"karta sarlavhasi asosida bo'ladi matn misollar va"
+"mazmunining asosiy qismini tashkil qiladi."
 #: templates/competition/competition.html:20
 #: templates/competition/competition.html:28
 #: templates/competition/competition.html:36
@@ -563,20 +711,20 @@ msgstr ""
 #: templates/competition/competition.html:81
 #: templates/competition/competition.html:90
 msgid "Пойти куда-нибудь"
-msgstr ""
+msgstr "Bir joyga boring"
 
 #: templates/competition/competition.html:106
 msgid "отправить заявку"
-msgstr ""
+msgstr "ariza yuboring"
 
 #: templates/competition/detail.html:187 templates/competition/detail.html:194
 #: templates/competition/detail.html:201
 msgid "Участвовать"
-msgstr ""
+msgstr "Ishtirok eting"
 
 #: templates/competition/detail.html:211
 msgid "Игрушки и игры"
-msgstr ""
+msgstr "O'yinchoqlar va o'yinlar"
 
 #: templates/competition/detail.html:212
 msgid ""
@@ -597,10 +745,25 @@ msgid ""
 "Беда, рожденная.</p>\n"
 "            "
 msgstr ""
-
+"\n"
+"            \t<p>Og'riq o'z-o'zidan muhim, yog 'ta'qib qiladi. Foyda uchun"
+"Bu mashq oqsoqollar, ayniqsa\n"
+"                 qaysi.</p>\n"
+"             <р>1. Mijoz uchun jarayonga e'tibor berish juda muhimdir"
+"adipiski. Qolganlari, ajoyib!</p>\n"
+"             <р>2. Mijoz uchun jarayonga e'tibor berish juda muhimdir "
+"adipiski. Qolganlari, ajoyib!</p>\n"
+"             <р>3. Mijoz uchun jarayonga e'tibor berish juda muhimdir "
+"adipiski. Qolganlari, ajoyib!</p>\n"
+"             4. Og'riqning o'zi juda muhim va undan keyin cho'kma paydo bo'ladi "
+"semiz.</p>\n"
+"             <р>5. Mijoz juda mamnun bo'lishi kerak.</p>\n"
+"             6. Mijoz uchun ro'yxatga olish jarayoniga e'tibor berish juda muhimdir. "
+"Muammo tug'iladi.</p>\n"
+"            "
 #: templates/competition/join.html:14
 msgid "Участие В конкурсе"
-msgstr ""
+msgstr "Tanlovda ishtirok etish"
 
 #: templates/competition/join.html:18
 msgid ""
@@ -613,136 +776,143 @@ msgid ""
 "деталям, кто\n"
 "                       "
 msgstr ""
-
+"\n"
+"                       \tMijoz uchun uning ehtiyojlarini bilish juda muhim, "
+"lekin ayni paytda xuddi shu narsa sodir bo'ladi.\n"
+"                         mashaqqatli mehnat bilan\n"
+"                         va\n"
+"                         ba'zi qattiq og'riqlar bilan. Eng kichigiga kelsak "
+"tafsilotlar, kim\n"
+"                       "
 #: templates/competition/join.html:28
 msgid "подробное"
-msgstr ""
+msgstr "batafsil"
 
 #: templates/competition/join.html:36
 msgid "АНКЕТА"
-msgstr ""
+msgstr "TADQIQOT"
 
 #: templates/competition/join.html:37
 msgid "пожалуйста, заполните эту форму, чтобы создать учетную запись"
-msgstr ""
+msgstr "hisob yaratish uchun ushbu shaklni to'ldiring"
 
 #: templates/competition/join.html:46
 msgid "Имя"
-msgstr ""
+msgstr "Ism"
 
 #: templates/competition/join.html:49
 msgid "Фамилия"
-msgstr ""
+msgstr "Familiya"
 
 #: templates/competition/join.html:62
 msgid "возраст"
-msgstr ""
+msgstr "Yosh"
 
 #: templates/competition/join.html:63
 msgid "средний возраст"
-msgstr ""
+msgstr "O'rta yosh"
 
 #: templates/competition/join.html:69
 msgid "Самарканд"
-msgstr ""
+msgstr "Samarqand"
 
 #: templates/competition/join.html:74
 msgid "Телефон"
-msgstr ""
+msgstr "Telefon"
 
 #: templates/competition/join.html:96
 msgid "Ваш коммент..."
-msgstr ""
+msgstr "Sizning fikringiz.."
 
 #: templates/competition/join.html:99
 msgid "Запомнить"
-msgstr ""
+msgstr "Eslab qoling"
 
 #: templates/competition/join.html:101
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 #: templates/expert/expert_registration.html:19
 msgid "Форма регистрации"
-msgstr ""
+msgstr "Ro'yxatdan o'tish shakli"
 
 #: templates/expert/expert_registration.html:24
 #: templates/expert/expert_registration.html:45
 msgid "Имя пользователя"
-msgstr ""
+msgstr "Foydalanuvchi nomi"
 
 #: templates/expert/expert_registration.html:40
 msgid "Изменить пароль"
-msgstr ""
+msgstr "Parolni o'zgartirish"
 
 #: templates/expert/expert_registration.html:51
 msgid "ИЗМЕНЯТЬ"
-msgstr ""
+msgstr "O'ZGARISH"
 
 #: templates/home/gallery.html:14
 msgid "ГАЛЛЕРИЯ"
-msgstr ""
+msgstr "GALEREYA"
 
 #: templates/home/gallery.html:41
 msgid "СТАТИСТИКА ПО РЕГИОНАМ"
-msgstr ""
+msgstr "HUDUDLAR BO'YICHA STATISTIKA"
 
 #: templates/home/main_page.html:17
 msgid "МЕРОПРИЯТИЯ ОБРАЗОВАТЕЛЬНОГО ПОРТАЛА"
-msgstr ""
+msgstr "TA'LIM PORTALIDAGI VOQEALAR"
 
 #: templates/layouts/footer.html:11
 msgid "Карта сайта"
-msgstr ""
+msgstr "Sayt xaritasi"
 
 #: templates/layouts/footer.html:13 templates/layouts/navbar.html:24
 msgid "Главная"
-msgstr ""
+msgstr "Asosiy"
 
 #: templates/layouts/footer.html:14 templates/layouts/navbar.html:27
 msgid "Результаты"
-msgstr ""
+msgstr "natijalar"
 
 #: templates/layouts/footer.html:15 templates/layouts/navbar.html:30
 msgid "О нас"
-msgstr ""
+msgstr "Biz haqimizda"
 
 #: templates/layouts/footer.html:16
 msgid "Правила"
-msgstr ""
+msgstr "Qoidalar"
 
 #: templates/layouts/footer.html:17 templates/layouts/navbar.html:25
 msgid "Работы"
-msgstr ""
+msgstr "Ishlar"
 
 #: templates/layouts/footer.html:21
 msgid "Контакты"
-msgstr ""
+msgstr "Kontaktlar"
 
 #: templates/layouts/footer.html:25
 msgid "г. Ташкент, Юнусабадский район, ул Узбекистан"
-msgstr ""
+msgstr "Toshkent sh, Yunusobod tumani, O‘zbekiston"
 
 #: templates/layouts/footer.html:31
 msgid "Мы в соцсетях:"
-msgstr ""
+msgstr "Biz ijtimoiy tarmoqlardamiz:"
 
 #: templates/layouts/navbar.html:10
 msgid "ВХОД"
-msgstr ""
+msgstr "KIRISH"
 
 #: templates/layouts/navbar.html:26
 msgid "Правило"
-msgstr ""
+msgstr "Qoida"
 
 #: templates/layouts/navbar.html:28
 msgid "Конкурс"
-msgstr ""
+msgstr "Musobaqa"
 
 #: templates/layouts/navbar.html:29
 msgid "Эксперты"
-msgstr ""
+msgstr "Mutaxassislar"
 
 #: templates/layouts/navbar.html:31
 msgid "Личный кабинет"
-msgstr ""
+msgstr "Shaxsiy kabinet"
